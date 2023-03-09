@@ -1,0 +1,48 @@
+header nav {
+    font-size: auto;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+}
+
+header nav>* {
+    float: left;
+}
+
+header h1 {
+    display: inline-block;
+    background-color: blue;
+    color: whitesmoke;
+    margin-bottom: auto;
+}
+
+header {
+    display: block;
+    background-color: blue;
+    color: whitesmoke;
+    position: relative;
+    padding: 8px;
+}
+
+.home {
+    font-size: auto;
+    font-family: 'Times New Roman', Times, serif;
+    color:whitesmoke;
+}
+
+nav a {
+    margin: 0 0.8em;
+    color:whitesmoke;
+    font-size: 20px;
+}
+
+nav a:hover {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.home:hover {
+    color: rgb(0, 0, 0);
+}
