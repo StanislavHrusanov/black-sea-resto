@@ -1,0 +1,65 @@
+.home-message h2 {
+    color: darkblue;
+    font-size: 350%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.top-three {
+    background-color: transparent;
+    box-shadow: 0px 0px 40px 0px;
+    overflow: hidden;
+    padding: 55px;
+    height: auto;
+    width: auto;
+}
+
+.top-three h1 {
+    color: darkblue;
+    font-weight: 700;
+    font-size: 84px;
+    margin-top: -50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.restaurant {
+    box-shadow: 0px 0px 30px 0px;
+    margin-top: 20px;
+    padding: 50px;
+    margin-left: 70px;
+    background-position: right 35% bottom 45%;
+    background-color: rgb(245, 223, 190);
+    box-sizing: border-box;
+    float: left;
+    height: auto;
+    color: darkblue;
+
+}
+
+.restaurant>h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.5s ease-out;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.image-wrap {
+    width: 275px;
+    height: 275px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.image-wrap>img {
+    max-width: 98%;
+    border: 2px solid darkblue;
+}
