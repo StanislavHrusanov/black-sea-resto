@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Auth.css";
 
 export const Register = () => {
@@ -32,7 +33,7 @@ export const Register = () => {
                 </form>
 
                 <div className="auth-question">
-                    <p>Already have an account?<a href="#"> Sign in</a>
+                    <p>Already have an account?<Link to="/login"> Sign in</Link>
                     </p>
                 </div>
             </div>
