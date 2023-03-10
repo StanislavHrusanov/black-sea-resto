@@ -1,3 +1,9 @@
+body {
+    background: url("https://www.concordia-bs.com/wp-content/uploads/2021/04/AdobeStock_210304684-e1618136466871.jpeg");
+    background-size: cover;
+    margin: auto;
+}
+
 header nav {
     font-size: auto;
     font-family: 'Times New Roman', Times, serif;
@@ -12,37 +18,37 @@ header nav>* {
 
 header h1 {
     display: inline-block;
-    background-color: blue;
+    background-color: darkblue;
     color: whitesmoke;
     margin-bottom: auto;
 }
 
 header {
     display: block;
-    background-color: blue;
+    background-color: darkblue;
     color: whitesmoke;
     position: relative;
     padding: 8px;
 }
 
 .home {
-    font-size: auto;
+    font-size: 120%;
     font-family: 'Times New Roman', Times, serif;
-    color:whitesmoke;
+    color: whitesmoke;
 }
 
 nav a {
     margin: 0 0.8em;
-    color:whitesmoke;
+    color: whitesmoke;
     font-size: 20px;
 }
 
 nav a:hover {
     cursor: pointer;
-    color: darkblue;
+    color: black;
     font-weight: bolder;
 }
 
 .home:hover {
-    color: darkblue;
+    color: black;
 }
