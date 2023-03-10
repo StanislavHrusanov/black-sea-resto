@@ -7,7 +7,7 @@
 
 .top-three {
     background-color: transparent;
-    box-shadow: 0px 0px 40px 0px;
+    /* box-shadow: 0px 0px 40px 0px; */
     overflow: hidden;
     padding: 55px;
     height: auto;
@@ -18,7 +18,7 @@
     color: darkblue;
     font-weight: 700;
     font-size: 84px;
-    margin-top: -50px;
+    margin-top: -70px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -28,26 +28,31 @@
     margin-top: 20px;
     padding: 50px;
     margin-left: 70px;
+    max-width: 375px;
+    max-height: 550px;
     background-position: right 35% bottom 45%;
     background-color: rgb(245, 223, 190);
     box-sizing: border-box;
     float: left;
     height: auto;
     color: darkblue;
-
 }
 
 .restaurant>h3 {
     font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+    margin-top: -50px;
     font-size: 42px;
     font-weight: 700;
     line-height: normal;
-    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     transition: all 0.5s ease-out;
     text-align: center;
     text-transform: uppercase;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .image-wrap {
@@ -56,10 +61,57 @@
     display: inline-block;
     overflow: hidden;
     position: relative;
-    text-align: center;
+    /* text-align: center; */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .image-wrap>img {
     max-width: 98%;
     border: 2px solid darkblue;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    text-align: center;
+    direction: rtl;
+}
+
+.rating span {
+    font-size: 40px;
+    padding: 4px;
+}
+
+.rating span:before {
+    content: "\2605";
+    position: absolute;
+    color: gold;
+}
+
+.details-btn {
+    background-color: darkblue;
+    font-size: 1.4rem;
+    padding-top: 20px;
+    margin-top: 10px;
+    color: whitesmoke;
+    padding: 0.9em 1.4em;
+}
+
+.data-buttons {
+    font-size: 1.4rem;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.btn.details-btn:hover {
+    background-color: rgb(192, 129, 117);
+    color: white;
+}
+
+.no-restaurants {
+    color: rgb(1, 1, 102);
+    text-align: center;
+    font-weight: 700;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
 }
