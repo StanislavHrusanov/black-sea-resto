@@ -7,7 +7,6 @@
 
 .top-three {
     background-color: transparent;
-    /* box-shadow: 0px 0px 40px 0px; */
     overflow: hidden;
     padding: 55px;
     height: auto;
@@ -61,7 +60,6 @@
     display: inline-block;
     overflow: hidden;
     position: relative;
-    /* text-align: center; */
     left: 50%;
     transform: translateX(-50%);
 }
