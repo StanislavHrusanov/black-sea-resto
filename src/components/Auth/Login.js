@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./Auth.css";
 
 export const Login = () => {
     return (
@@ -10,14 +11,13 @@ export const Login = () => {
                     </h2>
                 </div>
                 <form className="auth-form">
-
                     <div className="input">
+                        <label htmlFor="username" className="username">Username</label>
                         <input type="text" className="input-field" placeholder="jdoe" id="username" />
-                        <label className="username">Username</label>
                     </div>
                     <div className="input">
+                        <label htmlFor="password" className="password">Password</label>
                         <input type="password" className="input-field" id="password" placeholder="******" />
-                        <label className="password">Password</label>
                     </div>
                     <div className="action">
                         <button className="action-button">Login</button>
