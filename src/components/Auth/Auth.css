@@ -20,13 +20,6 @@
     line-height: 1.222;
 }
 
-.card-heading>p {
-    display: block;
-    font-size: .60em;
-    font-weight: 400;
-    margin-top: .24em;
-}
-
 .auth-form {
     padding: 2rem 1rem 0;
 }
@@ -63,7 +56,7 @@
 .input-field:focus,
 .input-field:valid {
     outline: 0;
-    border-bottom-color:darkblue;
+    border-bottom-color: darkblue;
 }
 
 .fullname,
@@ -103,7 +96,7 @@
     font-size: .875rem;
 }
 
-.card-info>p {
+.auth-question>p {
     font-size: 1.2em;
-    color: darkblue;
+    color: black;
 }
