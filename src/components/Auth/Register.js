@@ -12,20 +12,20 @@ export const Register = () => {
                 </div>
                 <form className="auth-form" >
                     <div className="input">
-                        <input type="text" className="input-field" placeholder="John Doe" />
-                        <label className="fullname">Full Name</label>
+                        <label htmlFor="full-name" className="fullname">Full Name</label>
+                        <input type="text" className="input-field" placeholder="John Doe" id="full-name" />
                     </div>
                     <div className="input">
+                        <label htmlFor="username" className="username">Username</label>
                         <input type="text" className="input-field" placeholder="jdoe" id="username" />
-                        <label className="username">Username</label>
                     </div>
                     <div className="input">
+                        <label htmlFor="password" className="password">Password</label>
                         <input type="password" className="input-field" id="password" placeholder="******" />
-                        <label className="password">Password</label>
                     </div>
                     <div className="input">
+                        <label htmlFor="re-password" className="re-password">Repeat Password</label>
                         <input type="password" className="input-field" id="re-password" placeholder="******" />
-                        <label className="re-password">Repeat Password</label>
                     </div>
                     <div className="action">
                         <button className="action-button">Register</button>
