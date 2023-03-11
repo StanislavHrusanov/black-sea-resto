@@ -1,29 +1,31 @@
+import { Link } from "react-router-dom";
+
 export const Login = () => {
     return (
         <section id="login-page">
-            <div class="container">
+            <div className="container">
                 <div>
-                    <h2 class="heading">
+                    <h2 className="heading">
                         Login
                     </h2>
                 </div>
-                <form class="auth-form">
+                <form className="auth-form">
 
-                    <div class="input">
-                        <input type="text" class="input-field" placeholder="jdoe" id="username" />
-                        <label class="username">Username</label>
+                    <div className="input">
+                        <input type="text" className="input-field" placeholder="jdoe" id="username" />
+                        <label className="username">Username</label>
                     </div>
-                    <div class="input">
-                        <input type="password" class="input-field" id="password" placeholder="******" />
-                        <label class="password">Password</label>
+                    <div className="input">
+                        <input type="password" className="input-field" id="password" placeholder="******" />
+                        <label className="password">Password</label>
                     </div>
-                    <div class="action">
-                        <button class="action-button">Login</button>
+                    <div className="action">
+                        <button className="action-button">Login</button>
                     </div>
                 </form>
-                <div class="auth-question">
+                <div className="auth-question">
                     <p>Dont have an account?
-                        <a href="#">Sign up</a>
+                        <Link to="/register">Sign up</Link>
                     </p>
                 </div>
             </div>
