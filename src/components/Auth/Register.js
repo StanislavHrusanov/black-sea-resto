@@ -7,7 +7,7 @@ export const Register = () => {
             <div className="container">
                 <div>
                     <h2 className="heading">
-                        Create your account
+                        Register
                     </h2>
                 </div>
                 <form className="auth-form" >
