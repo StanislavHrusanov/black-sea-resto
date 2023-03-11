@@ -25,7 +25,7 @@ export const Login = () => {
                 </form>
                 <div className="auth-question">
                     <p>Dont have an account?
-                        <Link to="/register">Sign up</Link>
+                        <Link to="/register"> Sign up</Link>
                     </p>
                 </div>
             </div>

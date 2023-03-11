@@ -33,7 +33,8 @@ export const Register = () => {
                 </form>
 
                 <div className="auth-question">
-                    <p>Already have an account?<Link to="/login"> Sign in</Link>
+                    <p>Already have an account?
+                        <Link to="/login"> Sign in</Link>
                     </p>
                 </div>
             </div>
