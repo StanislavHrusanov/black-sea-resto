@@ -4,53 +4,53 @@ import "./Home.css";
 export const Home = () => {
     return (
         <section id="home-section">
-
             <div className="home-message">
-                <h2>Find your perfect restaurant</h2>
+                <h2>We will help you find your perfect restaurant!</h2>
             </div>
+            <div className="home-container">
 
-            <div className="top-three">
-                <h1>Top 3</h1>
+                <div className="top-three">
+                    <h1>Most Popular</h1>
 
-                <div class="restaurant">
-                    <div class="image-wrap">
-                        <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
+                    <div class="restaurant">
+                        <div class="image-wrap">
+                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
+                        </div>
+                        <h3>Vili Sozopol</h3>
+                        <div class="rating">
+                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                        </div>
+                        <div class="data-buttons">
+                            <Link href="#" class="btn details-btn">Details</Link>
+                        </div>
                     </div>
-                    <h3>Vili Sozopol</h3>
-                    <div class="rating">
-                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                    <div class="restaurant">
+                        <div class="image-wrap">
+                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
+                        </div>
+                        <h3>Vili Sozopol</h3>
+                        <div class="rating">
+                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                        </div>
+                        <div class="data-buttons">
+                            <Link href="#" class="btn details-btn">Details</Link>
+                        </div>
                     </div>
-                    <div class="data-buttons">
-                        <Link href="#" class="btn details-btn">Details</Link>
+                    <div class="restaurant">
+                        <div class="image-wrap">
+                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
+                        </div>
+                        <h3>Vili Sozopol daadadaddadadadas</h3>
+                        <div class="rating">
+                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                        </div>
+                        <div class="data-buttons">
+                            <Link href="#" class="btn details-btn">Details</Link>
+                        </div>
                     </div>
+                    <p class="no-restaurants">There is no restaurants yet!</p>
                 </div>
-                <div class="restaurant">
-                    <div class="image-wrap">
-                        <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                    </div>
-                    <h3>Vili Sozopol</h3>
-                    <div class="rating">
-                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                    </div>
-                    <div class="data-buttons">
-                        <Link href="#" class="btn details-btn">Details</Link>
-                    </div>
-                </div>
-                <div class="restaurant">
-                    <div class="image-wrap">
-                        <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                    </div>
-                    <h3>Vili Sozopol daadadaddadadadas</h3>
-                    <div class="rating">
-                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                    </div>
-                    <div class="data-buttons">
-                        <Link href="#" class="btn details-btn">Details</Link>
-                    </div>
-                </div>
-                <p class="no-restaurants">There is no restaurants yet!</p>
             </div>
-
         </section>
 
     );
