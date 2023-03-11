@@ -1,3 +1,14 @@
+.home-container {
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1350px;
+    box-shadow: 0px 0px 40px 0px;
+    padding: .55rem;
+    background-color: transparent;
+}
+
 .home-message h2 {
     color: darkblue;
     font-size: 350%;
@@ -16,8 +27,8 @@
 .top-three h1 {
     color: darkblue;
     font-weight: 700;
-    font-size: 84px;
-    margin-top: -70px;
+    font-size: 63px;
+    margin-top: -50px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -27,7 +38,7 @@
     margin-top: 20px;
     padding: 50px;
     margin-left: 70px;
-    max-width: 375px;
+    max-width: 325px;
     max-height: 550px;
     background-position: right 35% bottom 45%;
     background-color: rgb(245, 223, 190);
@@ -60,7 +71,7 @@
     display: inline-block;
     overflow: hidden;
     position: relative;
-    left: 50%;
+    left: 51%;
     transform: translateX(-50%);
 }
 
