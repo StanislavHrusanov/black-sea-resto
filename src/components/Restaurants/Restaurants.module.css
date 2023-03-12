@@ -95,7 +95,7 @@
 .rating span:before {
     content: "\2605";
     position: absolute;
-    color: gold;
+    color: orange;
 }
 
 .details-btn {
