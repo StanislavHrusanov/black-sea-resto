@@ -39,7 +39,7 @@
     padding: 50px;
     margin-left: 70px;
     max-width: 325px;
-    max-height: 550px;
+    max-height: 475px;
     background-position: right 35% bottom 45%;
     background-color: rgb(245, 223, 190);
     box-sizing: border-box;
@@ -52,7 +52,7 @@
     font-family: 'Times New Roman', Times, serif;
     margin: auto;
     margin-top: -50px;
-    font-size: 42px;
+    font-size: 30px;
     font-weight: 700;
     line-height: normal;
     overflow: hidden;
@@ -61,7 +61,7 @@
     text-align: center;
     text-transform: uppercase;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
 
@@ -87,19 +87,19 @@
 }
 
 .rating span {
-    font-size: 40px;
+    font-size: 35px;
     padding: 4px;
 }
 
 .rating span:before {
     content: "\2605";
     position: absolute;
-    color: gold;
+    color: orange;
 }
 
 .details-btn {
     background-color: darkblue;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding-top: 20px;
     margin-top: 10px;
     color: whitesmoke;
