@@ -12,43 +12,43 @@ export const Home = () => {
                 <div className="top-three">
                     <h1>Most Popular</h1>
 
-                    <div class="restaurant">
-                        <div class="image-wrap">
+                    <div className="restaurant">
+                        <div className="image-wrap">
                             <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
                         </div>
                         <h3>Vili Sozopol</h3>
-                        <div class="rating">
+                        <div className="rating">
                             <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                         </div>
-                        <div class="data-buttons">
-                            <Link href="#" class="btn details-btn">Details</Link>
+                        <div className="data-buttons">
+                            <Link href="#" className="btn details-btn">Details</Link>
                         </div>
                     </div>
-                    <div class="restaurant">
-                        <div class="image-wrap">
+                    <div className="restaurant">
+                        <div className="image-wrap">
                             <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
                         </div>
                         <h3>Vili Sozopol</h3>
-                        <div class="rating">
+                        <div className="rating">
                             <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                         </div>
-                        <div class="data-buttons">
-                            <Link href="#" class="btn details-btn">Details</Link>
+                        <div className="data-buttons">
+                            <Link href="#" className="btn details-btn">Details</Link>
                         </div>
                     </div>
-                    <div class="restaurant">
-                        <div class="image-wrap">
+                    <div className="restaurant">
+                        <div className="image-wrap">
                             <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
                         </div>
                         <h3>Vili Sozopol daadadaddadadadas</h3>
-                        <div class="rating">
+                        <div className="rating">
                             <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                         </div>
-                        <div class="data-buttons">
-                            <Link href="#" class="btn details-btn">Details</Link>
+                        <div className="data-buttons">
+                            <Link href="#" className="btn details-btn">Details</Link>
                         </div>
                     </div>
-                    <p class="no-restaurants">There is no restaurants yet!</p>
+                    <p className="no-restaurants">There is no restaurants yet!</p>
                 </div>
             </div>
         </section>
