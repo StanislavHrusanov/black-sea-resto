@@ -16,7 +16,7 @@ export const Restaurants = () => {
                         <div className={styles["image-wrap"]}>
                             <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
                         </div>
-                        <h3>Vili Sozopol</h3>
+                        <h3>Bistro staria sozo</h3>
                         <div className={styles["rating"]}>
                             <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                         </div>
