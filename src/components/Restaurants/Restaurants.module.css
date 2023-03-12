@@ -20,6 +20,7 @@
     background-color: transparent;
     overflow: hidden;
     padding: 55px;
+    text-align: center;
     height: auto;
     width: auto;
 }
@@ -38,8 +39,8 @@
     margin-top: 20px;
     padding: 50px;
     margin-left: 70px;
-    max-width: 325px;
-    max-height: 550px;
+    max-width: 225px;
+    max-height: 375px;
     background-position: right 35% bottom 45%;
     background-color: rgb(245, 223, 190);
     box-sizing: border-box;
@@ -51,8 +52,8 @@
 .restaurant>h3 {
     font-family: 'Times New Roman', Times, serif;
     margin: auto;
-    margin-top: -50px;
-    font-size: 42px;
+    margin-top: -20px;
+    font-size: 17px;
     font-weight: 700;
     line-height: normal;
     overflow: hidden;
@@ -61,17 +62,17 @@
     text-align: center;
     text-transform: uppercase;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
 
 .image-wrap {
-    width: 275px;
-    height: 275px;
+    width: 150px;
+    height: 150px;
     display: inline-block;
     overflow: hidden;
     position: relative;
-    left: 51%;
+    left: 50%;
     transform: translateX(-50%);
 }
 
@@ -87,7 +88,7 @@
 }
 
 .rating span {
-    font-size: 40px;
+    font-size: 20px;
     padding: 4px;
 }
 
@@ -99,7 +100,7 @@
 
 .details-btn {
     background-color: darkblue;
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     padding-top: 20px;
     margin-top: 10px;
     color: whitesmoke;
