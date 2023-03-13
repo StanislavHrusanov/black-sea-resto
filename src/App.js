@@ -5,6 +5,7 @@ import { Home } from './components/Home/Home';
 import { Register } from './components/Auth/Register';
 import { Login } from './components/Auth/Login';
 import { Restaurants } from './components/Restaurants/Restaurants';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path='/restaurants' element={<Restaurants />} />
 
       </Routes>
-
+      <Footer />
 
     </div>
   );
