@@ -7,20 +7,25 @@ import { Login } from './components/Auth/Login';
 import { Restaurants } from './components/Restaurants/Restaurants';
 import { Footer } from './components/Footer/Footer';
 
+import { RestaurantProvider } from './contexts/restaurantsContext';
+
 function App() {
   return (
     <div >
 
       <Header />
 
-      <Routes>
+      <RestaurantProvider>
+        <Routes>
 
-        <Route path='/' element={<Home />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/restaurants' element={<Restaurants />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/restaurants' element={<Restaurants />} />
 
-      </Routes>
+        </Routes>
+      </RestaurantProvider>
+
       <Footer />
 
     </div>
