@@ -1,7 +1,17 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
 import styles from "./Home.module.css";
 
+import { RestaurantContext } from "../../contexts/restaurantsContext";
+import { Restaurant } from "./Restaurant/Restaurant";
+import { getAvgRating } from "../../utils";
+
 export const Home = () => {
+    const { restaurants } = useContext(RestaurantContext);
+    const mostPopular = restaurants
+        .slice()
+        .sort((a, b) => b.reviews.length - a.reviews.length || getAvgRating(b.reviews) - getAvgRating(a.reviews))
+        .slice(0, 3);
+
     return (
         <section id="home-section">
             <div className={styles["home-message"]}>
@@ -12,43 +22,12 @@ export const Home = () => {
                 <div className={styles["top-three"]}>
                     <h1>Most Popular</h1>
 
-                    <div className={styles["restaurant"]}>
-                        <div className={styles["image-wrap"]}>
-                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                        </div>
-                        <h3>Vili Sozopol</h3>
-                        <div className={styles["rating"]}>
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                        </div>
-                        <div className={styles["data-buttons"]}>
-                            <Link href="#" className={styles["details-btn"]}>Details</Link>
-                        </div>
-                    </div>
-                    <div className={styles["restaurant"]}>
-                        <div className={styles["image-wrap"]}>
-                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                        </div>
-                        <h3>Vili Sozopol</h3>
-                        <div className={styles["rating"]}>
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                        </div>
-                        <div className={styles["data-buttons"]}>
-                            <Link href="#" className={styles["details-btn"]}>Details</Link>
-                        </div>
-                    </div>
-                    <div className={styles["restaurant"]}>
-                        <div className={styles["image-wrap"]}>
-                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                        </div>
-                        <h3>Vili Sozopol</h3>
-                        <div className={styles["rating"]}>
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                        </div>
-                        <div className={styles["data-buttons"]}>
-                            <Link href="#" className={styles["details-btn"]}>Details</Link>
-                        </div>
-                    </div>
-                    <p className={styles["no-restaurants"]}>There is no restaurants yet!</p>
+                    {
+                        mostPopular.length > 0
+                            ? mostPopular.map(x => <Restaurant key={x._id} restaurant={x} />)
+                            : <p className={styles["no-restaurants"]}>There is no restaurants yet!</p>
+                    }
+
                 </div>
             </div>
         </section>
