@@ -1,7 +1,12 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
 import styles from "./Restaurants.module.css";
 
+import { RestaurantContext } from "../../contexts/restaurantsContext";
+import { RestaurantItem } from "./RestaurantItem/RestaurantItem";
+
 export const Restaurants = () => {
+    const { restaurants } = useContext(RestaurantContext);
+
     return (
         <section id="restaurants-section">
             <div className={styles["restaurants-message"]}>
@@ -12,90 +17,11 @@ export const Restaurants = () => {
                 <div className={styles["restaurants"]}>
                     <h1>Restaurants</h1>
 
-                    <div className={styles["restaurant"]}>
-                        <div className={styles["image-wrap"]}>
-                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                        </div>
-                        <h3>Bistro staria sozo</h3>
-                        <div className={styles["rating"]}>
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                        </div>
-                        <div className={styles["data-buttons"]}>
-                            <Link href="#" className={styles["details-btn"]}>Details</Link>
-                        </div>
-                    </div>
-                    <div className={styles["restaurant"]}>
-                        <div className={styles["image-wrap"]}>
-                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                        </div>
-                        <h3>Vili Sozopol</h3>
-                        <div className={styles["rating"]}>
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                        </div>
-                        <div className={styles["data-buttons"]}>
-                            <Link href="#" className={styles["details-btn"]}>Details</Link>
-                        </div>
-                    </div>
-                    <div className={styles["restaurant"]}>
-                        <div className={styles["image-wrap"]}>
-                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                        </div>
-                        <h3>Vili Sozopol ddasdasda</h3>
-                        <div className={styles["rating"]}>
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                        </div>
-                        <div className={styles["data-buttons"]}>
-                            <Link href="#" className={styles["details-btn"]}>Details</Link>
-                        </div>
-                    </div>
-                    <div className={styles["restaurant"]}>
-                        <div className={styles["image-wrap"]}>
-                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                        </div>
-                        <h3>Vili Sozopol ddasdasda</h3>
-                        <div className={styles["rating"]}>
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                        </div>
-                        <div className={styles["data-buttons"]}>
-                            <Link href="#" className={styles["details-btn"]}>Details</Link>
-                        </div>
-                    </div>
-                    <div className={styles["restaurant"]}>
-                        <div className={styles["image-wrap"]}>
-                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                        </div>
-                        <h3>ViliSozopol ddasdasda</h3>
-                        <div className={styles["rating"]}>
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                        </div>
-                        <div className={styles["data-buttons"]}>
-                            <Link href="#" className={styles["details-btn"]}>Details</Link>
-                        </div>
-                    </div>
-                    <div className={styles["restaurant"]}>
-                        <div className={styles["image-wrap"]}>
-                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                        </div>
-                        <h3>Vili Sozopol ddasdasda</h3>
-                        <div className={styles["rating"]}>
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                        </div>
-                        <div className={styles["data-buttons"]}>
-                            <Link href="#" className={styles["details-btn"]}>Details</Link>
-                        </div>
-                    </div>
-                    <div className={styles["restaurant"]}>
-                        <div className={styles["image-wrap"]}>
-                            <img src="https://villi-sozopol-hotel.hotelmix.bg/data/Photos/OriginalPhoto/11239/1123947/1123947600/Villi-Sozopol-Hotel-Exterior.JPEG" alt="resto" />
-                        </div>
-                        <h3>Vili</h3>
-                        <div className={styles["rating"]}>
-                            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                        </div>
-                        <div className={styles["data-buttons"]}>
-                            <Link href="#" className={styles["details-btn"]}>Details</Link>
-                        </div>
-                    </div>
+                    {restaurants.length > 0
+                        ? restaurants.map(x => <RestaurantItem key={x._id} restaurant={x} />)
+                        : <p className={styles["no-restaurants"]}>There is no restaurants yet!</p>
+                    }
+
                 </div>
             </div>
         </section>
