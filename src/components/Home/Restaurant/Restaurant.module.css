@@ -1,0 +1,97 @@
+.restaurant {
+    box-shadow: 0px 0px 30px 0px;
+    margin-top: 20px;
+    padding: 50px;
+    margin-left: 70px;
+    max-width: 325px;
+    max-height: 475px;
+    background-position: right 35% bottom 45%;
+    background-color: rgb(245, 223, 190);
+    box-sizing: border-box;
+    float: left;
+    height: auto;
+    color: darkblue;
+}
+
+.restaurant>h3 {
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+    margin-top: -50px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.5s ease-out;
+    text-align: center;
+    /* text-transform: uppercase; */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.image-wrap {
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    left: 55%;
+    transform: translateX(-50%);
+}
+
+.image-wrap>img {
+    max-width: 220px;
+    max-height: 220px;
+    aspect-ratio: 1/0.8;
+    border: 2px solid darkblue;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    text-align: center;
+    direction: ltr;
+}
+
+.rating span {
+    font-size: 35px;
+    padding: 4px;
+    text-align: center;
+}
+
+/* .rating span:before {
+    content: "\2605";
+    position: absolute;
+    color: orange;
+} */
+.full::before {
+    content: "\2605";
+    position: absolute;
+    color: orange;
+}
+
+.empty::before {
+    content: "\2605";
+    position: absolute;
+    color: grey;
+}
+
+.details-btn {
+    background-color: darkblue;
+    font-size: 1.2rem;
+    padding-top: 20px;
+    margin-top: 10px;
+    color: whitesmoke;
+    padding: 0.9em 1.4em;
+}
+
+.data-buttons {
+    font-size: 1.4rem;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.btn.details-btn:hover {
+    background-color: rgb(192, 129, 117);
+    color: white;
+}
