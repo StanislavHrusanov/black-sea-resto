@@ -13,19 +13,19 @@ export const Register = () => {
                 <form className={styles["auth-form"]} >
                     <div className={styles["input"]}>
                         <label htmlFor="full-name" className={styles["fullname"]}>Full Name</label>
-                        <input type="text" className={styles["input-field"]} placeholder="John Doe" id="full-name" />
+                        <input type="text" className={styles["input-field"]} name="fullname" placeholder="John Doe" id="full-name" />
                     </div>
                     <div className={styles["input"]}>
                         <label htmlFor="username" className={styles["username"]}>Username</label>
-                        <input type="text" className={styles["input-field"]} placeholder="jdoe" id="username" />
+                        <input type="text" className={styles["input-field"]} name="username" placeholder="jdoe" id="username" />
                     </div>
                     <div className={styles["input"]}>
                         <label htmlFor="password" className={styles["password"]}>Password</label>
-                        <input type="password" className={styles["input-field"]} id="password" placeholder="******" />
+                        <input type="password" className={styles["input-field"]} name="password" id="password" placeholder="******" />
                     </div>
                     <div className={styles["input"]}>
                         <label htmlFor="re-password" className={styles["re-password"]}>Repeat Password</label>
-                        <input type="password" className={styles["input-field"]} id="re-password" placeholder="******" />
+                        <input type="password" className={styles["input-field"]} name="re-password" id="re-password" placeholder="******" />
                     </div>
                     <div className={styles["action"]}>
                         <button className={styles["action-button"]}>Register</button>
