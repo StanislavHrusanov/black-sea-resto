@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import styles from "./Restaurants.module.css";
 
-import { RestaurantContext } from "../../contexts/restaurantsContext";
+import { RestaurantContext } from "../../contexts/RestaurantContext";
 import { RestaurantItem } from "./RestaurantItem/RestaurantItem";
 
 export const Restaurants = () => {

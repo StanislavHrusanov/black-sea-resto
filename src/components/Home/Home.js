@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import styles from "./Home.module.css";
 
-import { RestaurantContext } from "../../contexts/restaurantsContext";
+import { RestaurantContext } from "../../contexts/RestaurantContext";
 import { Restaurant } from "./Restaurant/Restaurant";
 import { getAvgRating } from "../../utils";
 
