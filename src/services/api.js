@@ -19,7 +19,6 @@ async function request(method, url, data) {
 
     try {
         const res = await fetch(host + url, options);
-
         if (res.ok === false) {
             if (res.status === 403) {
                 localStorage.removeItem('user');
@@ -35,7 +34,7 @@ async function request(method, url, data) {
         }
 
     } catch (error) {
-        window.alert(error.message);
+        // window.alert(error.message);
         throw error;
     }
 }

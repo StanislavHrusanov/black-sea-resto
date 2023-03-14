@@ -8,6 +8,8 @@ const restaurantReducer = (state, action) => {
     switch (action.type) {
         case 'LOAD_RESTAURANTS':
             return [...action.payload];
+        case 'ADD_RESTAURANT':
+            return [...state, action.payload];
 
         default:
             return state;
@@ -31,9 +33,17 @@ export const RestaurantProvider = ({ children }) => {
 
     }, []);
 
+    const addRestaurantToState = (restaurant) => {
+        dispatch({
+            type: 'ADD_RESTAURANT',
+            payload: restaurant
+        });
+    }
+
     return (
         <RestaurantContext.Provider value={{
-            restaurants
+            restaurants,
+            addRestaurantToState
         }}>
             {children}
         </RestaurantContext.Provider>

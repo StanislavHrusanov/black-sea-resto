@@ -29,7 +29,7 @@ export const Login = () => {
             userLogin(loggedInUser);
             navigate('/');
         } catch (error) {
-            return window.alert(error);
+            return window.alert(error.message);
         }
 
     }

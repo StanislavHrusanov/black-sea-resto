@@ -31,7 +31,7 @@ export const Register = () => {
             navigate('/');
 
         } catch (error) {
-            return window.alert(error);
+            return window.alert(error.message);
         }
     }
 

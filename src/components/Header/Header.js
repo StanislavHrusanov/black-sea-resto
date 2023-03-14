@@ -13,12 +13,12 @@ export const Header = () => {
         e.preventDefault();
         try {
             await authService.logout();
-            userLogout();
-            navigate('/');
 
         } catch (error) {
-            return window.alert(error);
+            window.alert(error.message);
         }
+        userLogout();
+        navigate('/');
     }
 
     return (
