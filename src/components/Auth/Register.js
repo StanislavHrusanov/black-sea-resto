@@ -1,7 +1,40 @@
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Auth.module.css";
 
+import { AuthContext } from "../../contexts/AuthContext";
+import * as authService from "../../services/authService";
+
 export const Register = () => {
+    const [inputs, setInputs] = useState({
+        fullname: '',
+        username: '',
+        password: '',
+        rePass: ''
+    });
+    const { userLogin } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const onChangeHandler = (e) => {
+        setInputs(state => ({
+            ...state,
+            [e.target.name]: e.target.value
+        }));
+    }
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const createdUser = await authService.register(inputs);
+            userLogin(createdUser);
+            navigate('/');
+
+        } catch (error) {
+            return window.alert(error);
+        }
+    }
+
     return (
         <section id="register-page">
             <div className={styles["container"]}>
@@ -10,22 +43,54 @@ export const Register = () => {
                         Register
                     </h2>
                 </div>
-                <form className={styles["auth-form"]} >
+                <form onSubmit={onSubmit} className={styles["auth-form"]} >
                     <div className={styles["input"]}>
                         <label htmlFor="full-name" className={styles["fullname"]}>Full Name</label>
-                        <input type="text" className={styles["input-field"]} name="fullname" placeholder="John Doe" id="full-name" />
+                        <input
+                            type="text"
+                            className={styles["input-field"]}
+                            name="fullname"
+                            id="full-name"
+                            placeholder="John Doe"
+                            value={inputs.fullname}
+                            onChange={onChangeHandler}
+                        />
                     </div>
                     <div className={styles["input"]}>
                         <label htmlFor="username" className={styles["username"]}>Username</label>
-                        <input type="text" className={styles["input-field"]} name="username" placeholder="jdoe" id="username" />
+                        <input
+                            type="text"
+                            className={styles["input-field"]}
+                            name="username"
+                            id="username"
+                            placeholder="jdoe"
+                            value={inputs.username}
+                            onChange={onChangeHandler}
+                        />
                     </div>
                     <div className={styles["input"]}>
                         <label htmlFor="password" className={styles["password"]}>Password</label>
-                        <input type="password" className={styles["input-field"]} name="password" id="password" placeholder="******" />
+                        <input
+                            type="password"
+                            className={styles["input-field"]}
+                            name="password"
+                            id="password"
+                            placeholder="******"
+                            value={inputs.password}
+                            onChange={onChangeHandler}
+                        />
                     </div>
                     <div className={styles["input"]}>
-                        <label htmlFor="re-password" className={styles["re-password"]}>Repeat Password</label>
-                        <input type="password" className={styles["input-field"]} name="re-password" id="re-password" placeholder="******" />
+                        <label htmlFor="rePass" className={styles["re-password"]}>Repeat Password</label>
+                        <input
+                            type="password"
+                            className={styles["input-field"]}
+                            name="rePass"
+                            id="rePass"
+                            placeholder="******"
+                            value={inputs.rePass}
+                            onChange={onChangeHandler}
+                        />
                     </div>
                     <div className={styles["action"]}>
                         <button className={styles["action-button"]}>Register</button>
