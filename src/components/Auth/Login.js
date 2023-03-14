@@ -1,7 +1,39 @@
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Auth.module.css";
 
+import * as authService from "../../services/authService";
+import { AuthContext } from "../../contexts/AuthContext";
+
 export const Login = () => {
+    const [inputs, setInputs] = useState({
+        username: '',
+        password: ''
+    });
+
+    const { userLogin } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const onChangeHandler = (e) => {
+        setInputs(state => ({
+            ...state,
+            [e.target.name]: e.target.value
+        }));
+    }
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const loggedInUser = await authService.login(inputs);
+            userLogin(loggedInUser);
+            navigate('/');
+        } catch (error) {
+            return window.alert(error);
+        }
+
+    }
+
     return (
         <section id="login-page">
             <div className={styles["container"]}>
@@ -10,14 +42,30 @@ export const Login = () => {
                         Login
                     </h2>
                 </div>
-                <form className={styles["auth-form"]}>
+                <form onSubmit={onSubmit} className={styles["auth-form"]}>
                     <div className={styles["input"]}>
                         <label htmlFor="username" className={styles["username"]}>Username</label>
-                        <input type="text" className={styles["input-field"]} placeholder="jdoe" id="username" />
+                        <input
+                            type="text"
+                            className={styles["input-field"]}
+                            name="username"
+                            id="username"
+                            placeholder="jdoe"
+                            value={inputs.username}
+                            onChange={onChangeHandler}
+                        />
                     </div>
                     <div className={styles["input"]}>
                         <label htmlFor="password" className={styles["password"]}>Password</label>
-                        <input type="password" className={styles["input-field"]} id="password" placeholder="******" />
+                        <input
+                            type="password"
+                            className={styles["input-field"]}
+                            name="password"
+                            id="password"
+                            placeholder="******"
+                            value={inputs.password}
+                            onChange={onChangeHandler}
+                        />
                     </div>
                     <div className={styles["action"]}>
                         <button className={styles["action-button"]}>Login</button>
