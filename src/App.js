@@ -8,7 +8,7 @@ import { Restaurants } from './components/Restaurants/Restaurants';
 import { Footer } from './components/Footer/Footer';
 
 import { RestaurantProvider } from './contexts/RestaurantContext';
-import { AuthProvider } from './contexts/authContext';
+import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
   return (

@@ -31,12 +31,12 @@
 }
 
 .image-wrap {
-    width: 250px;
-    height: 250px;
+    width: 252px;
+    height: 252px;
     display: inline-block;
     overflow: hidden;
     position: relative;
-    left: 55%;
+    left: 56%;
     transform: translateX(-50%);
 }
 

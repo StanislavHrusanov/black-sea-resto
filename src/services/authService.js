@@ -1,9 +1,9 @@
 import * as api from "./api";
 
 const endpoints = {
-    register: '/user/register',
-    login: '/user/login',
-    logout: '/user/logout'
+    register: '/users/register',
+    login: '/users/login',
+    logout: '/users/logout'
 };
 
 export const register = (data) => api.post(endpoints.register, data);
