@@ -7,6 +7,7 @@ import { Login } from './components/Auth/Login';
 import { Restaurants } from './components/Restaurants/Restaurants';
 import { Footer } from './components/Footer/Footer';
 import { AddRestaurant } from './components/AddRestaurant/AddRestaurant';
+import { Details } from './components/Details/Details';
 
 import { RestaurantProvider } from './contexts/RestaurantContext';
 import { AuthProvider } from './contexts/AuthContext';
@@ -25,6 +26,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/restaurants' element={<Restaurants />} />
             <Route path='/addRestaurant' element={<AddRestaurant />} />
+            <Route path='/details' element={<Details/>}/>
 
           </Routes>
         </RestaurantProvider>
