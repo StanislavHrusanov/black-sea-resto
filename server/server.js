@@ -1329,6 +1329,11 @@
                 fullname: "John Johnes",
                 username: "John",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+            },
+            "847ec027-f659-4086-8032-5173e2f9c93b": {
+                fullname: "Ivan Ivanov",
+                username: "Ivan",
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             }
         },
         sessions: {
@@ -1398,6 +1403,14 @@
                     "comment": "Peter: Very good!",
                     "_createdOn": 1678708464073,
                     "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c3"
+                },
+                {
+                    "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                    "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
+                    "rating": 5,
+                    "comment": "Ivan: Nice place!",
+                    "_createdOn": 1678708464073,
+                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c8"
                 }],
                 "_createdOn": 1617194295475,
             }
