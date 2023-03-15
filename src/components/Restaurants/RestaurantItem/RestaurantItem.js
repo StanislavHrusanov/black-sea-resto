@@ -18,7 +18,7 @@ export const RestaurantItem = ({ restaurant }) => {
                     return (
                         <span
                             key={index}
-                            className={index <= rating ? styles["full"] : styles["empty"]}
+                            className={index <= Math.round(rating) ? styles["full"] : styles["empty"]}
                         >
                             ☆
                         </span>
@@ -27,7 +27,7 @@ export const RestaurantItem = ({ restaurant }) => {
                 <p>{`(${restaurant.reviews.length}) rewiews`}</p>
             </div>
             <div className={styles["data-buttons"]}>
-                <Link href="#" className={styles["details-btn"]}>Details</Link>
+                <Link to="/details" className={styles["details-btn"]}>Details</Link>
             </div>
         </div>
     );

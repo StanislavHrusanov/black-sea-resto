@@ -15,10 +15,11 @@ export const Restaurant = ({ restaurant }) => {
                 {[...Array(5)].map((star, index) => {
                     index += 1;
                     const rating = getAvgRating(restaurant.reviews);
+
                     return (
                         <span
                             key={index}
-                            className={index <= rating ? styles["full"] : styles["empty"]}
+                            className={index <= Math.round(rating) ? styles["full"] : styles["empty"]}
                         >
                             ☆
                         </span>
