@@ -4,7 +4,7 @@ import styles from "./RestaurantItem.module.css";
 import { getAvgRating } from "../../../utils";
 
 export const RestaurantItem = ({ restaurant }) => {
-
+    
     return (
         <div className={styles["restaurant"]}>
             <div className={styles["image-wrap"]}>
@@ -27,7 +27,7 @@ export const RestaurantItem = ({ restaurant }) => {
                 <p>{`(${restaurant.reviews.length}) rewiews`}</p>
             </div>
             <div className={styles["data-buttons"]}>
-                <Link to="/details" className={styles["details-btn"]}>Details</Link>
+                <Link to={`/restaurants/${restaurant._id}`} className={styles["details-btn"]}>Details</Link>
             </div>
         </div>
     );

@@ -1,20 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState,useEffect } from "react";
 import styles from "./Restaurants.module.css";
 
 // import { RestaurantContext } from "../../contexts/RestaurantContext";
 import { RestaurantItem } from "./RestaurantItem/RestaurantItem";
-import * as restaurantService from "../../services/restaurantService";
-
+import { getAllRestaurants } from "../../services/restaurantService";
 
 export const Restaurants = () => {
     // const { restaurants } = useContext(RestaurantContext);
-    const [restaurants, setRestaurants] = useState([]);
+    const [restaurants,setRestaurants] = useState([]);
 
-    useEffect(() => {
-        restaurantService.getAllRestaurants()
-            .then(result => setRestaurants(result))
-            .catch(err => window.alert(err.message));
-    }, []);
+    useEffect(()=>{
+        getAllRestaurants()
+        .then(result=>setRestaurants(result))
+        .catch(err=>window.alert(err.message));
+    },[])
 
     return (
         <section id="restaurants-section">

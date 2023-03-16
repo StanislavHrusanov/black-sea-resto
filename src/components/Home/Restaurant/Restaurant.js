@@ -29,7 +29,7 @@ export const Restaurant = ({ restaurant }) => {
 
             </div>
             <div className={styles["data-buttons"]}>
-                <Link href="#" className={styles["details-btn"]}>Details</Link>
+                <Link to={`/restaurants/${restaurant._id}`} className={styles["details-btn"]}>Details</Link>
             </div>
         </div>
     );

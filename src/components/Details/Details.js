@@ -1,13 +1,31 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
 import styles from "./Details.module.css";
 
 import { AddReview } from "./AddReview/AddReview";
 import { Review } from "./Review/Review";
 
+import { getAvgRating } from "../../utils";
+import * as restaurantService from "../../services/restaurantService";
+import * as reviewService from "../../services/reviewService";
+// import { RestaurantContext } from "../../contexts/RestaurantContext";
+
 export const Details = () => {
     const [showModal, setShowModal] = useState(false);
-    const rating = 3;
+    const [restaurant, setRestaurant] = useState({});
+    const [reviews, setReviews] = useState([]);
+    const { restaurantId } = useParams();
+    // const { restaurants, updateRestaurantDetails } = useContext(RestaurantContext);
+
+    // const currentRestaurant = restaurants.find(x => x._id === restaurantId);
+
+    useEffect(() => {
+        restaurantService.getOne(restaurantId)
+            .then(result => setRestaurant(result))
+        reviewService.getById(restaurantId)
+            .then(result => setReviews(result))
+            .catch(err => window.alert(err.message));
+    }, [restaurantId]);
 
     const openModal = () => {
         setShowModal(true)
@@ -26,46 +44,52 @@ export const Details = () => {
             <div className={styles["item-details"]}>
 
                 <div className={styles["item-description"]}>
-                    <h2> Azahar</h2>
-                    <h3><div className={styles["rating"]}>
-                        {[...Array(5)].map((star, index) => {
-                            index += 1;
+                    <h2> {restaurant.name}</h2>
+                    {
+                        <h3><div className={styles["rating"]}>
+                            {[...Array(5)].map((star, index) => {
+                                index += 1;
 
-                            return (
-                                <span
-                                    key={index}
-                                    className={index <= Math.round(rating) ? styles["full"] : styles["empty"]}
-                                >
-                                    ☆
-                                </span>
-                            )
-                        })}
-                        <span>{`${rating.toFixed(1)} (2) rewiews`}</span>
+                                return (
+                                    <span
+                                        key={index}
+                                        className={index <= Math.round(getAvgRating(reviews)) ? styles["full"] : styles["empty"]}
+                                    >
+                                        ☆
+                                    </span>
+                                )
+                            })}
+                            <span>{`${getAvgRating(reviews)} (${reviews.length}) rewiews`}</span>
 
-                    </div></h3>
-                    <h3>Address: dadada</h3>
-                    <h3>Phone: 321221313</h3>
-                    <h3>Capacity: 212</h3>
-                    <h3>Summary: alabalaczcz dzzdzc czczczczxczxc czczczczx czczcsfcsdczxc  c</h3>
+                        </div></h3>
+                    }
+                    <h3>Address: {restaurant.address}</h3>
+                    <h3>Phone: {restaurant.phone}</h3>
+                    <h3>Capacity: {restaurant.capacity}</h3>
+                    <h3>Summary: {restaurant.summary}</h3>
                     <div className={styles["buttons"]}>
                         <Link to="#" className={styles["edit-button"]}>Edit</Link>
                         <Link to="#" className={styles["delete-button"]}>Delete</Link>
                         <Link className={styles["favourite-button"]} >Favourite</Link>
-                        {/* <p className="wish-pub"></p> */}
+
                     </div>
 
                     <div className={styles["reviews-container"]}>
 
                         <button onClick={() => openModal()} className={styles["add-review-btn"]}>Add review</button>
 
-                        {<Review rating={rating} />}
+                        {reviews.length > 0
+                            ? reviews.map(x => <Review key={x._id} review={x} />)
+                            : <p>No reviews yet!</p>
+                        }
+
 
                     </div>
 
                 </div>
 
                 <div className={styles["item-details-image"]}>
-                    <img src="https://static.pochivka.bg/bgstay.com/images/photos/39/39827/orig_39827_1.jpg" alt="resto" />
+                    <img src={restaurant.imageUrl} alt="resto" />
                 </div>
             </div>
         </section>
