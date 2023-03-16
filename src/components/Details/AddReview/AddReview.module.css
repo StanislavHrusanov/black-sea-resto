@@ -36,7 +36,11 @@
     }
 }
 
-.btn {
+.btn-close {
+    background-color: transparent;
+    padding: 5px 10px;
+    height: auto;
+    font-size: 22px;
     border: none;
     cursor: pointer;
     display: flex;
@@ -44,18 +48,9 @@
     justify-content: center;
     padding: 5px;
     color: white;
-    width: 30px;
-    height: 30px;
 }
 
-.btn.close {
-    background-color: transparent;
-    padding: 5px 10px;
-    height: auto;
-    font-size: 22px;
-}
-
-.btn:hover {
+.btn-close:hover {
     opacity: 0.7;
 }
 
@@ -113,17 +108,28 @@
     font-size: 24px;
 }
 
-#form-actions {
+.form-actions {
     margin-bottom: 10px;
     justify-content: flex-end;
 }
 
-#action-add {
+.btn-add {
     width: 10em;
     height: 5em;
     float: right;
     background-color: darkblue;
     margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: white;
+}
+
+.btn-add:hover {
+    opacity: 0.7;
 }
 
 .full {
