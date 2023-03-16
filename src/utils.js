@@ -5,3 +5,11 @@ export const getAvgRating = (reviews) => {
 
     return rating;
 }
+
+export const ratingAsWords = new Map();
+ratingAsWords.set(0, '');
+ratingAsWords.set(1, 'Poor!');
+ratingAsWords.set(2, 'Weak!');
+ratingAsWords.set(3, 'Good!');
+ratingAsWords.set(4, 'Very good!');
+ratingAsWords.set(5, 'Excellent!');

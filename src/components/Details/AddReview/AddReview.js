@@ -1,27 +1,14 @@
 import "./AddReview.css";
 import { useState } from "react";
 
+import * as utils from "../../../utils";
+
 export const AddReview = ({ onCloseModal }) => {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
     const [starName, setStarName] = useState('');
 
-    const showRatingWithWord = (number) => {
-        switch (number) {
-            case 1:
-                return setStarName('Poor!');
-            case 2:
-                return setStarName('Weak!');
-            case 3:
-                return setStarName('Good!');
-            case 4:
-                return setStarName('Very good!');
-            case 5:
-                return setStarName('Excellent!');
-            default:
-                return setStarName('');
-        }
-    }
+    const ratingAsWords = utils.ratingAsWords;
 
     return (
         <div className="modal-container">
@@ -46,14 +33,17 @@ export const AddReview = ({ onCloseModal }) => {
                                                 type="button"
                                                 key={index}
                                                 className={index <= (hover || rating) ? "full" : "empty"}
-                                                onClick={() => setRating(index)}
+                                                onClick={() => {
+                                                    setRating(index);
+                                                    setStarName(ratingAsWords.get(index));
+                                                }}
                                                 onMouseEnter={() => {
                                                     setHover(index);
-                                                    showRatingWithWord(index);
+                                                    setStarName(ratingAsWords.get(index));
                                                 }}
                                                 onMouseLeave={() => {
                                                     setHover(0);
-                                                    showRatingWithWord('');
+                                                    setStarName(ratingAsWords.get(rating));
                                                 }}
                                             >
                                                 <span className="star">&#9733;</span>
