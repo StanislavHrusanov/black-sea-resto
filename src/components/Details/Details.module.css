@@ -83,39 +83,12 @@
   color: darkblue;
 }
 
-/* .details-btn:hover {
-  box-shadow: none;
-  background-image: linear-gradient(to left, violet, rgb(41, 151, 151));
-} */
-
 .buttons {
   margin-top: 10%;
   position: relative;
   text-align: center;
   bottom: 2%;
 }
-
-/* .buttons>.as {
-  color: #fff;
-  border: none;
-  padding: 5px;
-  outline: none;
-  font-size: 15.3px;
-  width: 250px;
-  margin-left: 5em;
-  font-weight: 600;
-  margin-top: 1.3em;
-  border-radius: 9px;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 300ms ease-in-out;
-  -o-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
-  border-color: gray;
-  border-style: outset;
-  border-width: 3px;
-  background-color: rgb(113, 81, 155);
-} */
 
 .edit-button,
 .delete-button,
@@ -169,15 +142,6 @@
   background-color: rgb(192, 129, 117);
 }
 
-.rating-container {
-  margin-top: 10%;
-  position: relative;
-  text-align: center;
-  bottom: 2%;
-  float: left;
-  margin-left: 5px;
-}
-
 .rating {
   unicode-bidi: bidi-override;
   text-align: center;
@@ -208,4 +172,26 @@ h3 .rating {
   text-align: center;
 }
 
-span {}
+.add-review-btn {
+  background-color: transparent;
+  border: none;
+  color: blue;
+  font-size: 45px;
+  font-weight: bolder;
+  cursor: pointer;
+  float: left;
+}
+
+.add-review-btn:hover {
+  background-color: rgb(192, 129, 117);
+}
+
+.reviews-container {
+  display: inline;
+  margin-top: 10%;
+  position: relative;
+  text-align: center;
+  bottom: 2%;
+  float: left;
+  margin-left: 5px;
+}

@@ -1,0 +1,102 @@
+.review-container {
+    display: table-row;
+    float: left;
+    box-sizing: border-box;
+    border: #444444 solid 1px;
+}
+
+.review-container p {
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.posted {
+    color: #888888;
+}
+
+.review-body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    /* -webkit-font-smoothing: antialiased; */
+    color: #444444;
+    box-sizing: content-box;
+    min-width: 988px;
+    max-width: 988px;
+    min-height: 50px;
+    display: inline;
+    position: relative;
+    float: left;
+}
+
+.star-rating-container {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    -webkit-font-smoothing: antialiased;
+    color: #444444;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none !important;
+    float: left;
+    margin-top: -30px;
+    margin-left: 5px;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    text-align: center;
+    direction: ltr;
+}
+
+.rating span {
+    font-size: 25px;
+    padding: 2px;
+    text-align: center;
+    color: black;
+    font-weight: lighter;
+}
+
+.full::before {
+    content: "\2605";
+    position: absolute;
+    color: orange;
+}
+
+.empty::before {
+    content: "\2605";
+    position: absolute;
+    color: grey;
+}
+
+h3 .rating {
+    text-align: center;
+}
+
+.comment {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    /* -webkit-font-smoothing: antialiased; */
+    color: #444444;
+    box-sizing: content-box;
+    min-width: 970px;
+    max-width: 970px;
+    min-height: 50px;
+    margin-bottom: 10px;
+    line-height: 20px;
+    overflow: hidden;
+    float: left;
+    margin-top: -20px;
+    margin-left: 10px;
+    text-align: left;
+    word-break: break-all;
+}
