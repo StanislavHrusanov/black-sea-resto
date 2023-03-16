@@ -4,6 +4,24 @@ import { useState } from "react";
 export const AddReview = ({ onCloseModal }) => {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
+    const [starName, setStarName] = useState('');
+
+    const showRatingWithWord = (number) => {
+        switch (number) {
+            case 1:
+                return setStarName('Poor!');
+            case 2:
+                return setStarName('Weak!');
+            case 3:
+                return setStarName('Good!');
+            case 4:
+                return setStarName('Very good!');
+            case 5:
+                return setStarName('Excellent!');
+            default:
+                return setStarName('');
+        }
+    }
 
     return (
         <div className="modal-container">
@@ -29,13 +47,20 @@ export const AddReview = ({ onCloseModal }) => {
                                                 key={index}
                                                 className={index <= (hover || rating) ? "full" : "empty"}
                                                 onClick={() => setRating(index)}
-                                                onMouseEnter={() => setHover(index)}
-                                                onMouseLeave={() => setHover(0)}
+                                                onMouseEnter={() => {
+                                                    setHover(index);
+                                                    showRatingWithWord(index);
+                                                }}
+                                                onMouseLeave={() => {
+                                                    setHover(0);
+                                                    showRatingWithWord('');
+                                                }}
                                             >
                                                 <span className="star">&#9733;</span>
                                             </button>
                                         );
                                     })}
+                                    <span className="star-name">{starName}</span>
                                 </div>
 
                             </div>
