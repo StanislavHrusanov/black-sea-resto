@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./AddRestaurant.module.css";
 
@@ -14,9 +14,9 @@ export const AddRestaurant = () => {
         imageUrl: '',
         summary: ''
     });
-
     const navigate = useNavigate();
-    // const { addRestaurantToState } = useContext(RestaurantContext);
+
+    // const { updateRestaurants } = useContext(RestaurantContext);
 
     const onChangeHandler = (e) => {
         setInputs(state => ({
@@ -29,8 +29,8 @@ export const AddRestaurant = () => {
         e.preventDefault();
         try {
             await restaurantService.addRestaurant({ ...inputs, reviews: [] });
-            // addRestaurantToState(addedRestaurant);
             navigate('/restaurants');
+            // updateRestaurants(addedRestaurant);
 
         } catch (error) {
             return window.alert(error);

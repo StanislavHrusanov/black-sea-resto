@@ -1,4 +1,5 @@
 import { createContext, useReducer, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import * as restaurantService from "../services/restaurantService";
 
@@ -8,9 +9,10 @@ const restaurantReducer = (state, action) => {
     switch (action.type) {
         case 'LOAD_RESTAURANTS':
             return [...action.payload];
-        case 'ADD_RESTAURANT':
+        case 'UPDATE_RESTAURANTS':
             return [...state, action.payload];
-
+        case 'UPDATE_RESTAURANT_DETAILS':
+            return state.map(x => x._id === action.restaurantId ? action.payload : x)
         default:
             return state;
     }
@@ -20,6 +22,7 @@ const restaurantReducer = (state, action) => {
 export const RestaurantProvider = ({ children }) => {
 
     const [restaurants, dispatch] = useReducer(restaurantReducer, []);
+    const navigate = useNavigate();
 
     useEffect(() => {
         restaurantService.getAllRestaurants()
@@ -33,17 +36,27 @@ export const RestaurantProvider = ({ children }) => {
 
     }, []);
 
-    const addRestaurantToState = (restaurant) => {
+    const updateRestaurants = (restaurant) => {
         dispatch({
-            type: 'ADD_RESTAURANT',
+            type: 'UPDATE_RESTAURANTS',
             payload: restaurant
+        });
+        navigate('/restaurants');
+    }
+
+    const updateRestaurantDetails = (restaurantId, details) => {
+        dispatch({
+            type: 'UPDATE_RESTAURANT_DETAILS',
+            payload: details,
+            restaurantId
         });
     }
 
     return (
         <RestaurantContext.Provider value={{
             restaurants,
-            addRestaurantToState
+            updateRestaurants,
+            updateRestaurantDetails
         }}>
             {children}
         </RestaurantContext.Provider>

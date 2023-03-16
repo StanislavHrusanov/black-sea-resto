@@ -1,9 +1,14 @@
 export const getAvgRating = (reviews) => {
     let sumOfRatings = 0;
-    reviews.forEach(x => sumOfRatings += x.rating);
-    const rating = Number((sumOfRatings / reviews.length).toFixed(1));
+    for (let review of reviews) {
+        sumOfRatings += review.rating;
+    }
+    if (sumOfRatings === 0) {
+        return '';
+    }
+    const rating = Number((sumOfRatings / reviews.length));
 
-    return rating;
+    return rating.toFixed(1);
 }
 
 export const ratingAsWords = new Map();
