@@ -1,3 +1,5 @@
+import styles from "./App.module.css";
+
 import { Routes, Route } from 'react-router-dom';
 
 import { Header } from './components/Header/Header';
@@ -14,7 +16,7 @@ import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
   return (
-    <div >
+    <div className='app-container'>
       <AuthProvider>
         <Header />
 
@@ -31,7 +33,9 @@ function App() {
           </Routes>
         </RestaurantProvider>
 
-        <Footer />
+        <div className={styles["footer-container"]}>
+          <Footer />
+        </div>
       </AuthProvider>
     </div>
   );

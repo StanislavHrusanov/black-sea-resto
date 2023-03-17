@@ -25,13 +25,9 @@
     vertical-align: top;
 }
 
-/* Footer left */
-
 .footer-distributed .footer-left {
     width: 40%;
 }
-
-/* The company logo */
 
 .footer-distributed h3 {
     color: whitesmoke;
@@ -42,8 +38,6 @@
 .footer-distributed h3 span {
     color: whitesmoke;
 }
-
-/* Footer links */
 
 .footer-distributed .footer-links {
     color: whitesmoke;
@@ -65,8 +59,6 @@
     font-weight: normal;
     margin: 0;
 }
-
-/* Footer Center */
 
 .footer-distributed .footer-center {
     width: 35%;
@@ -124,8 +116,6 @@
 .footer-distributed .footer-links .link-1:before {
     content: none;
 }
-
-/* Footer Right */
 
 .footer-distributed .footer-right {
     width: 20%;
