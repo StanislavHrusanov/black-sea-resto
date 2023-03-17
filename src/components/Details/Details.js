@@ -64,8 +64,8 @@ export const Details = () => {
                     <h3>Capacity: {restaurant.capacity}</h3>
                     <h3>Summary: {restaurant.summary}</h3>
                     <div className={styles["buttons"]}>
-                        <Link to="#" className={styles["edit-button"]}>Edit</Link>
-                        <Link to="#" className={styles["delete-button"]}>Delete</Link>
+                        <Link to={`/restaurant/${restaurant._id}/edit`} className={styles["edit-button"]}>Edit</Link>
+                        <Link to={`/restaurant/${restaurant._id}/edit`} className={styles["delete-button"]}>Delete</Link>
                         <Link className={styles["favourite-button"]} >Favourite</Link>
 
                     </div>

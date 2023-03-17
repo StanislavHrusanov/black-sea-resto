@@ -10,6 +10,7 @@ import { Restaurants } from './components/Restaurants/Restaurants';
 import { Footer } from './components/Footer/Footer';
 import { AddRestaurant } from './components/AddRestaurant/AddRestaurant';
 import { Details } from './components/Details/Details';
+import { Edit } from "./components/Edit/Edit";
 
 import { RestaurantProvider } from './contexts/RestaurantContext';
 import { AuthProvider } from './contexts/AuthContext';
@@ -28,6 +29,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/restaurants' element={<Restaurants />} />
             <Route path='/restaurants/:restaurantId' element={<Details />} />
+            <Route path='/restaurant/:restaurantId/edit' element={<Edit />} />
             <Route path='/addRestaurant' element={<AddRestaurant />} />
 
           </Routes>
