@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Details.module.css";
 
 import { AddReview } from "./AddReview/AddReview";
@@ -8,16 +8,12 @@ import { Review } from "./Review/Review";
 import { getAvgRating } from "../../utils";
 import * as restaurantService from "../../services/restaurantService";
 import * as reviewService from "../../services/reviewService";
-// import { RestaurantContext } from "../../contexts/RestaurantContext";
 
 export const Details = () => {
     const [showModal, setShowModal] = useState(false);
     const [restaurant, setRestaurant] = useState({});
     const [reviews, setReviews] = useState([]);
     const { restaurantId } = useParams();
-    // const { restaurants, updateRestaurantDetails } = useContext(RestaurantContext);
-
-    // const currentRestaurant = restaurants.find(x => x._id === restaurantId);
 
     useEffect(() => {
         restaurantService.getOne(restaurantId)

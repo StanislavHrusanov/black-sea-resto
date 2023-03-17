@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import styles from "./Home.module.css";
 
-// import { RestaurantContext } from "../../contexts/RestaurantContext";
 import { Restaurant } from "./Restaurant/Restaurant";
 import { getAvgRating } from "../../utils";
 import { getAllRestaurants } from "../../services/restaurantService";
 
 export const Home = () => {
-    // const { restaurants } = useContext(RestaurantContext);
     const [restaurants, setRestaurants] = useState([]);
 
     useEffect(() => {

@@ -1,9 +1,8 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./AddRestaurant.module.css";
 
 import * as restaurantService from "../../services/restaurantService";
-// import { RestaurantContext } from "../../contexts/RestaurantContext";
 
 export const AddRestaurant = () => {
     const [inputs, setInputs] = useState({
@@ -15,8 +14,6 @@ export const AddRestaurant = () => {
         summary: ''
     });
     const navigate = useNavigate();
-
-    // const { updateRestaurants } = useContext(RestaurantContext);
 
     const onChangeHandler = (e) => {
         setInputs(state => ({
@@ -30,7 +27,6 @@ export const AddRestaurant = () => {
         try {
             await restaurantService.addRestaurant({ ...inputs, reviews: [] });
             navigate('/restaurants');
-            // updateRestaurants(addedRestaurant);
 
         } catch (error) {
             return window.alert(error);
