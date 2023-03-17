@@ -1,4 +1,5 @@
 import styles from "./Review.module.css";
+import { commentDateConverter } from "../../../utils";
 
 export const Review = ({ review }) => {
     const rating = review.rating;
@@ -6,7 +7,7 @@ export const Review = ({ review }) => {
     return (
         <div className={styles["review-container"]}>
             <p >{review.author}</p>
-            <p className={styles["posted"]}>Posted at: {review._createdOn}</p>
+            <p className={styles["posted"]}>{commentDateConverter(review._createdOn)}</p>
             <div className={styles["review-body"]}>
                 <div className={styles["star-rating-container"]}>
                     <h3><div className={styles["rating"]}>

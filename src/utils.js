@@ -18,3 +18,15 @@ ratingAsWords.set(2, 'Weak!');
 ratingAsWords.set(3, 'Good!');
 ratingAsWords.set(4, 'Very good!');
 ratingAsWords.set(5, 'Excellent!');
+
+export const commentDateConverter = (par) => {
+
+    const date = new Date(par);
+
+    const fullDate = date.toLocaleDateString();
+    const time = date.toLocaleTimeString();
+
+    const formatedDate = `${time.slice(0, -3)}/${fullDate.slice(0,-3)}`;
+
+    return formatedDate;
+}
