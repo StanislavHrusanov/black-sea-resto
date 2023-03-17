@@ -1,6 +1,45 @@
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import styles from "./Edit.module.css";
 
+import * as restaurantService from "../../services/restaurantService";
+
 export const Edit = () => {
+    const [restaurant, setRestaurant] = useState({
+        name: '',
+        address: '',
+        phone: '',
+        capacity: '',
+        imageUrl: '',
+        summary: ''
+    });
+    const { restaurantId } = useParams();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        restaurantService.getOne(restaurantId)
+            .then(result => setRestaurant(result))
+            .catch(err => window.alert(err.message));
+    }, [restaurantId]);
+
+    const onChangeHandler = (e) => {
+        setRestaurant(state => ({
+            ...state,
+            [e.target.name]: e.target.value
+        }));
+    }
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            await restaurantService.edit(restaurantId, restaurant);
+
+            navigate(`/restaurants/${restaurantId}`);
+        } catch (error) {
+            return window.alert(error.message);
+        }
+    }
 
     return (
         <section id="editRestaurant-page">
@@ -10,6 +49,7 @@ export const Edit = () => {
                         Edit your restaurant
                     </h2>
                 </div>
+
                 <form onSubmit={onSubmit} className={styles["edit-form"]} >
                     <div className={styles["input"]}>
                         <label htmlFor="restaurant-name" className={styles["name"]}>Restaurant name</label>
@@ -19,7 +59,7 @@ export const Edit = () => {
                             name="name"
                             id="restaurant-name"
                             placeholder="Happy Bar & Grill"
-                            value={inputs.name}
+                            value={restaurant.name}
                             onChange={onChangeHandler}
                         />
                     </div>
@@ -31,7 +71,7 @@ export const Edit = () => {
                             name="address"
                             id="restaurant-address"
                             placeholder="10, Vitosha, Sofia 1000"
-                            value={inputs.address}
+                            value={restaurant.address}
                             onChange={onChangeHandler}
                         />
                     </div>
@@ -43,7 +83,7 @@ export const Edit = () => {
                             name="phone"
                             id="phone-number"
                             placeholder="+359888XXXXXX"
-                            value={inputs.phone}
+                            value={restaurant.phone}
                             onChange={onChangeHandler}
                         />
                     </div>
@@ -55,7 +95,7 @@ export const Edit = () => {
                             name="capacity"
                             id="restaurant-capacity"
                             placeholder="100 persons"
-                            value={inputs.capacity}
+                            value={restaurant.capacity}
                             onChange={onChangeHandler}
                         />
                     </div>
@@ -67,7 +107,7 @@ export const Edit = () => {
                             name="imageUrl"
                             id="restaurant-image"
                             placeholder="http://image.jpeg"
-                            value={inputs.imageUrl}
+                            value={restaurant.imageUrl}
                             onChange={onChangeHandler}
                         />
                     </div>
@@ -79,7 +119,7 @@ export const Edit = () => {
                             name="summary"
                             id="restaurant-summary"
                             placeholder="Some text..."
-                            value={inputs.summary}
+                            value={restaurant.summary}
                             onChange={onChangeHandler}
                         />
                     </div>
@@ -87,7 +127,6 @@ export const Edit = () => {
                         <button className={styles["action-button"]}>Edit</button>
                     </div>
                 </form>
-
 
             </div>
         </section>
