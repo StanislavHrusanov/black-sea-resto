@@ -2,8 +2,8 @@
     box-shadow: 0px 0px 30px 0px;
     margin-top: 20px;
     padding: 50px;
-    margin-left: 70px;
-    max-width: 325px;
+    margin-left: 85px;
+    max-width: 300px;
     max-height: 475px;
     background-position: right 35% bottom 45%;
     background-color: rgb(245, 223, 190);
@@ -31,18 +31,19 @@
 }
 
 .image-wrap {
-    width: 252px;
-    height: 252px;
+    width: 238px;
+    height: 238px;
     display: inline-block;
     overflow: hidden;
     position: relative;
+    margin-top: -5px;
     left: 56%;
     transform: translateX(-50%);
 }
 
 .image-wrap>img {
-    max-width: 220px;
-    max-height: 220px;
+    max-width: 210px;
+    max-height: 210px;
     aspect-ratio: 1/0.8;
     border: 2px solid darkblue;
 }
@@ -94,4 +95,10 @@
 .btn.details-btn:hover {
     background-color: rgb(192, 129, 117);
     color: white;
+}
+
+.review-count {
+    color: black;
+    font-size: 18px;
+    text-align: center;
 }

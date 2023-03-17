@@ -7,7 +7,7 @@
     box-shadow: 0px 0px 40px 0px;
     padding: .55rem;
     background-color: transparent;
-    height: 780px;
+    min-height: 780px;
     margin-top: 100px;
 }
 

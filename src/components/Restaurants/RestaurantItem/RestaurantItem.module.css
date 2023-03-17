@@ -95,3 +95,9 @@
     background-color: rgb(192, 129, 117);
     color: white;
 }
+
+.review-count {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+}

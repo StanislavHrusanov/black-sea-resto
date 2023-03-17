@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css"
 
 export const Footer = () => {
@@ -10,11 +11,11 @@ export const Footer = () => {
                 <h3>Black Sea Resto</h3>
 
                 <p className={styles["footer-links"]}>
-                    <a href="#" className={styles["link-1"]}>Home</a>
+                    <Link to="#" className={styles["link-1"]}>Home</Link>
 
-                    <a href="#">About</a>
+                    <Link to="#">About</Link>
 
-                    <a href="#">Contact</a>
+                    <Link to="#">Contact</Link>
                 </p>
 
                 <p className={styles["footer-company-name"]}>Black Sea Resto © 2023</p>
@@ -34,7 +35,7 @@ export const Footer = () => {
 
                 <div>
                     <i className="fa fa-envelope"></i>
-                    <p><a href="">support@blacksearesto.com</a></p>
+                    <p><Link to="">support@blacksearesto.com</Link></p>
                 </div>
 
             </div>
@@ -48,10 +49,10 @@ export const Footer = () => {
 
                 <div className={styles["footer-icons"]}>
 
-                    <a href="#"><i className="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i className="fa-brands fa-tiktok"></i></a>
-                    <a href="#"><i className="fa-brands fa-youtube"></i></a>
+                    <Link to="#"><i className="fa-brands fa-facebook"></i></Link>
+                    <Link to="#"><i className="fa-brands fa-instagram"></i></Link>
+                    <Link to="#"><i className="fa-brands fa-tiktok"></i></Link>
+                    <Link to="#"><i className="fa-brands fa-youtube"></i></Link>
 
                 </div>
 
