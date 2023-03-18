@@ -41,68 +41,69 @@ export const Details = () => {
     }
 
     return isLoading
-        ? (<LoadingSpinner />)
-        : (<section className={styles["details-page"]}>
-            {showModal &&
-                <AddReview onCloseModal={closeModal} />
-            }
+        ? (
+            <LoadingSpinner />
+        )
+        : (
+            <section className={styles["details-page"]}>
+                {showModal &&
+                    <AddReview onCloseModal={closeModal} />
+                }
 
-            <div className={styles["item-details"]}>
+                <div className={styles["item-details"]}>
 
-                <div className={styles["item-description"]}>
-                    <h2> {restaurant.name}</h2>
-                    {
-                        <h3><div className={styles["rating"]}>
-                            {[...Array(5)].map((star, index) => {
-                                index += 1;
+                    <div className={styles["item-description"]}>
+                        <h2> {restaurant.name}</h2>
+                        {
+                            <h3><div className={styles["rating"]}>
+                                {[...Array(5)].map((star, index) => {
+                                    index += 1;
 
-                                return (
-                                    <span
-                                        key={index}
-                                        className={index <= Math.round(getAvgRating(reviews)) ? styles["full"] : styles["empty"]}
-                                    >
-                                        ☆
-                                    </span>
-                                )
-                            })}
-                            <span>{`${getAvgRating(reviews)} (${reviews.length}) rewiews`}</span>
+                                    return (
+                                        <span
+                                            key={index}
+                                            className={index <= Math.round(getAvgRating(reviews)) ? styles["full"] : styles["empty"]}
+                                        >
+                                            ☆
+                                        </span>
+                                    )
+                                })}
+                                <span>{`${getAvgRating(reviews)} (${reviews.length}) rewiews`}</span>
 
-                        </div></h3>
-                    }
-                    <h3>Address: {restaurant.address}</h3>
-                    <h3>Phone: {restaurant.phone}</h3>
-                    <h3>Capacity: {restaurant.capacity}</h3>
-                    <h3>Summary: {restaurant.summary}</h3>
-                    <div className={styles["buttons"]}>
-                        {isOwner &&
-                            <>
-                                <Link to={`/restaurants/${restaurant._id}/edit`} className={styles["edit-button"]}>Edit</Link>
-                                <Link to={`/restaurants/${restaurant._id}/edit`} className={styles["delete-button"]}>Delete</Link>
-                                <Link className={styles["favourite-button"]} >Favourite</Link>
-                            </>
+                            </div></h3>
                         }
+                        <h3>Address: {restaurant.address}</h3>
+                        <h3>Phone: {restaurant.phone}</h3>
+                        <h3>Capacity: {restaurant.capacity}</h3>
+                        <h3>Summary: {restaurant.summary}</h3>
+                        <div className={styles["buttons"]}>
+                            {isOwner &&
+                                <>
+                                    <Link to={`/restaurants/${restaurant._id}/edit`} className={styles["edit-button"]}>Edit</Link>
+                                    <Link to={`/restaurants/${restaurant._id}/edit`} className={styles["delete-button"]}>Delete</Link>
+                                    <Link className={styles["favourite-button"]} >Favourite</Link>
+                                </>
+                            }
+                        </div>
+
+                        <div className={styles["reviews-container"]}>
+                            {isOwner &&
+                                <button onClick={() => openModal()} className={styles["add-review-btn"]}>Add review</button>
+                            }
+                            {reviews.length > 0
+                                ? reviews.map(x => <Review key={x._id} review={x} />)
+                                : <p className={styles["no-reviews"]}>No reviews yet!</p>
+                            }
+
+
+                        </div>
+
                     </div>
 
-                    <div className={styles["reviews-container"]}>
-                        {isOwner &&
-                            <button onClick={() => openModal()} className={styles["add-review-btn"]}>Add review</button>
-                        }
-                        {reviews.length > 0
-                            ? reviews.map(x => <Review key={x._id} review={x} />)
-                            : <p className={styles["no-reviews"]}>No reviews yet!</p>
-                        }
-
-
+                    <div className={styles["item-details-image"]}>
+                        <img src={restaurant.imageUrl} alt="resto" />
                     </div>
-
                 </div>
-
-                <div className={styles["item-details-image"]}>
-                    <img src={restaurant.imageUrl} alt="resto" />
-                </div>
-            </div>
-        </section>);
-
-
-
+            </section>
+        );
 }

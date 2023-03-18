@@ -26,7 +26,9 @@ export const Home = () => {
         .slice(0, 3);
 
     return isLoading
-        ? (<LoadingSpinner />)
+        ? (
+            <LoadingSpinner />
+        )
         : (
             <section id="home-section">
                 <div className={styles["home-message"]}>

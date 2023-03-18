@@ -21,7 +21,9 @@ export const Restaurants = () => {
     }, [showLoading, hideLoading]);
 
     return isLoading
-        ? (<LoadingSpinner />)
+        ? (
+            <LoadingSpinner />
+        )
         : (
             <section id="restaurants-section">
                 <div className={styles["restaurants-message"]}>
