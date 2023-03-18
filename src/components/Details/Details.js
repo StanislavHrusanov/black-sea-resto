@@ -1,27 +1,36 @@
 import { Link, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import styles from "./Details.module.css";
 
 import { AddReview } from "./AddReview/AddReview";
 import { Review } from "./Review/Review";
+import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
 import { getAvgRating } from "../../utils";
 import * as restaurantService from "../../services/restaurantService";
 import * as reviewService from "../../services/reviewService";
+import { AuthContext } from "../../contexts/AuthContext";
+import { LoadingContext } from "../../contexts/LoadingContext";
 
 export const Details = () => {
     const [showModal, setShowModal] = useState(false);
     const [restaurant, setRestaurant] = useState({});
     const [reviews, setReviews] = useState([]);
     const { restaurantId } = useParams();
+    const { user } = useContext(AuthContext);
+    const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
 
     useEffect(() => {
+        showLoading()
         restaurantService.getOne(restaurantId)
             .then(result => setRestaurant(result))
         reviewService.getById(restaurantId)
             .then(result => setReviews(result))
+            .then(() => hideLoading())
             .catch(err => window.alert(err.message));
-    }, [restaurantId]);
+    }, [restaurantId, showLoading, hideLoading]);
+
+    const isOwner = restaurant._ownerId === user?._id;
 
     const openModal = () => {
         setShowModal(true)
@@ -31,8 +40,9 @@ export const Details = () => {
         setShowModal(false);
     }
 
-    return (
-        <section className={styles["details-page"]}>
+    return isLoading
+        ? (<LoadingSpinner />)
+        : (<section className={styles["details-page"]}>
             {showModal &&
                 <AddReview onCloseModal={closeModal} />
             }
@@ -64,16 +74,19 @@ export const Details = () => {
                     <h3>Capacity: {restaurant.capacity}</h3>
                     <h3>Summary: {restaurant.summary}</h3>
                     <div className={styles["buttons"]}>
-                        <Link to={`/restaurants/${restaurant._id}/edit`} className={styles["edit-button"]}>Edit</Link>
-                        <Link to={`/restaurants/${restaurant._id}/edit`} className={styles["delete-button"]}>Delete</Link>
-                        <Link className={styles["favourite-button"]} >Favourite</Link>
-
+                        {isOwner &&
+                            <>
+                                <Link to={`/restaurants/${restaurant._id}/edit`} className={styles["edit-button"]}>Edit</Link>
+                                <Link to={`/restaurants/${restaurant._id}/edit`} className={styles["delete-button"]}>Delete</Link>
+                                <Link className={styles["favourite-button"]} >Favourite</Link>
+                            </>
+                        }
                     </div>
 
                     <div className={styles["reviews-container"]}>
-
-                        <button onClick={() => openModal()} className={styles["add-review-btn"]}>Add review</button>
-
+                        {isOwner &&
+                            <button onClick={() => openModal()} className={styles["add-review-btn"]}>Add review</button>
+                        }
                         {reviews.length > 0
                             ? reviews.map(x => <Review key={x._id} review={x} />)
                             : <p className={styles["no-reviews"]}>No reviews yet!</p>
@@ -88,6 +101,8 @@ export const Details = () => {
                     <img src={restaurant.imageUrl} alt="resto" />
                 </div>
             </div>
-        </section>
-    );
+        </section>);
+
+
+
 }
