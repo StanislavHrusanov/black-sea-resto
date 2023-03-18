@@ -76,7 +76,7 @@ export const Details = () => {
 
                         {reviews.length > 0
                             ? reviews.map(x => <Review key={x._id} review={x} />)
-                            : <p>No reviews yet!</p>
+                            : <p className={styles["no-reviews"]}>No reviews yet!</p>
                         }
 
 
