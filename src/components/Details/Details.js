@@ -87,9 +87,11 @@ export const Details = () => {
                         </div>
 
                         <div className={styles["reviews-container"]}>
-                            {isOwner &&
-                                <button onClick={() => openModal()} className={styles["add-review-btn"]}>Add review</button>
+                            {user && !isOwner
+                                ? <button onClick={() => openModal()} className={styles["add-review-btn"]}>Add review</button>
+                                : <p className={styles["reviews-p"]}>Reviews</p>
                             }
+
                             {reviews.length > 0
                                 ? reviews.map(x => <Review key={x._id} review={x} />)
                                 : <p className={styles["no-reviews"]}>No reviews yet!</p>
@@ -104,6 +106,6 @@ export const Details = () => {
                         <img src={restaurant.imageUrl} alt="resto" />
                     </div>
                 </div>
-            </section>
+            </section >
         );
 }

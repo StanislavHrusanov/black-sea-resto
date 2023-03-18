@@ -3,7 +3,7 @@
     float: left;
     box-sizing: border-box;
     border: #444444 solid 1px;
-    margin-top: 73px;
+    /* margin-top: 10px; */
 }
 
 .review-container p {
