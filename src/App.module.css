@@ -1,11 +1,11 @@
 body {
-    background: url("https://www.concordia-bs.com/wp-content/uploads/2021/04/AdobeStock_210304684-e1618136466871.jpeg");
+    background: url("https://mediaim.expedia.com/destination/1/d964393b5bcd342786829cb60b8c58ca.jpg");
     background-size: cover;
     margin: auto;
 }
 
 .footer-container {
     position: relative;
-    margin-top: 25vh;
+    /* margin-top: 62vh; */
     width: 100%;
 }
