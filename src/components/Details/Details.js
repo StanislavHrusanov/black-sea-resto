@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import styles from "./Details.module.css";
 
@@ -19,16 +19,24 @@ export const Details = () => {
     const { restaurantId } = useParams();
     const { user } = useContext(AuthContext);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        showLoading()
-        restaurantService.getOne(restaurantId)
-            .then(result => setRestaurant(result))
-        reviewService.getById(restaurantId)
-            .then(result => setReviews(result))
-            .then(() => hideLoading())
-            .catch(err => window.alert(err.message));
-    }, [restaurantId, showLoading, hideLoading]);
+        (async () => {
+            try {
+                showLoading();
+                const resto = await restaurantService.getOne(restaurantId);
+                setRestaurant(resto);
+                const revs = await reviewService.getById(restaurantId);
+                setReviews(revs);
+                hideLoading();
+
+            } catch (error) {
+                window.alert(error.message);
+                return navigate('/restaurants');
+            }
+        })();
+    }, [restaurantId, showLoading, hideLoading, navigate]);
 
     const isOwner = restaurant._ownerId === user?._id;
 
@@ -87,16 +95,21 @@ export const Details = () => {
                         </div>
 
                         <div className={styles["reviews-container"]}>
-                            {user && !isOwner
+                            {/* {user && !isOwner
                                 ? <button onClick={() => openModal()} className={styles["add-review-btn"]}>Add review</button>
                                 : <p className={styles["reviews-p"]}>Reviews</p>
+                            } */}
+                            {!user
+                                ? <p className={styles["reviews-p"]}>Reviews</p>
+                                : !isOwner
+                                    ? <button onClick={() => openModal()} className={styles["add-review-btn"]}>Add review</button>
+                                    : <p className={styles["reviews-p"]}>Reviews</p>
                             }
 
                             {reviews.length > 0
                                 ? reviews.map(x => <Review key={x._id} review={x} />)
                                 : <p className={styles["no-reviews"]}>No reviews yet!</p>
                             }
-
 
                         </div>
 
