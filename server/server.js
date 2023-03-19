@@ -1201,8 +1201,8 @@
         const rules = Object.assign({
             '*': {
                 '.create': ['User'],
-                '.update': ['Owner'],
-                '.delete': ['Owner']
+                '.update': ['User'],
+                '.delete': ['User']
             }
         }, settings.rules);
 
