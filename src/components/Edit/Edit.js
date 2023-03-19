@@ -41,11 +41,13 @@ export const Edit = () => {
         e.preventDefault();
 
         try {
+            showLoading();
             await restaurantService.edit(restaurantId, restaurant);
-
+            hideLoading();
             navigate(`/restaurants/${restaurantId}`);
         } catch (error) {
-            return window.alert(error.message);
+            window.alert(error.message);
+            return window.location.reload();
         }
     }
 

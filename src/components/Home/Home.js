@@ -17,7 +17,10 @@ export const Home = () => {
         getAllRestaurants()
             .then(result => setRestaurants(result))
             .then(() => hideLoading())
-            .catch(err => window.alert(err.message));
+            .catch(err => {
+                window.alert(err.message);
+                return window.location.reload();
+            });
     }, [showLoading, hideLoading]);
 
     const mostPopular = restaurants
