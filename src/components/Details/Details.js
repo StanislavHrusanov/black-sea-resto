@@ -48,6 +48,13 @@ export const Details = () => {
         setShowModal(false);
     }
 
+    const addReview = (review) => {
+        setReviews(state => [
+            ...state,
+            review
+        ]);
+    }
+
     return isLoading
         ? (
             <LoadingSpinner />
@@ -55,7 +62,11 @@ export const Details = () => {
         : (
             <section className={styles["details-page"]}>
                 {showModal &&
-                    <AddReview onCloseModal={closeModal} />
+                    <AddReview
+                        onCloseModal={closeModal}
+                        restaurant={restaurant}
+                        addReview={addReview}
+                    />
                 }
 
                 <div className={styles["item-details"]}>
