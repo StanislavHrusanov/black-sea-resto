@@ -46,8 +46,9 @@ export const Edit = () => {
             hideLoading();
             navigate(`/restaurants/${restaurantId}`);
         } catch (error) {
+            hideLoading()
             window.alert(error.message);
-            return window.location.reload();
+            return navigate(`/restaurants/${restaurantId}/edit`);
         }
     }
 

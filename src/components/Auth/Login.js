@@ -4,6 +4,8 @@ import styles from "./Auth.module.css";
 
 import * as authService from "../../services/authService";
 import { AuthContext } from "../../contexts/AuthContext";
+import { LoadingContext } from "../../contexts/LoadingContext";
+import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
 export const Login = () => {
     const [inputs, setInputs] = useState({
@@ -12,6 +14,7 @@ export const Login = () => {
     });
 
     const { userLogin } = useContext(AuthContext);
+    const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
     const navigate = useNavigate();
 
     const onChangeHandler = (e) => {
@@ -25,58 +28,66 @@ export const Login = () => {
         e.preventDefault();
 
         try {
+            showLoading();
             const loggedInUser = await authService.login(inputs);
             userLogin(loggedInUser);
+            hideLoading();
             navigate('/');
         } catch (error) {
-            return window.alert(error.message);
+            hideLoading();
+            window.alert(error.message);
+            return navigate('/login');
         }
 
     }
 
-    return (
-        <section id="login-page">
-            <div className={styles["container"]}>
-                <div>
-                    <h2 className={styles["heading"]}>
-                        Login
-                    </h2>
+    return isLoading
+        ? (
+            <LoadingSpinner />
+        )
+        : (
+            <section id="login-page">
+                <div className={styles["container"]}>
+                    <div>
+                        <h2 className={styles["heading"]}>
+                            Login
+                        </h2>
+                    </div>
+                    <form onSubmit={onSubmit} className={styles["auth-form"]}>
+                        <div className={styles["input"]}>
+                            <label htmlFor="username" className={styles["username"]}>Username</label>
+                            <input
+                                type="text"
+                                className={styles["input-field"]}
+                                name="username"
+                                id="username"
+                                placeholder="jdoe"
+                                value={inputs.username}
+                                onChange={onChangeHandler}
+                            />
+                        </div>
+                        <div className={styles["input"]}>
+                            <label htmlFor="password" className={styles["password"]}>Password</label>
+                            <input
+                                type="password"
+                                className={styles["input-field"]}
+                                name="password"
+                                id="password"
+                                placeholder="******"
+                                value={inputs.password}
+                                onChange={onChangeHandler}
+                            />
+                        </div>
+                        <div className={styles["action"]}>
+                            <button className={styles["action-button"]}>Login</button>
+                        </div>
+                    </form>
+                    <div className={styles["auth-question"]}>
+                        <p>Dont have an account?
+                            <Link to="/register"> Sign up</Link>
+                        </p>
+                    </div>
                 </div>
-                <form onSubmit={onSubmit} className={styles["auth-form"]}>
-                    <div className={styles["input"]}>
-                        <label htmlFor="username" className={styles["username"]}>Username</label>
-                        <input
-                            type="text"
-                            className={styles["input-field"]}
-                            name="username"
-                            id="username"
-                            placeholder="jdoe"
-                            value={inputs.username}
-                            onChange={onChangeHandler}
-                        />
-                    </div>
-                    <div className={styles["input"]}>
-                        <label htmlFor="password" className={styles["password"]}>Password</label>
-                        <input
-                            type="password"
-                            className={styles["input-field"]}
-                            name="password"
-                            id="password"
-                            placeholder="******"
-                            value={inputs.password}
-                            onChange={onChangeHandler}
-                        />
-                    </div>
-                    <div className={styles["action"]}>
-                        <button className={styles["action-button"]}>Login</button>
-                    </div>
-                </form>
-                <div className={styles["auth-question"]}>
-                    <p>Dont have an account?
-                        <Link to="/register"> Sign up</Link>
-                    </p>
-                </div>
-            </div>
-        </section>
-    );
+            </section>
+        );
 }
