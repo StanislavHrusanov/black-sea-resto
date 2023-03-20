@@ -19,7 +19,7 @@
 
 .modal {
     width: 900px;
-    height: 450px;
+    height: 415px;
     position: absolute;
     max-height: 90vh;
     margin: auto;
@@ -114,8 +114,9 @@
 }
 
 .btn-add {
-    width: 10em;
-    height: 5em;
+    width: 120px;
+    height: 60px;
+    font-size: 20px;
     float: right;
     background-color: darkblue;
     margin-top: 10px;

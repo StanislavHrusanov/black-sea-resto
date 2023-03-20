@@ -12,7 +12,6 @@ import { AddRestaurant } from './components/AddRestaurant/AddRestaurant';
 import { Details } from './components/Details/Details';
 import { Edit } from "./components/Edit/Edit";
 
-import { RestaurantProvider } from './contexts/RestaurantContext';
 import { AuthProvider } from './contexts/AuthContext';
 import { LoadingProvider } from "./contexts/LoadingContext";
 
@@ -23,19 +22,17 @@ function App() {
         <LoadingProvider>
           <Header />
 
-          <RestaurantProvider>
-            <Routes>
+          <Routes>
 
-              <Route path='/' element={<Home />} />
-              <Route path='/register' element={<Register />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/restaurants' element={<Restaurants />} />
-              <Route path='/restaurants/:restaurantId' element={<Details />} />
-              <Route path='/restaurants/:restaurantId/edit' element={<Edit />} />
-              <Route path='/addRestaurant' element={<AddRestaurant />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/restaurants' element={<Restaurants />} />
+            <Route path='/restaurants/:restaurantId' element={<Details />} />
+            <Route path='/restaurants/:restaurantId/edit' element={<Edit />} />
+            <Route path='/addRestaurant' element={<AddRestaurant />} />
 
-            </Routes>
-          </RestaurantProvider>
+          </Routes>
 
           <div className={styles["footer-container"]}>
             <Footer />

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import styles from "./EditReview.module.css";
 
 import { LoadingContext } from "../../../contexts/LoadingContext";
-import { UserProfileContext } from "../../../contexts/UserProfileContext";
 
 import * as utils from "../../../utils";
 import * as reviewService from "../../../services/reviewService";
@@ -20,7 +19,6 @@ export const EditReview = ({
     const [starName, setStarName] = useState(userReview.rating);
     const [comment, setComment] = useState(userReview.comment);
 
-    // const { editReviewInProfile } = useContext(UserProfileContext);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
     const navigate = useNavigate();
 
@@ -47,7 +45,6 @@ export const EditReview = ({
 
             await restaurantService.edit(restaurant._id, currentRestaurant);
             editReview(editedReview);
-            // editReviewInProfile(userReview, editedReview);
             onCloseModal();
             // window.location.reload();
             hideLoading();

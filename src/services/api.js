@@ -42,11 +42,13 @@ async function request(method, url, data) {
 const get = request.bind(null, 'get');
 const post = request.bind(null, 'post');
 const put = request.bind(null, 'put');
+const patch = request.bind(null, 'patch');
 const del = request.bind(null, 'delete');
 
 export {
     get,
     post,
     put,
+    patch,
     del
 }

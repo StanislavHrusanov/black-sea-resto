@@ -9,18 +9,14 @@ import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
 import { getAvgRating } from "../../utils";
 import * as restaurantService from "../../services/restaurantService";
-// import * as reviewService from "../../services/reviewService";
 import { AuthContext } from "../../contexts/AuthContext";
 import { LoadingContext } from "../../contexts/LoadingContext";
-// import { UserProfileContext } from "../../contexts/UserProfileContext";
 
 export const Details = () => {
     const [showModal, setShowModal] = useState(false);
     const [restaurant, setRestaurant] = useState({});
-    // const [reviews, setReviews] = useState([]);
     const { restaurantId } = useParams();
     const { user } = useContext(AuthContext);
-    // const { userProfile } = useContext(UserProfileContext);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
     const navigate = useNavigate();
 
@@ -30,8 +26,6 @@ export const Details = () => {
                 showLoading();
                 const currRestaurant = await restaurantService.getOne(restaurantId);
                 setRestaurant(currRestaurant);
-                // const restaurantReviews = await reviewService.getById(restaurantId);
-                // setReviews(restaurantReviews);
                 hideLoading();
 
             } catch (error) {
@@ -130,10 +124,7 @@ export const Details = () => {
                         </div>
 
                         <div className={styles["reviews-container"]}>
-                            {/* {user && !isOwner
-                                ? <button onClick={() => openModal()} className={styles["add-review-btn"]}>Add review</button>
-                                : <p className={styles["reviews-p"]}>Reviews</p>
-                            } */}
+
                             {!user
                                 ? <p className={styles["reviews-p"]}>Reviews</p>
                                 : !isOwner

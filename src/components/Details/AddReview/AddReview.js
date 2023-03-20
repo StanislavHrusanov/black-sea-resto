@@ -40,9 +40,9 @@ export const AddReview = ({
         try {
             showLoading();
             const addedReview = await reviewService.addReview(review);
-            const currentrRestaurant = await restaurantService.getOne(restaurant._id);
-            currentrRestaurant.reviews.push(addedReview);
-            await restaurantService.edit(restaurant._id, currentrRestaurant);
+            const currentRestaurant = await restaurantService.getOne(restaurant._id);
+            currentRestaurant.reviews.push(addedReview);
+            await restaurantService.edit(restaurant._id, currentRestaurant);
             addReview(addedReview);
             onCloseModal();
             // window.location.reload();

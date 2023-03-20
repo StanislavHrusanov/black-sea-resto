@@ -1,64 +1,34 @@
-import { createContext, useReducer, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// import { createContext, useReducer, useEffect, useState } from "react";
+// import { useNavigate } from "react-router-dom";
 
-import * as restaurantService from "../services/restaurantService";
+// import * as restaurantService from "../services/restaurantService";
 
-export const RestaurantContext = createContext();
+// export const RestaurantContext = createContext();
 
-const restaurantReducer = (state, action) => {
-    switch (action.type) {
-        case 'LOAD_RESTAURANTS':
-            return [...action.payload];
-        case 'UPDATE_RESTAURANTS':
-            return [...state, action.payload];
-        case 'UPDATE_RESTAURANT_DETAILS':
-            return state.map(x => x._id === action.restaurantId ? action.payload : x)
-        default:
-            return state;
-    }
-}
+// export const RestaurantProvider = ({ children }) => {
+//     const [contextRestaurants, setContextRestaurants] = useState([]);
+//     const navigate = useNavigate();
 
+//     useEffect(() => {
+//         restaurantService.getAllRestaurants()
+//             .then(result => setContextRestaurants(result));
 
-export const RestaurantProvider = ({ children }) => {
+//     }, []);
 
-    const [restaurants, dispatch] = useReducer(restaurantReducer, []);
-    const navigate = useNavigate();
+//     const updateRestaurantContext = (data) => {
+//         setContextRestaurants(data);
+//     }
 
-    useEffect(() => {
-        restaurantService.getAllRestaurants()
-            .then(result => {
-                const action = {
-                    type: 'LOAD_RESTAURANTS',
-                    payload: result
-                };
-                dispatch(action)
-            });
-
-    }, []);
-
-    const updateRestaurants = (restaurant) => {
-        dispatch({
-            type: 'UPDATE_RESTAURANTS',
-            payload: restaurant
-        });
-        navigate('/restaurants');
-    }
-
-    const updateRestaurantDetails = (restaurantId, details) => {
-        dispatch({
-            type: 'UPDATE_RESTAURANT_DETAILS',
-            payload: details,
-            restaurantId
-        });
-    }
-
-    return (
-        <RestaurantContext.Provider value={{
-            restaurants,
-            updateRestaurants,
-            updateRestaurantDetails
-        }}>
-            {children}
-        </RestaurantContext.Provider>
-    );
-}
+//     const selectedRestaurant = (restaurantId) => {
+//         return contextRestaurants.find(x => x._id === restaurantId);
+//     }
+//     return (
+//         <RestaurantContext.Provider value={{
+//             contextRestaurants,
+//             updateRestaurantContext,
+//             selectedRestaurant
+//         }}>
+//             {children}
+//         </RestaurantContext.Provider>
+//     );
+// }

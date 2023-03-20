@@ -7,7 +7,9 @@ export const Review = ({ review }) => {
     return (
         <div className={styles["review-container"]}>
             <p >{review.author}</p>
-            <p className={styles["posted"]}>{commentDateConverter(review._createdOn)}</p>
+            <p className={styles["posted"]}>
+                {review._updatedOn ? commentDateConverter(review._updatedOn) : commentDateConverter(review._createdOn)}
+            </p>
             <div className={styles["review-body"]}>
                 <div className={styles["star-rating-container"]}>
                     <h3><div className={styles["rating"]}>

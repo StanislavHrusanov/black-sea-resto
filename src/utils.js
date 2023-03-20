@@ -1,7 +1,9 @@
 export const getAvgRating = (reviews) => {
     let sumOfRatings = 0;
-    for (let review of reviews) {
-        sumOfRatings += review.rating;
+    if (reviews) {
+        for (let review of reviews) {
+            sumOfRatings += review.rating;
+        }
     }
     if (sumOfRatings === 0) {
         return '';
@@ -26,7 +28,7 @@ export const commentDateConverter = (par) => {
     const fullDate = date.toLocaleDateString();
     const time = date.toLocaleTimeString();
 
-    const formatedDate = `${time.slice(0, -3)}/${fullDate.slice(0,-3)}`;
+    const formatedDate = `${time.slice(0, -3)}/${fullDate.slice(0, -3)}`;
 
     return formatedDate;
 }
