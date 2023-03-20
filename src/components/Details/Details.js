@@ -3,21 +3,24 @@ import { useState, useEffect, useContext } from "react";
 import styles from "./Details.module.css";
 
 import { AddReview } from "./AddReview/AddReview";
+import { EditReview } from "./EditReview/EditReview";
 import { Review } from "./Review/Review";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
 import { getAvgRating } from "../../utils";
 import * as restaurantService from "../../services/restaurantService";
-import * as reviewService from "../../services/reviewService";
+// import * as reviewService from "../../services/reviewService";
 import { AuthContext } from "../../contexts/AuthContext";
 import { LoadingContext } from "../../contexts/LoadingContext";
+// import { UserProfileContext } from "../../contexts/UserProfileContext";
 
 export const Details = () => {
     const [showModal, setShowModal] = useState(false);
     const [restaurant, setRestaurant] = useState({});
-    const [reviews, setReviews] = useState([]);
+    // const [reviews, setReviews] = useState([]);
     const { restaurantId } = useParams();
     const { user } = useContext(AuthContext);
+    // const { userProfile } = useContext(UserProfileContext);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
     const navigate = useNavigate();
 
@@ -25,10 +28,10 @@ export const Details = () => {
         (async () => {
             try {
                 showLoading();
-                const resto = await restaurantService.getOne(restaurantId);
-                setRestaurant(resto);
-                const revs = await reviewService.getById(restaurantId);
-                setReviews(revs);
+                const currRestaurant = await restaurantService.getOne(restaurantId);
+                setRestaurant(currRestaurant);
+                // const restaurantReviews = await reviewService.getById(restaurantId);
+                // setReviews(restaurantReviews);
                 hideLoading();
 
             } catch (error) {
@@ -40,6 +43,11 @@ export const Details = () => {
 
     const isOwner = restaurant._ownerId === user?._id;
 
+
+    const userReview = restaurant?.reviews?.find(x => x._ownerId === user?._id);
+
+    const reviewBtnName = userReview ? 'Edit your review' : 'Add review';
+
     const openModal = () => {
         setShowModal(true)
     }
@@ -49,10 +57,17 @@ export const Details = () => {
     }
 
     const addReview = (review) => {
-        setReviews(state => [
+        setRestaurant(state => ({
             ...state,
-            review
-        ]);
+            reviews: [...state.reviews, review]
+        }));
+    }
+
+    const editReview = (review) => {
+        setRestaurant(state => ({
+            ...state,
+            reviews: state.reviews.map(x => x._id === review._id ? review : x)
+        }))
     }
 
     return isLoading
@@ -61,11 +76,20 @@ export const Details = () => {
         )
         : (
             <section className={styles["details-page"]}>
-                {showModal &&
+                {showModal && !userReview &&
                     <AddReview
                         onCloseModal={closeModal}
                         restaurant={restaurant}
                         addReview={addReview}
+                    />
+                }
+
+                {showModal && userReview &&
+                    <EditReview
+                        onCloseModal={closeModal}
+                        restaurant={restaurant}
+                        editReview={editReview}
+                        userReview={userReview}
                     />
                 }
 
@@ -81,13 +105,13 @@ export const Details = () => {
                                     return (
                                         <span
                                             key={index}
-                                            className={index <= Math.round(getAvgRating(reviews)) ? styles["full"] : styles["empty"]}
+                                            className={index <= Math.round(getAvgRating(restaurant.reviews)) ? styles["full"] : styles["empty"]}
                                         >
                                             ☆
                                         </span>
                                     )
                                 })}
-                                <span>{`${getAvgRating(reviews)} (${reviews.length}) rewiews`}</span>
+                                <span>{`${getAvgRating(restaurant.reviews)} (${restaurant.reviews?.length}) rewiews`}</span>
 
                             </div></h3>
                         }
@@ -113,12 +137,12 @@ export const Details = () => {
                             {!user
                                 ? <p className={styles["reviews-p"]}>Reviews</p>
                                 : !isOwner
-                                    ? <button onClick={() => openModal()} className={styles["add-review-btn"]}>Add review</button>
+                                    ? <button onClick={() => openModal()} className={styles["add-review-btn"]}>{reviewBtnName}</button>
                                     : <p className={styles["reviews-p"]}>Reviews</p>
                             }
 
-                            {reviews.length > 0
-                                ? reviews.map(x => <Review key={x._id} review={x} />)
+                            {restaurant.reviews?.length > 0
+                                ? restaurant.reviews?.map(x => <Review key={x._id} review={x} />)
                                 : <p className={styles["no-reviews"]}>No reviews yet!</p>
                             }
 

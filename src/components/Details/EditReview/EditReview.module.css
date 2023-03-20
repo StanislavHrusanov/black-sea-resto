@@ -1,0 +1,180 @@
+.modal-container {
+    position: relative;
+    top: 300px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.modal {
+    width: 900px;
+    height: 415px;
+    position: absolute;
+    max-height: 90vh;
+    margin: auto;
+    background-color: rgb(245, 223, 190);
+    padding: 1rem;
+    box-shadow: 0px 0px 40px 0px;
+    z-index: 30;
+}
+
+@media (min-width: 930px) {
+    .modal {
+        width: 45rem;
+        left: calc(50% - 23rem);
+    }
+}
+
+.btn-close {
+    background-color: transparent;
+    padding: 5px 10px;
+    height: auto;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: white;
+}
+
+.btn-close:hover {
+    opacity: 0.7;
+}
+
+.review-container {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 5px 0px;
+    margin-bottom: 15px;
+}
+
+.header h2 {
+    margin-bottom: 0px;
+
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-wrapper textarea {
+    width: 100%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+    outline: none;
+    min-height: 150px;
+    max-height: 150px;
+    min-width: 695px;
+    max-width: 695px;
+    padding: 6px 12px;
+    background-color: rgb(239, 228, 212);
+}
+
+.form-column {
+    width: 100%;
+    display: table;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.form-input {
+    margin-right: 10px;
+    width: 100%;
+    font-size: 24px;
+}
+
+.form-actions {
+    margin-bottom: 10px;
+    justify-content: flex-end;
+}
+
+.btn-edit {
+    width: 120px;
+    height: 60px;
+    font-size: 20px;
+    float: right;
+    background-color: darkblue;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: white;
+}
+
+.btn-edit:hover {
+    opacity: 0.7;
+}
+
+.btn-delete {
+    width: 120px;
+    height: 60px;
+    font-size: 20px;
+    float: right;
+    background-color: red;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: white;
+}
+
+.btn-delete:hover {
+    opacity: 0.7;
+}
+
+.full {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: orange;
+}
+
+.empty {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: grey;
+}
+
+.star {
+    font-size: 40px;
+    margin-left: -10px;
+}
+
+.star-name {
+    font-size: 46px;
+    color: black;
+}
