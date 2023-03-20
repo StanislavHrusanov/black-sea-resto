@@ -28,9 +28,15 @@ export const Register = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
 
+        const userData = {
+            ...inputs,
+            myReviews:[],
+            favourites:[]
+        };
+
         try {
             showLoading();
-            const createdUser = await authService.register(inputs);
+            const createdUser = await authService.register(userData);
             userLogin(createdUser);
             hideLoading();
             navigate('/');
