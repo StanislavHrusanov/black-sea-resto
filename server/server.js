@@ -1323,17 +1323,56 @@
             "35c62d76-8152-4626-8712-eeb96381bea8": {
                 fullname: "Peter Petrov",
                 username: "Peter",
-                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1",
+                myReviews: [{
+                    "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                    "restaurantId": "126777f5-3277-42ad-b874-76d043b069cb",
+                    "rating": 5,
+                    "author": "Peter",
+                    "comment": "Excellent!",
+                    "_createdOn": 1678708464033,
+                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c2"
+                },
+                {
+                    "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                    "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
+                    "rating": 4,
+                    "author": "Peter",
+                    "comment": "Very good!",
+                    "_createdOn": 1678708464073,
+                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c3"
+                }],
+                favourites: []
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
                 fullname: "John Johnes",
                 username: "John",
-                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1",
+                myReviews: [{
+                    "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                    "restaurantId": "1840a313-225c-416a-817a-9954d4609f7c",
+                    "rating": 3,
+                    "author": "John",
+                    "comment": "Good!",
+                    "_createdOn": 1678708464033,
+                    "id": "8d7fa12f-3669-453b-adc6-550d6295f6c4"
+                }],
+                favourites: []
             },
             "847ec027-f659-4086-8032-5173e2f9c93b": {
                 fullname: "Ivan Ivanov",
                 username: "Ivan",
-                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1",
+                myReviews: [{
+                    "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                    "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
+                    "rating": 5,
+                    "author": "Ivan",
+                    "comment": "Nice place!",
+                    "_createdOn": 1678708464073,
+                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c8"
+                }],
+                favourites: []
             }
         },
         sessions: {
