@@ -11,8 +11,9 @@ import * as restaurantService from "../../../services/restaurantService";
 export const EditReview = ({
     onCloseModal,
     restaurant,
-    editReview,
-    userReview
+    userReview,
+    editReviewInState,
+    deleteReviewFromState
 }) => {
     const [rating, setRating] = useState(userReview.rating);
     const [hover, setHover] = useState(userReview.rating);
@@ -42,10 +43,36 @@ export const EditReview = ({
             const currentRestaurant = await restaurantService.getOne(restaurant._id);
             currentRestaurant.reviews = currentRestaurant.reviews.map(x => x._id === editedReview._id ? editedReview : x);
             await restaurantService.edit(restaurant._id, currentRestaurant);
-            editReview(editedReview);
+            editReviewInState(editedReview);
             onCloseModal();
             // window.location.reload();
             hideLoading();
+
+        } catch (error) {
+            hideLoading();
+            window.alert(error.message);
+            return navigate(`/restaurants/${restaurant._id}`);
+        }
+    }
+
+    const onDeleteReview = async () => {
+
+        try {
+            const choice = window.confirm('Are you sure you want delete this review?');
+
+            if (choice) {
+                showLoading();
+                const reviewToDelete = Object.assign({}, userReview);
+                await reviewService.deleteReview(reviewToDelete._id);
+                const currentRestaurant = await restaurantService.getOne(restaurant._id);
+                currentRestaurant.reviews = currentRestaurant.reviews.filter(x => x._id !== reviewToDelete._id);
+                await restaurantService.edit(restaurant._id, currentRestaurant);
+                deleteReviewFromState(reviewToDelete);
+                onCloseModal();
+                // window.location.reload();
+                hideLoading();
+
+            }
 
         } catch (error) {
             hideLoading();
@@ -116,7 +143,7 @@ export const EditReview = ({
                         </div>
 
                         <div className={styles["form-actions"]}>
-                            <button id="action-delete" className={styles["btn-delete"]}>Delete</button>
+                            <button onClick={onDeleteReview} id="action-delete" className={styles["btn-delete"]}>Delete</button>
                             <button id="action-edit" className={styles["btn-edit"]} type="submit">Edit</button>
                         </div>
                     </form>

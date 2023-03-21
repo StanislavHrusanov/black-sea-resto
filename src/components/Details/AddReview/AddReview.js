@@ -12,7 +12,7 @@ import { LoadingSpinner } from "../../LoadingSpinner/LoadingSpinner";
 export const AddReview = ({
     onCloseModal,
     restaurant,
-    addReview
+    addReviewToState
 }) => {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
@@ -43,7 +43,7 @@ export const AddReview = ({
             const currentRestaurant = await restaurantService.getOne(restaurant._id);
             currentRestaurant.reviews.push(addedReview);
             await restaurantService.edit(restaurant._id, currentRestaurant);
-            addReview(addedReview);
+            addReviewToState(addedReview);
             onCloseModal();
             // window.location.reload();
             hideLoading();

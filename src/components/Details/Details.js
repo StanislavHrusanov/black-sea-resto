@@ -42,25 +42,32 @@ export const Details = () => {
     const reviewBtnName = userReview ? 'Edit your review' : 'Add review';
 
     const openModal = () => {
-        setShowModal(true)
+        setShowModal(true);
     }
 
     const closeModal = () => {
         setShowModal(false);
     }
 
-    const addReview = (review) => {
+    const addReviewToState = (review) => {
         setRestaurant(state => ({
             ...state,
             reviews: [...state.reviews, review]
         }));
     }
 
-    const editReview = (review) => {
+    const editReviewInState = (review) => {
         setRestaurant(state => ({
             ...state,
             reviews: state.reviews.map(x => x._id === review._id ? review : x)
-        }))
+        }));
+    }
+
+    const deleteReviewFromState = (review) => {
+        setRestaurant(state => ({
+            ...state,
+            reviews: state.reviews.filter(x => x._id !== review._id)
+        }));
     }
 
     const deleteRestaurant = async (e) => {
@@ -90,7 +97,7 @@ export const Details = () => {
                     <AddReview
                         onCloseModal={closeModal}
                         restaurant={restaurant}
-                        addReview={addReview}
+                        addReviewToState={addReviewToState}
                     />
                 }
 
@@ -98,8 +105,9 @@ export const Details = () => {
                     <EditReview
                         onCloseModal={closeModal}
                         restaurant={restaurant}
-                        editReview={editReview}
                         userReview={userReview}
+                        editReviewInState={editReviewInState}
+                        deleteReviewFromState={deleteReviewFromState}
                     />
                 }
 
