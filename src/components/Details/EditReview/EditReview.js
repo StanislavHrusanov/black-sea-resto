@@ -19,7 +19,7 @@ export const EditReview = ({
     const [starName, setStarName] = useState(userReview.rating);
     const [comment, setComment] = useState(userReview.comment);
 
-    const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
+    const { showLoading, hideLoading } = useContext(LoadingContext);
     const navigate = useNavigate();
 
     const onChangeHandler = (e) => setComment(e.target.value);
@@ -40,14 +40,13 @@ export const EditReview = ({
             showLoading();
             const editedReview = await reviewService.editReview(userReview._id, reviewToEditData);
             const currentRestaurant = await restaurantService.getOne(restaurant._id);
-
             currentRestaurant.reviews = currentRestaurant.reviews.map(x => x._id === editedReview._id ? editedReview : x);
-
             await restaurantService.edit(restaurant._id, currentRestaurant);
             editReview(editedReview);
             onCloseModal();
             // window.location.reload();
             hideLoading();
+
         } catch (error) {
             hideLoading();
             window.alert(error.message);

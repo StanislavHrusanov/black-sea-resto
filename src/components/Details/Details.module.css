@@ -128,6 +128,7 @@
 
 .delete-button {
   background-color: red;
+  cursor: pointer;
 }
 
 .delete-button:hover {
@@ -188,7 +189,7 @@ h3 .rating {
   color: blue;
   font-size: 45px;
   font-weight: bolder;
-  cursor: default ;
+  cursor: default;
   float: left;
   margin-bottom: 10px;
 }

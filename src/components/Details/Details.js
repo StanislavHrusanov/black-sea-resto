@@ -37,7 +37,6 @@ export const Details = () => {
 
     const isOwner = restaurant._ownerId === user?._id;
 
-
     const userReview = restaurant?.reviews?.find(x => x._ownerId === user?._id);
 
     const reviewBtnName = userReview ? 'Edit your review' : 'Add review';
@@ -62,6 +61,23 @@ export const Details = () => {
             ...state,
             reviews: state.reviews.map(x => x._id === review._id ? review : x)
         }))
+    }
+
+    const deleteRestaurant = async (e) => {
+        try {
+            showLoading();
+
+            const choice = window.confirm('Are you sure you want to delete this restaurant?');
+
+            if (choice) {
+                await restaurantService.del(restaurant._id);
+                hideLoading();
+                navigate('/restaurants');
+            }
+        } catch (error) {
+            window.alert(error.message);
+            return navigate(`/restaurants/${restaurant._id}`);
+        }
     }
 
     return isLoading
@@ -117,7 +133,7 @@ export const Details = () => {
                             {isOwner &&
                                 <>
                                     <Link to={`/restaurants/${restaurant._id}/edit`} className={styles["edit-button"]}>Edit</Link>
-                                    <Link to={`/restaurants/${restaurant._id}/edit`} className={styles["delete-button"]}>Delete</Link>
+                                    <button onClick={deleteRestaurant} className={styles["delete-button"]}>Delete</button>
                                     <Link className={styles["favourite-button"]} >Favourite</Link>
                                 </>
                             }
