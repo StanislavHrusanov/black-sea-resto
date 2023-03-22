@@ -7,7 +7,7 @@ export const isValidFullName = (e, setError) => {
     }));
 }
 
-export const minLength = (e, setError, length) => {
+export const minLengthRegister = (e, setError, length) => {
     setError(state => ({
         ...state,
         [e.target.name]: e.target.value.length < length || e.target.value.includes(' ')
@@ -18,5 +18,12 @@ export const isPaswordsMatch = (e, password, setError) => {
     setError(state => ({
         ...state,
         [e.target.name]: e.target.value !== password
+    }));
+}
+
+export const minLength = (e, setError, length) => {
+    setError(state => ({
+        ...state,
+        [e.target.name]: e.target.value.length < length
     }));
 }

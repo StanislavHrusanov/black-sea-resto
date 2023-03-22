@@ -32,3 +32,10 @@ export const commentDateConverter = (par) => {
 
     return formatedDate;
 }
+
+export const trimInputs = (inputsObj) => {
+    for (let key in inputsObj) {
+        inputsObj[key] = inputsObj[key].trim();
+    }
+    return inputsObj;
+}

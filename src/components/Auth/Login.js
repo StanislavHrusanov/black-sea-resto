@@ -3,15 +3,19 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./Auth.module.css";
 
 import * as authService from "../../services/authService";
+import * as validation from "../../validation";
 import { AuthContext } from "../../contexts/AuthContext";
 import { LoadingContext } from "../../contexts/LoadingContext";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
+import { trimInputs } from "../../utils";
 
 export const Login = () => {
     const [inputs, setInputs] = useState({
         username: '',
         password: ''
     });
+
+    const [errors, setErrors] = useState({});
 
     const { userLogin } = useContext(AuthContext);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
@@ -27,9 +31,17 @@ export const Login = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
 
+        for (let key in errors) {
+            if (errors[key]) {
+                return;
+            }
+        }
+
+        const trimedInputs = trimInputs(inputs);
+
         try {
             showLoading();
-            const loggedInUser = await authService.login(inputs);
+            const loggedInUser = await authService.login(trimedInputs);
             userLogin(loggedInUser);
             hideLoading();
             navigate('/');
@@ -64,8 +76,14 @@ export const Login = () => {
                                 placeholder="jdoe"
                                 value={inputs.username}
                                 onChange={onChangeHandler}
+                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
                             />
                         </div>
+                        {errors.username &&
+                            <div className={styles["error-msg"]}>
+                                Username is required!
+                            </div>
+                        }
                         <div className={styles["input"]}>
                             <label htmlFor="password" className={styles["password"]}>Password</label>
                             <input
@@ -76,8 +94,14 @@ export const Login = () => {
                                 placeholder="******"
                                 value={inputs.password}
                                 onChange={onChangeHandler}
+                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
                             />
                         </div>
+                        {errors.password &&
+                            <div className={styles["error-msg"]}>
+                                Password is required!
+                            </div>
+                        }
                         <div className={styles["action"]}>
                             <button className={styles["action-button"]}>Login</button>
                         </div>

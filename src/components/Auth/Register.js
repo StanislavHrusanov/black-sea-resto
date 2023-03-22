@@ -93,7 +93,7 @@ export const Register = () => {
                                 placeholder="jdoe"
                                 value={inputs.username}
                                 onChange={onChangeHandler}
-                                onBlur={(e) => validation.minLength(e, setErrors, 3)}
+                                onBlur={(e) => validation.minLengthRegister(e, setErrors, 3)}
                             />
                         </div>
                         {errors.username &&
@@ -111,7 +111,7 @@ export const Register = () => {
                                 placeholder="******"
                                 value={inputs.password}
                                 onChange={onChangeHandler}
-                                onBlur={(e) => validation.minLength(e, setErrors, 6)}
+                                onBlur={(e) => validation.minLengthRegister(e, setErrors, 6)}
                             />
                         </div>
                         {errors.password &&
