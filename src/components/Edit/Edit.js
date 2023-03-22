@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import styles from "./Edit.module.css";
 
 import * as restaurantService from "../../services/restaurantService";
+import * as validation from "../../validation";
 import { LoadingContext } from "../../contexts/LoadingContext";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
@@ -15,6 +16,9 @@ export const Edit = () => {
         imageUrl: '',
         summary: ''
     });
+
+    const [errors, setErrors] = useState({});
+
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
     const { restaurantId } = useParams();
     const navigate = useNavigate();
@@ -39,6 +43,12 @@ export const Edit = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
+
+        for (let key in errors) {
+            if (errors[key]) {
+                return;
+            }
+        }
 
         try {
             showLoading();
@@ -76,8 +86,14 @@ export const Edit = () => {
                                 placeholder="Happy Bar & Grill"
                                 value={restaurant.name}
                                 onChange={onChangeHandler}
+                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
                             />
                         </div>
+                        {errors.name &&
+                            <div className={styles["error-msg"]}>
+                                Restaurant name is required!
+                            </div>
+                        }
                         <div className={styles["input"]}>
                             <label htmlFor="restaurant-address" className={styles["address"]}>Address</label>
                             <input
@@ -88,8 +104,14 @@ export const Edit = () => {
                                 placeholder="10, Vitosha, Sofia 1000"
                                 value={restaurant.address}
                                 onChange={onChangeHandler}
+                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
                             />
                         </div>
+                        {errors.address &&
+                            <div className={styles["error-msg"]}>
+                                Address is required!
+                            </div>
+                        }
                         <div className={styles["input"]}>
                             <label htmlFor="phone-number" className={styles["phone"]}>Phone</label>
                             <input
@@ -100,20 +122,32 @@ export const Edit = () => {
                                 placeholder="+359888XXXXXX"
                                 value={restaurant.phone}
                                 onChange={onChangeHandler}
+                                onBlur={(e) => validation.isPhoneNumber(e, setErrors)}
                             />
                         </div>
+                        {errors.phone &&
+                            <div className={styles["error-msg"]}>
+                                Phone number must start with +359 followed by 9 digits!
+                            </div>
+                        }
                         <div className={styles["input"]}>
                             <label htmlFor="restaurant-capacity" className={styles["capacity"]}>Capacity</label>
                             <input
-                                type="text"
+                                type="number"
                                 className={styles["input-field"]}
                                 name="capacity"
                                 id="restaurant-capacity"
                                 placeholder="100 persons"
                                 value={restaurant.capacity}
                                 onChange={onChangeHandler}
+                                onBlur={(e) => validation.isPositiveNumber(e, setErrors)}
                             />
                         </div>
+                        {errors.capacity &&
+                            <div className={styles["error-msg"]}>
+                                Capacity must be an integer bigger than 0!
+                            </div>
+                        }
                         <div className={styles["input"]}>
                             <label htmlFor="restaurant-image" className={styles["imageUrl"]}>Image</label>
                             <input
@@ -124,8 +158,14 @@ export const Edit = () => {
                                 placeholder="http://image.jpeg"
                                 value={restaurant.imageUrl}
                                 onChange={onChangeHandler}
+                                onBlur={(e) => validation.isImageUrl(e, setErrors)}
                             />
                         </div>
+                        {errors.imageUrl &&
+                            <div className={styles["error-msg"]}>
+                                Image must be a link!
+                            </div>
+                        }
                         <div className={styles["input"]}>
                             <label htmlFor="restaurant-summary" className={styles["summary"]}>Summary</label>
                             <input
@@ -136,8 +176,14 @@ export const Edit = () => {
                                 placeholder="Some text..."
                                 value={restaurant.summary}
                                 onChange={onChangeHandler}
+                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
                             />
                         </div>
+                        {errors.summary &&
+                            <div className={styles["error-msg"]}>
+                                Summary is required!
+                            </div>
+                        }
                         <div className={styles["action"]}>
                             <button className={styles["action-button"]}>Edit</button>
                         </div>
