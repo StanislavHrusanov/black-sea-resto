@@ -111,15 +111,9 @@
   border-width: 3px;
 }
 
-.edit-button:hover,
-.delete-button:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
 .edit-button {
   background-color: darkblue;
+  text-decoration: none;
 }
 
 .edit-button:hover {
@@ -137,6 +131,7 @@
 
 .favourite-button {
   background-color: rgb(0, 174, 255);
+  text-decoration: none;
 }
 
 .favourite-button:hover {

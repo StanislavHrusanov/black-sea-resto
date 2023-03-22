@@ -19,6 +19,7 @@ export const Home = () => {
             .then(() => hideLoading())
             .catch(err => {
                 window.alert(err.message);
+                hideLoading();
                 return window.location.reload();
             });
     }, [showLoading, hideLoading]);
