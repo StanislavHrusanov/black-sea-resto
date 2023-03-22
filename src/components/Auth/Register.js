@@ -46,8 +46,8 @@ export const Register = () => {
             navigate('/');
 
         } catch (error) {
-            hideLoading();
             window.alert(error.message);
+            hideLoading();
             return navigate('/register');
         }
     }

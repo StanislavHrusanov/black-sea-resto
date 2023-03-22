@@ -30,6 +30,7 @@ export const Details = () => {
 
             } catch (error) {
                 window.alert(error.message);
+                hideLoading();
                 return navigate('/restaurants');
             }
         })();
@@ -72,17 +73,18 @@ export const Details = () => {
 
     const deleteRestaurant = async (e) => {
         try {
-            showLoading();
 
             const choice = window.confirm('Are you sure you want to delete this restaurant?');
 
             if (choice) {
+                showLoading();
                 await restaurantService.del(restaurant._id);
                 hideLoading();
                 navigate('/restaurants');
             }
         } catch (error) {
             window.alert(error.message);
+            hideLoading();
             return navigate(`/restaurants/${restaurant._id}`);
         }
     }

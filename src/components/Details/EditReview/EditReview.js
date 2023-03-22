@@ -49,8 +49,8 @@ export const EditReview = ({
             hideLoading();
 
         } catch (error) {
-            hideLoading();
             window.alert(error.message);
+            hideLoading();
             return navigate(`/restaurants/${restaurant._id}`);
         }
     }
@@ -75,8 +75,8 @@ export const EditReview = ({
             }
 
         } catch (error) {
-            hideLoading();
             window.alert(error.message);
+            hideLoading();
             return navigate(`/restaurants/${restaurant._id}`);
         }
     }

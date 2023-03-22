@@ -3,22 +3,35 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./Header.module.css"
 
 import { AuthContext } from "../../contexts/AuthContext";
+import { LoadingContext } from "../../contexts/LoadingContext";
 import * as authService from "../../services/authService";
 
 export const Header = () => {
     const { user, userLogout } = useContext(AuthContext);
+    const { showLoading, hideLoading } = useContext(LoadingContext);
     const navigate = useNavigate();
 
     const onLogout = async (e) => {
         e.preventDefault();
         try {
+            showLoading();
             await authService.logout();
+            userLogout();
+            localStorage.removeItem('user');
+            hideLoading();
+            navigate('/');
 
         } catch (error) {
+            if (
+                error.message === 'Invalid access token' ||
+                error.message === 'User session does not exist') {
+                userLogout();
+                localStorage.removeItem('user');
+            }
             window.alert(error.message);
+            hideLoading();
+            navigate('/');
         }
-        userLogout();
-        navigate('/');
     }
 
     return (

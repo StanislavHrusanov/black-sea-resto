@@ -55,8 +55,8 @@ export const AddReview = ({
             // window.location.reload();
             hideLoading();
         } catch (error) {
-            hideLoading();
             window.alert(error.message);
+            hideLoading();
             return navigate(`/restaurants/${restaurant._id}`);
         }
     }

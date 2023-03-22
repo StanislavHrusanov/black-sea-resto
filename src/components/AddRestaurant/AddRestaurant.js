@@ -45,8 +45,8 @@ export const AddRestaurant = () => {
             navigate('/restaurants');
 
         } catch (error) {
-            hideLoading();
             window.alert(error.message);
+            hideLoading();
             return navigate('/addRestaurant');
         }
     }

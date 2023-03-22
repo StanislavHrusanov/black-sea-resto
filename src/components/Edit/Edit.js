@@ -29,7 +29,8 @@ export const Edit = () => {
             .then(result => setRestaurant(result))
             .then(() => hideLoading())
             .catch(err => {
-                window.alert(err.message)
+                window.alert(err.message);
+                hideLoading();
                 return navigate(`/restaurants/${restaurantId}`);
             });
     }, [restaurantId, showLoading, hideLoading, navigate]);
@@ -56,8 +57,8 @@ export const Edit = () => {
             hideLoading();
             navigate(`/restaurants/${restaurantId}`);
         } catch (error) {
-            hideLoading()
             window.alert(error.message);
+            hideLoading();
             return navigate(`/restaurants/${restaurantId}/edit`);
         }
     }

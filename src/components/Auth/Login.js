@@ -46,8 +46,8 @@ export const Login = () => {
             hideLoading();
             navigate('/');
         } catch (error) {
-            hideLoading();
             window.alert(error.message);
+            hideLoading();
             return navigate('/login');
         }
 
