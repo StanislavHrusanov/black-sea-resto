@@ -27,3 +27,26 @@ export const minLength = (e, setError, length) => {
         [e.target.name]: e.target.value.length < length
     }));
 }
+
+export const isPhoneNumber = (e, setError) => {
+    const pattern = /^\+359[0-9]{9}$/g;
+    setError(state => ({
+        ...state,
+        [e.target.name]: !pattern.test(e.target.value)
+    }));
+}
+
+export const isImageUrl = (e, setError) => {
+    setError(state => ({
+        ...state,
+        [e.target.name]: !e.target.value.match(/https*:\/\/.*/g)
+    }));
+}
+
+export const isPositiveNumber = (e, setError) => {
+    const pattern = /^[1-9][0-9]*$/g
+    setError(state => ({
+        ...state,
+        [e.target.name]: !pattern.test(e.target.value)
+    }));
+}

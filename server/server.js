@@ -1346,7 +1346,7 @@
                 "name": "Viaturna Melnica",
                 "address": "12, Morski skali, Sozopol 8130",
                 "phone": "+359888888888",
-                "capacity": "300 persons",
+                "capacity": 300,
                 "imageUrl": "https://fastly.4sqi.net/img/general/600x600/32551704_l_uL8IULNtcByxgmcCtPPtZQL4_swnvqekBtyLN7XIE.jpg",
                 "summary": "Viaturna melnica is located in old town of Sozopol. It offers traditional Bulgarian food of it's guests.",
                 "reviews": [],
@@ -1357,7 +1357,7 @@
                 "name": "Pri hudojnicite",
                 "address": "80, Kiril i Metodii, Sozopol 8130",
                 "phone": "+359888888888",
-                "capacity": "150 persons",
+                "capacity": 150,
                 "imageUrl": "https://www.arthotel-sbh.com/wp-content/uploads/2021/12/Ev.Hud-27-1200x812.jpg",
                 "summary": "Restaurant Pri hudojnicite is located in old town of Sozopol. It offers fresh fish and other sea foods.",
                 "reviews": [{
@@ -1376,7 +1376,7 @@
                 "name": "Boca Grande",
                 "address": "15, Kraibrejna, Sozopol 8130",
                 "phone": "+359888888888",
-                "capacity": "200 persons",
+                "capacity": 200,
                 "imageUrl": "https://gradat.bg/sites/default/files/styles/page_article_dynamic_width/public/mainimages/o_3045804_0.jpg?itok=Te1DzaI8",
                 "summary": "A first-class drink with friends or a blissful meal in your own company are some of the options our restaurants proudly serve. A meal at the Boca Grande restaurant will transport you to Spain without leaving dazzling Sozopol.",
                 "reviews": [{
@@ -1395,7 +1395,7 @@
                 "name": "Coral",
                 "address": "15, Yani Hrisopolu, Sozopol 8130",
                 "phone": "+359888888888",
-                "capacity": "50 persons",
+                "capacity": 50,
                 "imageUrl": "https://guest-house-koral-sozopol.hotelmix.bg/data/Photos/OriginalPhoto/1431/143152/143152287/Guest-House-Koral-Sozopol-Exterior.JPEG",
                 "summary": "A small family restaurant located in old town of Sozopol. It is a quiet place with delicious traditional and sea food.",
                 "reviews": [{

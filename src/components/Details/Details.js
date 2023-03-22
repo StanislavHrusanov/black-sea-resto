@@ -135,7 +135,7 @@ export const Details = () => {
                         }
                         <h3>Address: {restaurant.address}</h3>
                         <h3>Phone: {restaurant.phone}</h3>
-                        <h3>Capacity: {restaurant.capacity}</h3>
+                        <h3>Capacity: {restaurant.capacity} persons</h3>
                         <h3>Summary: {restaurant.summary}</h3>
                         <div className={styles["buttons"]}>
                             {isOwner &&
