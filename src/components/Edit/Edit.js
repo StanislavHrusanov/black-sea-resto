@@ -86,7 +86,7 @@ export const Edit = () => {
                                 placeholder="Happy Bar & Grill"
                                 value={restaurant.name}
                                 onChange={onChangeHandler}
-                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
+                                onBlur={(e) => validation.minLength(e, setErrors)}
                             />
                         </div>
                         {errors.name &&
@@ -104,7 +104,7 @@ export const Edit = () => {
                                 placeholder="10, Vitosha, Sofia 1000"
                                 value={restaurant.address}
                                 onChange={onChangeHandler}
-                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
+                                onBlur={(e) => validation.minLength(e, setErrors)}
                             />
                         </div>
                         {errors.address &&
@@ -176,7 +176,7 @@ export const Edit = () => {
                                 placeholder="Some text..."
                                 value={restaurant.summary}
                                 onChange={onChangeHandler}
-                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
+                                onBlur={(e) => validation.minLength(e, setErrors)}
                             />
                         </div>
                         {errors.summary &&

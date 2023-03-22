@@ -74,7 +74,7 @@ export const AddRestaurant = () => {
                                 placeholder="Happy Bar & Grill"
                                 value={inputs.name}
                                 onChange={onChangeHandler}
-                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
+                                onBlur={(e) => validation.minLength(e, setErrors)}
                             />
                         </div>
                         {errors.name &&
@@ -92,7 +92,7 @@ export const AddRestaurant = () => {
                                 placeholder="10, Vitosha, Sofia 1000"
                                 value={inputs.address}
                                 onChange={onChangeHandler}
-                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
+                                onBlur={(e) => validation.minLength(e, setErrors)}
                             />
                         </div>
                         {errors.address &&
@@ -164,7 +164,7 @@ export const AddRestaurant = () => {
                                 placeholder="Some text..."
                                 value={inputs.summary}
                                 onChange={onChangeHandler}
-                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
+                                onBlur={(e) => validation.minLength(e, setErrors)}
                             />
                         </div>
                         {errors.summary &&

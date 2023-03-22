@@ -21,10 +21,11 @@ export const isPaswordsMatch = (e, password, setError) => {
     }));
 }
 
-export const minLength = (e, setError, length) => {
+export const minLength = (e, setError) => {
+    const pattern = /\S+/g;
     setError(state => ({
         ...state,
-        [e.target.name]: e.target.value.length < length
+        [e.target.name]: !pattern.test(e.target.value)
     }));
 }
 

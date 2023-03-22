@@ -76,7 +76,7 @@ export const Login = () => {
                                 placeholder="jdoe"
                                 value={inputs.username}
                                 onChange={onChangeHandler}
-                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
+                                onBlur={(e) => validation.minLength(e, setErrors)}
                             />
                         </div>
                         {errors.username &&
@@ -94,7 +94,7 @@ export const Login = () => {
                                 placeholder="******"
                                 value={inputs.password}
                                 onChange={onChangeHandler}
-                                onBlur={(e) => validation.minLength(e, setErrors, 1)}
+                                onBlur={(e) => validation.minLength(e, setErrors)}
                             />
                         </div>
                         {errors.password &&
