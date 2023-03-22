@@ -158,3 +158,8 @@
     font-size: 46px;
     color: black;
 }
+
+.error-msg {
+    color: red;
+    font-size: 16px;
+}

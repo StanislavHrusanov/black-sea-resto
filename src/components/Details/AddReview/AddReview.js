@@ -18,6 +18,7 @@ export const AddReview = ({
     const [hover, setHover] = useState(0);
     const [starName, setStarName] = useState('');
     const [comment, setComment] = useState('');
+    const [isSubmited, setIsSubmited] = useState(false);
 
     const { user } = useContext(AuthContext);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
@@ -29,6 +30,12 @@ export const AddReview = ({
 
     const onSubmit = async (e) => {
         e.preventDefault();
+
+        setIsSubmited(true);
+
+        if (rating === 0) {
+            return;
+        }
 
         const review = {
             restaurantId: restaurant._id,
@@ -104,6 +111,13 @@ export const AddReview = ({
                                     </div>
 
                                 </div>
+
+                                {isSubmited && rating === 0 &&
+                                    <div className={styles["error-msg"]}>
+                                        Rating is required!
+                                    </div>
+                                }
+
                                 <div className={styles["form-input"]}>
                                     <label htmlFor="add-comment">Add comment:</label>
                                     <div className={styles["input-wrapper"]}>
@@ -117,6 +131,7 @@ export const AddReview = ({
                                     </div>
 
                                 </div>
+
                             </div>
 
                             <div className={styles["form-actions"]}>
