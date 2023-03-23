@@ -45,6 +45,7 @@ export const Header = () => {
                 {user
                     ? <div id="user">
                         <Link to="/addRestaurant">Add restaurant</Link>
+                        <Link to="/myProfile">My profile</Link>
                         <Link to="/logout" onClick={(e) => onLogout(e)}>Logout</Link>
                     </div>
 

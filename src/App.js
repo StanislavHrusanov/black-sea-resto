@@ -11,6 +11,7 @@ import { Footer } from './components/Footer/Footer';
 import { AddRestaurant } from './components/AddRestaurant/AddRestaurant';
 import { Details } from './components/Details/Details';
 import { Edit } from "./components/Edit/Edit";
+import { MyProfile } from "./components/MyProfile/MyProfile";
 
 import { AuthProvider } from './contexts/AuthContext';
 import { LoadingProvider } from "./contexts/LoadingContext";
@@ -27,6 +28,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/myProfile' element={<MyProfile />} />
             <Route path='/restaurants' element={<Restaurants />} />
             <Route path='/restaurants/:restaurantId' element={<Details />} />
             <Route path='/restaurants/:restaurantId/edit' element={<Edit />} />
