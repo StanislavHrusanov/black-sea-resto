@@ -39,3 +39,18 @@ export const trimInputs = (inputsObj) => {
     }
     return inputsObj;
 }
+
+export const sortRestaurantsByCriteria = (restaurants, criteria) => {
+    switch (criteria) {
+        case 'newest':
+            return restaurants.sort((a, b) => b._createdOn - a._createdOn);
+        case 'a-z':
+            return restaurants.sort((a, b) => a.name.localeCompare(b.name));
+        case 'reviews':
+            return restaurants.sort((a, b) => b.reviews.length - a.reviews.length);
+        case 'rating':
+            return restaurants.sort((a, b) => getAvgRating(b.reviews) - getAvgRating(a.reviews));
+        default:
+            return restaurants;
+    }
+}
