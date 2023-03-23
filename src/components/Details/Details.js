@@ -139,15 +139,17 @@ export const Details = () => {
                         <h3>Phone: {restaurant.phone}</h3>
                         <h3>Capacity: {restaurant.capacity} persons</h3>
                         <h3>Summary: {restaurant.summary}</h3>
-                        <div className={styles["buttons"]}>
-                            {isOwner &&
-                                <>
-                                    <Link to={`/restaurants/${restaurant._id}/edit`} className={styles["edit-button"]}>Edit</Link>
-                                    <button onClick={deleteRestaurant} className={styles["delete-button"]}>Delete</button>
-                                    <Link className={styles["favourite-button"]} >Favourite</Link>
-                                </>
-                            }
-                        </div>
+                        {user &&
+                            <div className={styles["buttons"]}>
+                                {isOwner
+                                    ? <>
+                                        <Link to={`/restaurants/${restaurant._id}/edit`} ><button className={styles["edit-button"]}>Edit</button></Link>
+                                        <button onClick={deleteRestaurant} className={styles["delete-button"]}>Delete</button>
+                                    </>
+                                    : <button className={styles["favourite-button"]} >Remove from Favourites</button>
+                                }
+                            </div>
+                        }
 
                         <div className={styles["reviews-container"]}>
 
