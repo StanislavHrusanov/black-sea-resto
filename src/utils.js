@@ -54,3 +54,11 @@ export const sortRestaurantsByCriteria = (restaurants, criteria) => {
             return restaurants;
     }
 }
+
+export const profileCreatedOnDateConverter = (par) => {
+    const date = new Date(par);
+
+    const fullDate = date.toLocaleDateString();
+
+    return fullDate.slice(0, -3);
+}
