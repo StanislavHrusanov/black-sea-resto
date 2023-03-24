@@ -1,6 +1,12 @@
+.profile-message {
+    margin: auto;
+    margin-top: -30px;
+    text-align: center;
+}
+
 .profile-message h2 {
-    color: darkblue;
-    font-size: 350%;
+    font-size: 63px;
+    color: rgb(2, 2, 107);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     margin-top: 80px;
@@ -23,33 +29,173 @@
     color: rgb(2, 2, 107);
 }
 
-.favourites-container {
-    margin: 5rem auto;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1350px;
-    min-height: 597px;
+.container-box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.box {
+    display: inline;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+.box h1 {
+    color: rgb(3, 3, 114);
+    font-weight: 700;
+    font-size: 63px;
+    margin-top: 50px;
+    margin-bottom: -30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.favourites-container,
+.my-reviews-container {
+    display: inline-flex;
+    flex-direction: row;
+    width: 800px;
+    min-height: 600px;
     box-shadow: 0px 0px 40px 0px;
-    padding: .55rem;
     background-color: transparent;
     margin-top: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
-.favourites {
+.favourites,
+.reviews {
     background-color: transparent;
-    overflow: hidden;
+    overflow: auto;
     padding: 55px;
+    padding-right: -55px;
     text-align: center;
-    height: auto;
-    width: auto;
+    max-height: 695px;
+    width: 800px;
 }
 
-.favourites h1 {
-    color: darkblue;
+.favourites h1,
+.reviews h1 {
+    color: rgb(3, 3, 114);
     font-weight: 700;
     font-size: 63px;
     margin-top: -50px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.restaurant-image-wrap {
+    width: 170px;
+    height: 170px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    left: -170px;
+    bottom: 8px;
+}
+
+.restaurant-image-wrap>img {
+    max-width: 166px;
+    max-height: 166px;
+    aspect-ratio: 1/0.8;
+    border: 2px solid darkblue;
+}
+
+.restaurant {
+    box-shadow: 0px 0px 20px 0px;
+    padding: 50px;
+    margin: auto auto 30px;
+    width: 500px;
+    max-height: 170px;
+    background-color: rgb(245, 223, 190);
+    color: darkblue;
+}
+
+.restaurant h3 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 190px;
+    margin-top: -185px;
+    font-size: 26px;
+    line-height: normal;
+    overflow: hidden;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.data-buttons {
+    display: inline-flex;
+    position: relative;
+    margin-left: 200px;
+    margin-top: -7px;
+    max-width: 280px;
+}
+
+.details-btn {
+    background-color: darkblue;
+    width: 70px;
+    height: 30px;
+    font-size: 18px;
+    margin-top: 10px;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+.details-btn:hover {
+    background-color: rgb(192, 129, 117);
+    color: white;
+}
+
+.favourites-btn {
+    background-color: red;
+    width: 190px;
+    height: 30px;
+    font-size: 18px;
+    margin-top: 10px;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+.favourites-btn:hover {
+    background-color: rgb(192, 129, 117);
+    color: white;
+}
+
+.rating {
+    position: relative;
+    unicode-bidi: bidi-override;
+    text-align: center;
+    direction: ltr;
+    margin-top: -25px;
+    margin-left: 190px;
+}
+
+.rating span {
+    font-size: 20px;
+    padding: 4px;
+}
+
+.full::before {
+    content: "\2605";
+    position: absolute;
+    color: orange;
+}
+
+.empty::before {
+    content: "\2605";
+    position: absolute;
+    color: grey;
+}
+
+.review-count {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 7px;
 }
