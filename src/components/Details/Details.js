@@ -9,12 +9,14 @@ import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
 import { getAvgRating } from "../../utils";
 import * as restaurantService from "../../services/restaurantService";
+import * as favouritesService from "../../services/favouritesService";
 import { AuthContext } from "../../contexts/AuthContext";
 import { LoadingContext } from "../../contexts/LoadingContext";
 
 export const Details = () => {
     const [showModal, setShowModal] = useState(false);
     const [restaurant, setRestaurant] = useState({});
+    const [isAddedToFavourites, setIsAddedToFavourites] = useState([]);
     const { restaurantId } = useParams();
     const { user } = useContext(AuthContext);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
@@ -26,6 +28,8 @@ export const Details = () => {
                 showLoading();
                 const currRestaurant = await restaurantService.getOne(restaurantId);
                 setRestaurant(currRestaurant);
+                const favourites = await favouritesService.getFavourites(restaurantId);
+                setIsAddedToFavourites(favourites);
                 hideLoading();
 
             } catch (error) {
@@ -41,6 +45,8 @@ export const Details = () => {
     const userReview = restaurant?.reviews?.find(x => x._ownerId === user?._id);
 
     const reviewBtnName = userReview ? 'Edit your review' : 'Add review';
+
+    const isUserAddedToFavourites = isAddedToFavourites?.find(x => x._ownerId === user?._id);
 
     const openModal = () => {
         setShowModal(true);
@@ -146,7 +152,9 @@ export const Details = () => {
                                         <Link to={`/restaurants/${restaurant._id}/edit`} ><button className={styles["edit-button"]}>Edit</button></Link>
                                         <button onClick={deleteRestaurant} className={styles["delete-button"]}>Delete</button>
                                     </>
-                                    : <button className={styles["favourite-button"]} >Remove from Favourites</button>
+                                    : isUserAddedToFavourites
+                                        ? <button className={styles["favourite-remove-button"]} >Remove from Favourites</button>
+                                        : <button className={styles["favourite-add-button"]} >Add to Favourites</button>
                                 }
                             </div>
                         }
