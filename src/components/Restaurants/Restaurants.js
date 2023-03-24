@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Restaurants.module.css";
 
 import { RestaurantItem } from "./RestaurantItem/RestaurantItem";
@@ -16,6 +17,7 @@ export const Restaurants = () => {
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [search, setSearch] = useState('');
     const [sortCriteria, setSortCriteria] = useState('date');
+    const navigate = useNavigate();
 
     useEffect(() => {
         showLoading();
@@ -25,9 +27,9 @@ export const Restaurants = () => {
             .catch(err => {
                 window.alert(err.message);
                 hideLoading();
-                return window.location.reload();
+                return navigate('/');
             });
-    }, [showLoading, hideLoading]);
+    }, [showLoading, hideLoading, navigate]);
 
     const sortedRestaurants = utils.sortRestaurantsByCriteria(restaurants, sortCriteria);
     const sortedFilteedRestaurants = utils.sortRestaurantsByCriteria(filteredRestaurants, sortCriteria);

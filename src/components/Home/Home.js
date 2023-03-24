@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
 
 import { Restaurant } from "./Restaurant/Restaurant";
@@ -11,6 +12,7 @@ import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 export const Home = () => {
     const [restaurants, setRestaurants] = useState([]);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         showLoading();
@@ -20,9 +22,9 @@ export const Home = () => {
             .catch(err => {
                 window.alert(err.message);
                 hideLoading();
-                return window.location.reload();
+                return navigate('/');
             });
-    }, [showLoading, hideLoading]);
+    }, [showLoading, hideLoading, navigate]);
 
     const mostPopular = restaurants
         .slice()

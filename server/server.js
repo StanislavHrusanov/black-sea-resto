@@ -1461,51 +1461,14 @@
             },
 
         },
-        usersProfile: {
-            "35c62d76-8152-4626-8712-eeb96381bea8": {
-                myReviews: [{
-                    "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                    "restaurantId": "126777f5-3277-42ad-b874-76d043b069cb",
-                    "rating": 5,
-                    "author": "Peter",
-                    "comment": "Excellent!",
-                    "_createdOn": 1678708464033,
-                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c2"
-                },
-                {
-                    "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                    "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
-                    "rating": 4,
-                    "author": "Peter",
-                    "comment": "Very good!",
-                    "_createdOn": 1678708464073,
-                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c3"
-                }],
-                favourites: []
-            },
-            "847ec027-f659-4086-8032-5173e2f9c93a": {
-                myReviews: [{
-                    "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                    "restaurantId": "1840a313-225c-416a-817a-9954d4609f7c",
-                    "rating": 3,
-                    "author": "John",
-                    "comment": "Good!",
-                    "_createdOn": 1678708464033,
-                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c4"
-                }],
-                favourites: []
-            },
-            "847ec027-f659-4086-8032-5173e2f9c93b": {
-                myReviews: [{
-                    "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
-                    "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
-                    "rating": 5,
-                    "author": "Ivan",
-                    "comment": "Nice place!",
-                    "_createdOn": 1678708464073,
-                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c8"
-                }],
-                favourites: []
+        favourites: {
+            "75ce39b5-ea44-4a6d-ae4d-303440c66f77": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "restaurantId": "126777f5-3277-42ad-b874-76d043b069cb",
+                "restaurantName": "Boca Grande",
+                "imageUrl": "https://gradat.bg/sites/default/files/styles/page_article_dynamic_width/public/mainimages/o_3045804_0.jpg?itok=Te1DzaI8",
+                "_createdOn": 1679666632574,
+                "_id": "75ce39b5-ea44-4a6d-ae4d-303440c66f77"
             }
         }
 

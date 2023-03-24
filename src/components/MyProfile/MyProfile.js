@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./MyProfile.module.css";
 
 import { AuthContext } from "../../contexts/AuthContext";
@@ -13,6 +13,7 @@ export const MyProfile = () => {
     const [myFavourites, setMyFavourites] = useState([]);
     const { user } = useContext(AuthContext);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         (async () => {
@@ -24,10 +25,10 @@ export const MyProfile = () => {
             } catch (error) {
                 hideLoading();
                 window.alert(error.message);
-                window.location.reload();
+                return navigate('/');
             }
         })();
-    }, [showLoading, hideLoading, user._id])
+    }, [showLoading, hideLoading, user._id, navigate])
 
     return isLoading
         ? (

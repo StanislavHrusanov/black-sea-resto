@@ -22,6 +22,7 @@ async function request(method, url, data) {
         if (res.ok === false) {
             if (res.status === 403) {
                 localStorage.removeItem('user');
+                window.location = '/';
             }
             const error = await res.json();
             throw new Error(error.message);
