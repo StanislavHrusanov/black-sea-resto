@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./MyProfile.module.css";
 
 import { AuthContext } from "../../contexts/AuthContext";
@@ -29,7 +29,11 @@ export const MyProfile = () => {
                 return navigate('/');
             }
         })();
-    }, [showLoading, hideLoading, user._id, navigate])
+    }, [showLoading, hideLoading, user._id, navigate]);
+
+    const removeFromMyFavouritesState = (favourite) => {
+        setMyFavourites(state => state.filter(x => x._id !== favourite._id));
+    }
 
     return isLoading
         ? (
@@ -57,7 +61,12 @@ export const MyProfile = () => {
                                 <div className={styles["favourites"]}>
                                     {myFavourites.length === 0
                                         ? <p className={styles["no-favourites"]}>There is no restaurants in favourites yet!</p>
-                                        : myFavourites.map(x => <Favourite key={x._id} favourite={x} />)
+                                        : myFavourites.map(x =>
+                                            <Favourite
+                                                key={x._id}
+                                                favourite={x}
+                                                removeFromMyFavouritesState={removeFromMyFavouritesState}
+                                            />)
                                     }
 
                                 </div>
