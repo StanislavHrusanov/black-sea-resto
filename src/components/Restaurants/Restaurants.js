@@ -27,7 +27,7 @@ export const Restaurants = () => {
             .catch(err => {
                 window.alert(err.message);
                 hideLoading();
-                return navigate('/');
+                return navigate('/restaurants');
             });
     }, [showLoading, hideLoading, navigate]);
 
