@@ -95,6 +95,34 @@ export const Details = () => {
         }
     }
 
+    const onAddToFavoutites = async () => {
+        const data = {
+            restaurantId: restaurant._id,
+            restaurantName: restaurant.name,
+            imageUrl: restaurant.imageUrl
+        }
+        try {
+
+            const addedRestaurant = await favouritesService.addToFavourites(data);
+            setIsAddedToFavourites(state => [...state, addedRestaurant]);
+
+        } catch (error) {
+            window.alert(error.message);
+            return navigate(`/restaurants/${restaurant._id}`);
+        }
+    }
+
+    const onRemoveFromFavourites = async () => {
+        try {
+            const restaurantToRemove = Object.assign({}, isUserAddedToFavourites);
+            await favouritesService.removeFromFavourites(restaurantToRemove._id);
+            setIsAddedToFavourites(state => state.filter(x => x._id !== restaurantToRemove._id));
+        } catch (error) {
+            window.alert(error.message);
+            return navigate(`/restaurants/${restaurant._id}`);
+        }
+    }
+
     return isLoading
         ? (
             <LoadingSpinner />
@@ -148,13 +176,22 @@ export const Details = () => {
                         {user &&
                             <div className={styles["buttons"]}>
                                 {isOwner
-                                    ? <>
+                                    ?
+                                    <>
                                         <Link to={`/restaurants/${restaurant._id}/edit`} ><button className={styles["edit-button"]}>Edit</button></Link>
                                         <button onClick={deleteRestaurant} className={styles["delete-button"]}>Delete</button>
                                     </>
                                     : isUserAddedToFavourites
-                                        ? <button className={styles["favourite-remove-button"]} >Remove from Favourites</button>
-                                        : <button className={styles["favourite-add-button"]} >Add to Favourites</button>
+                                        ?
+                                        <button
+                                            className={styles["favourite-remove-button"]}
+                                            onClick={onRemoveFromFavourites}
+                                        >Remove from Favourites</button>
+                                        :
+                                        <button
+                                            className={styles["favourite-add-button"]}
+                                            onClick={onAddToFavoutites}
+                                        >Add to Favourites</button>
                                 }
                             </div>
                         }
