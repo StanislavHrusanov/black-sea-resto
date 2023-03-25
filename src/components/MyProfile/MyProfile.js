@@ -8,6 +8,7 @@ import * as utils from "../../utils";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
 import * as favouritesService from "../../services/favouritesService";
+import { Favourite } from "./Favourite/Favourite";
 
 export const MyProfile = () => {
     const [myFavourites, setMyFavourites] = useState([]);
@@ -56,16 +57,7 @@ export const MyProfile = () => {
                                 <div className={styles["favourites"]}>
                                     {myFavourites.length === 0
                                         ? <p className={styles["no-favourites"]}>There is no restaurants in favourites yet!</p>
-                                        : myFavourites.map(x => <div key={x._id} className={styles["restaurant"]}>
-                                            <div className={styles["restaurant-image-wrap"]}>
-                                                <img src={x.imageUrl} alt="resto" />
-                                            </div>
-                                            <h3>{x.restaurantName}</h3>
-                                            <div className={styles["data-buttons"]}>
-                                                <Link to={`/restaurants/${x.restaurantId}`}><button className={styles["details-btn"]}>Details</button></Link>
-                                                <button className={styles["favourites-btn"]}>Remove from favourites</button>
-                                            </div>
-                                        </div>)
+                                        : myFavourites.map(x => <Favourite key={x._id} favourite={x} />)
                                     }
 
                                 </div>
