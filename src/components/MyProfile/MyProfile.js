@@ -66,12 +66,14 @@ export const MyProfile = () => {
                                 <div className={styles["favourites"]}>
                                     {myFavourites.length === 0
                                         ? <p className={styles["no-favourites"]}>There is no restaurants in favourites yet!</p>
-                                        : myFavourites.map(x =>
-                                            <Favourite
-                                                key={x._id}
-                                                favourite={x}
-                                                removeFromMyFavouritesState={removeFromMyFavouritesState}
-                                            />)
+                                        : myFavourites
+                                            .sort((a, b) => b._createdOn - a._createdOn)
+                                            .map(x =>
+                                                <Favourite
+                                                    key={x._id}
+                                                    favourite={x}
+                                                    removeFromMyFavouritesState={removeFromMyFavouritesState}
+                                                />)
                                     }
                                 </div>
                             </div>
