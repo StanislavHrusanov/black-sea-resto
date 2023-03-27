@@ -165,7 +165,7 @@ export const Details = () => {
                                         </span>
                                     )
                                 })}
-                                <span>{`${getAvgRating(restaurant.reviews)} (${restaurant.reviews?.length}) rewiews`}</span>
+                                <span>{`${getAvgRating(restaurant.reviews)} (${restaurant.reviews?.length}) reviews`}</span>
 
                             </div></h3>
                         }

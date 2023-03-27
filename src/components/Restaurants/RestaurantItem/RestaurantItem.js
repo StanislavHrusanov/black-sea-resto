@@ -24,7 +24,7 @@ export const RestaurantItem = ({ restaurant }) => {
                         </span>
                     )
                 })}
-                <p className={styles['review-count']}>{`(${restaurant.reviews.length}) rewiews`}</p>
+                <p className={styles['review-count']}>{`(${restaurant.reviews.length}) reviews`}</p>
             </div>
             <div className={styles["data-buttons"]}>
                 <Link to={`/restaurants/${restaurant._id}`} className={styles["details-btn"]}>Details</Link>
