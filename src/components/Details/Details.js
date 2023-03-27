@@ -42,11 +42,11 @@ export const Details = () => {
 
     const isOwner = restaurant._ownerId === user?._id;
 
-    const userReview = restaurant?.reviews?.find(x => x._ownerId === user?._id);
+    const userReview = restaurant.reviews?.find(x => x._ownerId === user?._id);
 
     const reviewBtnName = userReview ? 'Edit your review' : 'Add review';
 
-    const isUserAddedToFavourites = isAddedToFavourites?.find(x => x._ownerId === user?._id);
+    const isUserAddedToFavourites = isAddedToFavourites.find(x => x._ownerId === user?._id);
 
     const openModal = () => {
         setShowModal(true);
@@ -206,7 +206,9 @@ export const Details = () => {
                             }
 
                             {restaurant.reviews?.length > 0
-                                ? restaurant.reviews?.map(x => <Review key={x._id} review={x} />)
+                                ? restaurant.reviews
+                                    .sort((a, b) => b._createdOn - a._createdOn)
+                                    .map(x => <Review key={x._id} review={x} />)
                                 : <p className={styles["no-reviews"]}>No reviews yet!</p>
                             }
 

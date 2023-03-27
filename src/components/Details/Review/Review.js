@@ -8,7 +8,9 @@ export const Review = ({ review }) => {
         <div className={styles["review-container"]}>
             <p >{review.author}</p>
             <p className={styles["posted"]}>
-                {review._updatedOn ? commentDateConverter(review._updatedOn) : commentDateConverter(review._createdOn)}
+                {review._updatedOn
+                    ? `edited at: ${commentDateConverter(review._updatedOn)}`
+                    : `posted at: ${commentDateConverter(review._createdOn)}`}
             </p>
             <div className={styles["review-body"]}>
                 <div className={styles["star-rating-container"]}>
