@@ -39,6 +39,7 @@ export const AddReview = ({
 
         const review = {
             restaurantId: restaurant._id,
+            restaurantName: restaurant.name,
             author: user.username,
             rating,
             comment

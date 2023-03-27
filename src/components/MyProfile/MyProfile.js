@@ -8,10 +8,13 @@ import * as utils from "../../utils";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
 import * as favouritesService from "../../services/favouritesService";
+import * as reviewService from "../../services/reviewService";
 import { Favourite } from "./Favourite/Favourite";
+import { MyReview } from "./MyReview/MyReview";
 
 export const MyProfile = () => {
     const [myFavourites, setMyFavourites] = useState([]);
+    const [myReviews, setMyReviews] = useState([]);
     const { user } = useContext(AuthContext);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
     const navigate = useNavigate();
@@ -22,6 +25,8 @@ export const MyProfile = () => {
                 showLoading();
                 const favourites = await favouritesService.getUserFavourites(user._id);
                 setMyFavourites(favourites);
+                const myRev = await reviewService.getMyReviews(user._id);
+                setMyReviews(myRev);
                 hideLoading();
             } catch (error) {
                 hideLoading();
@@ -68,20 +73,19 @@ export const MyProfile = () => {
                                                 removeFromMyFavouritesState={removeFromMyFavouritesState}
                                             />)
                                     }
-
                                 </div>
-
                             </div>
                         </div>
-
 
                         <div className={styles["rev-box"]}>
                             <h1>My reviews</h1>
                             <div className={styles["my-reviews-container"]}>
                                 <div className={styles["reviews"]}>
+                                    {myReviews.length === 0
+                                        ? <p className={styles["no-favourites"]}>There is no reviews in My reviews yet!</p>
+                                        : myReviews.map(x => <MyReview key={x._id} review={x} />)
+                                    }
                                 </div>
-
-
                             </div>
                         </div>
                     </div>

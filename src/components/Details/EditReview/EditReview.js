@@ -32,6 +32,7 @@ export const EditReview = ({
 
         const reviewToEditData = {
             restaurantId: restaurant._id,
+            restaurantName: restaurant.name,
             author: userReview.author,
             rating,
             comment
