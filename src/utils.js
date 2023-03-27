@@ -47,9 +47,9 @@ export const sortRestaurantsByCriteria = (restaurants, criteria) => {
         case 'a-z':
             return restaurants.sort((a, b) => a.name.localeCompare(b.name));
         case 'reviews':
-            return restaurants.sort((a, b) => b.reviews.length - a.reviews.length);
+            return restaurants.sort((a, b) => b.reviews.length - a.reviews.length || getAvgRating(b.reviews) - getAvgRating(a.reviews));
         case 'rating':
-            return restaurants.sort((a, b) => getAvgRating(b.reviews) - getAvgRating(a.reviews));
+            return restaurants.sort((a, b) => getAvgRating(b.reviews) - getAvgRating(a.reviews) || b.reviews.length - a.reviews.length);
         default:
             return restaurants;
     }
