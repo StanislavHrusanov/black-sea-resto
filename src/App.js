@@ -6,6 +6,7 @@ import { Header } from './components/Header/Header';
 import { Home } from './components/Home/Home';
 import { Register } from './components/Auth/Register';
 import { Login } from './components/Auth/Login';
+import { Logout } from "./components/Auth/Logout";
 import { Restaurants } from './components/Restaurants/Restaurants';
 import { Footer } from './components/Footer/Footer';
 import { AddRestaurant } from './components/AddRestaurant/AddRestaurant';
@@ -28,6 +29,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/logout' element={<Logout />} />
             <Route path='/myProfile' element={<MyProfile />} />
             <Route path='/restaurants' element={<Restaurants />} />
             <Route path='/restaurants/:restaurantId' element={<Details />} />
