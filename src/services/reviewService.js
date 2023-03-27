@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event";
 import * as api from "./api";
 
 const endpoints = {

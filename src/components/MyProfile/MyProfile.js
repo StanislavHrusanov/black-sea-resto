@@ -83,7 +83,9 @@ export const MyProfile = () => {
                                 <div className={styles["reviews"]}>
                                     {myReviews.length === 0
                                         ? <p className={styles["no-favourites"]}>There is no reviews in My reviews yet!</p>
-                                        : myReviews.map(x => <MyReview key={x._id} review={x} />)
+                                        : myReviews
+                                            .sort((a, b) => b._createdOn - a._createdOn)
+                                            .map(x => <MyReview key={x._id} review={x} />)
                                     }
                                 </div>
                             </div>
