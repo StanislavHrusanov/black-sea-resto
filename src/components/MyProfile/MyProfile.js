@@ -9,12 +9,16 @@ import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
 import * as favouritesService from "../../services/favouritesService";
 import * as reviewService from "../../services/reviewService";
+import * as restaurantService from "../../services/restaurantService";
+
 import { Favourite } from "./Favourite/Favourite";
 import { MyReview } from "./MyReview/MyReview";
+import { MyRestaurant } from "./MyRestaurants/MyRestaurant";
 
 export const MyProfile = () => {
     const [myFavourites, setMyFavourites] = useState([]);
     const [myReviews, setMyReviews] = useState([]);
+    const [myRestaurants, setMyRestaurants] = useState([]);
     const { user } = useContext(AuthContext);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
     const navigate = useNavigate();
@@ -27,6 +31,8 @@ export const MyProfile = () => {
                 setMyFavourites(favourites);
                 const myRev = await reviewService.getMyReviews(user._id);
                 setMyReviews(myRev);
+                const myRts = await restaurantService.getMyRestaurants(user._id);
+                setMyRestaurants(myRts);
                 hideLoading();
             } catch (error) {
                 hideLoading();
@@ -38,6 +44,10 @@ export const MyProfile = () => {
 
     const removeFromMyFavouritesState = (favourite) => {
         setMyFavourites(state => state.filter(x => x._id !== favourite._id));
+    }
+
+    const removeFromMyRestaurantsState = (restaurant) => {
+        setMyRestaurants(state => state.filter(x => x._id !== restaurant._id));
     }
 
     return isLoading
@@ -60,12 +70,32 @@ export const MyProfile = () => {
 
                     </div>
                     <div className={styles["box"]}>
+
+                        <div className={styles["my-rt-box"]}>
+                            <h1>My restaurants</h1>
+                            <div className={styles["my-rt-container"]}>
+                                <div className={styles["rt"]}>
+                                    {myRestaurants.length === 0
+                                        ? <p className={styles["no-rt"]}>There is no restaurants in My restaurants yet!</p>
+                                        : myRestaurants
+                                            .sort((a, b) => b._createdOn - a._createdOn)
+                                            .map(x =>
+                                                <MyRestaurant
+                                                    key={x._id}
+                                                    restaurant={x}
+                                                    removeFromMyRestaurantsState={removeFromMyRestaurantsState}
+                                                />)
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
                         <div className={styles["fav-box"]}>
-                            <h1>Favourites</h1>
+                            <h1>My favourites</h1>
                             <div className={styles["favourites-container"]}>
                                 <div className={styles["favourites"]}>
                                     {myFavourites.length === 0
-                                        ? <p className={styles["no-favourites"]}>There is no restaurants in favourites yet!</p>
+                                        ? <p className={styles["no-favourites"]}>There is no restaurants in My favourites yet!</p>
                                         : myFavourites
                                             .sort((a, b) => b._createdOn - a._createdOn)
                                             .map(x =>
@@ -84,7 +114,7 @@ export const MyProfile = () => {
                             <div className={styles["my-reviews-container"]}>
                                 <div className={styles["reviews"]}>
                                     {myReviews.length === 0
-                                        ? <p className={styles["no-favourites"]}>There is no reviews in My reviews yet!</p>
+                                        ? <p className={styles["no-reviews"]}>There is no reviews in My reviews yet!</p>
                                         : myReviews
                                             .sort((a, b) => b._createdOn - a._createdOn)
                                             .map(x => <MyReview key={x._id} review={x} />)

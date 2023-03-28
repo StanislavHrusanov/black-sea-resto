@@ -6,7 +6,6 @@ import * as favouritesService from "../../../services/favouritesService";
 export const Favourite = ({ favourite, removeFromMyFavouritesState }) => {
     const navigate = useNavigate();
 
-
     const onRemove = async () => {
 
         try {
