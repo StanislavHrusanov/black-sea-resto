@@ -52,11 +52,12 @@
 }
 
 .favourites-container,
-.my-reviews-container {
+.my-reviews-container,
+.my-rt-container {
     display: inline-flex;
     flex-direction: row;
     width: 800px;
-    min-height: 600px;
+    min-height: 200px;
     box-shadow: 0px 0px 40px 0px;
     background-color: transparent;
     margin-top: 100px;
@@ -65,7 +66,8 @@
 }
 
 .favourites,
-.reviews {
+.reviews,
+.rt {
     background-color: transparent;
     overflow: auto;
     padding: 55px;
@@ -85,7 +87,9 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.no-favourites {
+.no-favourites,
+.no-reviews,
+.no-rt {
     color: rgb(1, 1, 102);
     text-align: center;
     font-weight: 700;

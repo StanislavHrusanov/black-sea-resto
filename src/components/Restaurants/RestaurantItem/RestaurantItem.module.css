@@ -58,12 +58,6 @@
     padding: 4px;
 }
 
-/* .rating span:before {
-    content: "\2605";
-    position: absolute;
-    color: orange;
-} */
-
 .full::before {
     content: "\2605";
     position: absolute;

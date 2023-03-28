@@ -8,6 +8,15 @@
     color: darkblue;
 }
 
+.review a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.review a:hover {
+    color: rgb(192, 129, 117);
+}
+
 .review h3 {
     font-family: 'Times New Roman', Times, serif;
     margin-top: -61px;
@@ -66,7 +75,7 @@
     box-sizing: content-box;
     min-width: 450px;
     max-width: 450px;
-    min-height: 50px;
+    min-height: 20px;
     margin-top: -49px;
     margin-left: 80px;
     word-break: break-all;
