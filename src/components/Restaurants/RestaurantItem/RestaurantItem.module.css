@@ -70,6 +70,12 @@
     color: grey;
 }
 
+.data-buttons {
+    font-size: 1.4rem;
+    padding-top: 20px;
+    text-align: center;
+}
+
 .details-btn {
     background-color: darkblue;
     font-size: 1.0rem;
@@ -80,13 +86,7 @@
     text-decoration: none;
 }
 
-.data-buttons {
-    font-size: 1.4rem;
-    padding-top: 20px;
-    text-align: center;
-}
-
-.btn.details-btn:hover {
+.details-btn:hover {
     background-color: rgb(192, 129, 117);
     color: white;
 }
