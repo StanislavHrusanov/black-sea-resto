@@ -1,0 +1,123 @@
+.restaurant-image-wrap {
+    width: 170px;
+    height: 170px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    left: -170px;
+    bottom: 8px;
+}
+
+.restaurant-image-wrap>img {
+    max-width: 166px;
+    max-height: 166px;
+    aspect-ratio: 1/0.8;
+    border: 2px solid darkblue;
+}
+
+.restaurant {
+    box-shadow: 0px 0px 20px 0px;
+    padding: 50px;
+    margin: auto auto 30px;
+    width: 500px;
+    max-height: 170px;
+    background-color: rgb(245, 223, 190);
+    color: darkblue;
+}
+
+.restaurant a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.restaurant a:hover{
+    color:rgb(192, 129, 117);
+}
+
+.restaurant h3 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 200px;
+    margin-top: -184px;
+    font-size: 26px;
+    line-height: normal;
+    overflow: hidden;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.data-buttons {
+    display: inline-flex;
+    position: relative;
+    margin-left: 200px;
+    margin-top: -7px;
+    max-width: 280px;
+}
+
+.edit-btn {
+    background-color: darkblue;
+    width: 70px;
+    height: 30px;
+    font-size: 18px;
+    margin-top: 6px;
+    margin-left: 0px;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: red;
+    width: 70px;
+    height: 30px;
+    font-size: 18px;
+    margin-top: 6px;
+    margin-left: 0px;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    background-color: rgb(192, 129, 117);
+    color: white;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    text-align: center;
+    direction: ltr;
+    margin-left: 200px;
+    margin-top: -19px;
+    position: relative;
+}
+
+.rating span {
+    font-size: 20px;
+    padding: 4px;
+}
+
+.full::before {
+    content: "\2605";
+    position: absolute;
+    color: orange;
+}
+
+.empty::before {
+    content: "\2605";
+    position: absolute;
+    color: grey;
+}
+
+.review-count {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 5px;
+}
