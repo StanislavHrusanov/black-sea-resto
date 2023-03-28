@@ -13,10 +13,10 @@ import * as utils from "../../utils";
 
 export const Restaurants = () => {
     const [restaurants, setRestaurants] = useState([]);
-    const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [search, setSearch] = useState('');
     const [sortCriteria, setSortCriteria] = useState('date');
+    const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
     const navigate = useNavigate();
 
     useEffect(() => {

@@ -4,6 +4,7 @@ import { commentDateConverter } from "../../../utils";
 export const Review = ({ review }) => {
     const rating = review.rating;
     const comment = review.comment;
+    
     return (
         <div className={styles["review-container"]}>
             <p >{review.author}</p>
