@@ -5,7 +5,8 @@ const endpoints = {
     add: '/data/reviews',
     edit: (reviewId) => `/data/reviews/${reviewId}`,
     delete: (reviewId) => `/data/reviews/${reviewId}`,
-    getUserReviews: (userId) => `/data/reviews?where=_ownerId%3D%22${userId}%22`
+    getUserReviews: (userId) => `/data/reviews?where=_ownerId%3D%22${userId}%22`,
+    lastReview: '/data/reviews?sortBy=_createdOn%20desc&pageSize=1'
 }
 
 export const getById = (restaurantId) => api.get(endpoints.getReviewsById(restaurantId));
@@ -17,3 +18,5 @@ export const editReview = (reviewId, data) => api.put(endpoints.edit(reviewId), 
 export const deleteReview = (reviewId) => api.del(endpoints.delete(reviewId));
 
 export const getMyReviews = (userId) => api.get(endpoints.getUserReviews(userId));
+
+export const getLastReview = () => api.get(endpoints.lastReview);
