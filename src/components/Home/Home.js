@@ -2,29 +2,38 @@ import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
 
-import { Restaurant } from "./Restaurant/Restaurant";
 import { getAvgRating } from "../../utils";
-import { getAllRestaurants } from "../../services/restaurantService";
+import * as restaurantService from "../../services/restaurantService";
+import * as reviewService from "../../services/reviewService";
 
 import { LoadingContext } from "../../contexts/LoadingContext";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
+import { Restaurant } from "./Restaurant/Restaurant";
 import { LastAdded } from "./LastAdded/LastAdded";
+import { LastReview } from "./LastReview/LastReview";
 
 export const Home = () => {
     const [restaurants, setRestaurants] = useState([]);
+    const [lastReview, setLastReview] = useState([]);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
     const navigate = useNavigate();
 
     useEffect(() => {
-        showLoading();
-        getAllRestaurants()
-            .then(result => setRestaurants(result))
-            .then(() => hideLoading())
-            .catch(err => {
-                window.alert(err.message);
+        (async () => {
+            try {
+                showLoading();
+                const allRestaurants = await restaurantService.getAllRestaurants();
+                setRestaurants(allRestaurants);
+                const lastRev = await reviewService.getLastReview();
+                setLastReview(lastRev);
+                hideLoading();
+
+            } catch (error) {
+                window.alert(error.message);
                 hideLoading();
                 return navigate('/');
-            });
+            }
+        })();
     }, [showLoading, hideLoading, navigate]);
 
     const mostPopular = restaurants
@@ -66,6 +75,20 @@ export const Home = () => {
                             lastAdded.length > 0
                                 ? <LastAdded key={lastAdded[0]._id} restaurant={lastAdded[0]} />
                                 : <p className={styles["no-restaurants"]}>There is no restaurants added yet!</p>
+                        }
+
+                    </div>
+                </div>
+
+                <div className={styles["last-review-container"]}>
+
+                    <div className={styles["last-review"]}>
+                        <h1>Last review</h1>
+
+                        {
+                            lastReview.length > 0
+                                ? <LastReview key={lastReview[0]._id} review={lastReview[0]} />
+                                : <p className={styles["no-restaurants"]}>There is no reviews added yet!</p>
                         }
 
                     </div>
