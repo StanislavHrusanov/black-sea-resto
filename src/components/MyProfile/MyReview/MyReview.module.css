@@ -41,14 +41,12 @@
 
 .rating {
     unicode-bidi: bidi-override;
-    /* text-align: center; */
     direction: ltr;
 }
 
 .rating span {
     font-size: 25px;
     padding: 2px;
-    /* text-align: center; */
     color: black;
     font-weight: lighter;
 }
@@ -73,18 +71,17 @@
     /* -webkit-font-smoothing: antialiased; */
     color: #444444;
     box-sizing: content-box;
-    min-width: 450px;
-    max-width: 450px;
+    min-width: 440px;
+    max-width: 440px;
     min-height: 20px;
     margin-top: -49px;
     margin-left: 80px;
-    word-break: break-all;
-    text-align: left;
+    word-break: normal;
+    text-align: justify;
     box-sizing: content-box;
 }
 
 .desc {
-    /* margin-left: -400px; */
     margin-top: -10px;
     padding-bottom: 10px;
     margin-left: -25px;

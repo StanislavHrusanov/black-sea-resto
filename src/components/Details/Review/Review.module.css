@@ -89,8 +89,8 @@ h3 .rating {
     /* -webkit-font-smoothing: antialiased; */
     color: #444444;
     box-sizing: content-box;
-    min-width: 970px;
-    max-width: 970px;
+    min-width: 968px;
+    max-width: 968px;
     min-height: 50px;
     margin-bottom: 10px;
     line-height: 20px;
@@ -98,6 +98,6 @@ h3 .rating {
     float: left;
     margin-top: -20px;
     margin-left: 10px;
-    text-align: left;
-    word-break: break-all;
+    text-align: justify;
+    word-break: normal;
 }
