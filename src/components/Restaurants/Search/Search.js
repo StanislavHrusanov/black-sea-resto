@@ -1,7 +1,10 @@
 import { useState } from "react";
 import styles from "./Search.module.css";
 
-export const Search = ({ onSearch }) => {
+export const Search = ({
+    onSearch,
+    calculateNumberOfPages
+}) => {
     const [searched, setSearched] = useState('');
 
     const onChangeHandler = (e) => {
@@ -10,6 +13,7 @@ export const Search = ({ onSearch }) => {
 
     const onClearSearch = () => {
         setSearched('')
+        calculateNumberOfPages('');
         onSearch('');
     }
 
@@ -21,6 +25,7 @@ export const Search = ({ onSearch }) => {
                 id="search-input"
                 value={searched}
                 onChange={onChangeHandler}
+                onBlur={(e) => calculateNumberOfPages(e.target.value)}
             />
             {searched.length > 0 &&
                 <button
