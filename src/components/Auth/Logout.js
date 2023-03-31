@@ -19,7 +19,7 @@ export const Logout = () => {
                 userLogout();
                 localStorage.removeItem('user');
                 hideLoading();
-                navigate('/');
+                window.location='/';
 
             } catch (error) {
                 window.alert(error.message);
