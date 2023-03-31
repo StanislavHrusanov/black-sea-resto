@@ -1,0 +1,11 @@
+.sort-div {
+    float: right;
+    font-size: 18px;
+    color: black;
+}
+
+.criteria {
+    background-color: transparent;
+    font-size: 18px;
+    border: 1px solid grey;
+}
