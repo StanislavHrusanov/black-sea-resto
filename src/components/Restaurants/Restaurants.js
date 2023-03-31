@@ -10,6 +10,8 @@ import { LoadingContext } from "../../contexts/LoadingContext";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
 import * as utils from "../../utils";
+import { Pagination } from "./Pagination/Pagination";
+import { Sort } from "./Sort/Sort";
 
 export const Restaurants = () => {
     const [restaurants, setRestaurants] = useState([]);
@@ -107,23 +109,11 @@ export const Restaurants = () => {
 
                 </div>
                 <div className={styles["restaurants-container"]}>
-                    <div className={styles["sort-container"]}>
-                        <div className={styles["sort-div"]}>
-                            <span>Sort by</span>
-                            <select
-                                value={sortCriteria}
-                                name="criteria"
-                                className={styles["criteria"]}
-                                onChange={(e) => onSort(e.target.value)}
-                            >
-                                <option value=""></option>
-                                <option value="newest">Newest</option>
-                                <option value="a-z">A-Z</option>
-                                <option value="reviews">Reviews</option>
-                                <option value="rating">Rating</option>
-                            </select>
-                        </div>
-                    </div>
+
+                    <Sort
+                        sortCriteria={sortCriteria}
+                        onSort={onSort}
+                    />
 
                     <div className={styles["restaurants"]}>
                         <h1>Restaurants</h1>
@@ -140,23 +130,14 @@ export const Restaurants = () => {
                     </div>
 
                     {filteredRestaurants.length > 0 &&
-                        <div className={styles["page-container"]}>
-                            <div className={styles["page-div"]}>
-                                <button onClick={clickPrev}>Prev</button>
-                                <select
-                                    name="page"
-                                    value={currentPage}
-                                    className={styles["page"]}
-                                    onChange={(e) => onChangePage(e.target.value)}
-                                >
-                                    {options.length > 0 &&
-                                        options.map((x, i) => <option key={i} value={i + 1}>{i + 1}</option>)
-                                    }
-                                </select>
-                                <button onClick={clickNext}>{currentPage < numberOfPages ? 'Next' : 'Last'}</button>
-                            </div>
-
-                        </div>
+                        <Pagination
+                            currentPage={currentPage}
+                            options={options}
+                            numberOfPages={numberOfPages}
+                            clickPrev={clickPrev}
+                            clickNext={clickNext}
+                            onChangePage={onChangePage}
+                        />
                     }
                 </div>
             </section>

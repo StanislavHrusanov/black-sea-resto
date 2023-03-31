@@ -1,0 +1,23 @@
+.page-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.page-div button {
+    width: 100px;
+    height: 35px;
+    background-color: darkblue;
+    color: whitesmoke;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.page {
+    width: 50px;
+    height: 35px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    font-size: 22px;
+    background-color: whitesmoke;
+}
