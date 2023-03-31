@@ -59,7 +59,7 @@ export const Restaurants = () => {
 
     const onSort = (criteria) => {
         setSortCriteria(criteria);
-        setFilteredRestaurants(state => [...utils.sortRestaurantsByCriteria(state, criteria)]);
+        setFilteredRestaurants(state => [...utils.sortRestaurantsByCriteria([...state], criteria)]);
     }
 
     const clickPrev = () => {
