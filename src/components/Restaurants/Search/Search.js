@@ -3,9 +3,10 @@ import styles from "./Search.module.css";
 
 export const Search = ({
     onSearch,
-    calculateNumberOfPages
+    calculateNumberOfPages,
+    search
 }) => {
-    const [searched, setSearched] = useState('');
+    const [searched, setSearched] = useState(search);
 
     const onChangeHandler = (e) => {
         setSearched(e.target.value);

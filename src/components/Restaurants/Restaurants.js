@@ -12,6 +12,7 @@ import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 import * as utils from "../../utils";
 import { Pagination } from "./Pagination/Pagination";
 import { Sort } from "./Sort/Sort";
+import { UserActionsContext } from "../../contexts/UserActionsContext";
 
 export const Restaurants = () => {
     const [restaurants, setRestaurants] = useState([]);
@@ -23,6 +24,7 @@ export const Restaurants = () => {
     const [numberOfPages, setNumberOfPages] = useState(1);
     const [options, setOptions] = useState([]);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
+    const { search, sort, page, changeSearchState, changeSortState, changePageState } = useContext(UserActionsContext)
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -31,11 +33,15 @@ export const Restaurants = () => {
                 showLoading();
                 const allRestaurants = await restaurantService.getAllRestaurants();
                 setRestaurants(allRestaurants);
-                setFilteredRestaurants(allRestaurants);
-                setNumberOfPages(Math.ceil(allRestaurants.length / pageSize));
+                const allFilteredRsts = allRestaurants.filter(x => x.name.toLowerCase().includes(search.toLowerCase()));
+                setFilteredRestaurants([...utils.sortRestaurantsByCriteria([...allFilteredRsts], sort)]);
+                setSortCriteria(sort);
+                setCurrentPage(page);
+                setStart(page * pageSize - pageSize);
+                setNumberOfPages(Math.ceil(allFilteredRsts.length / pageSize));
                 setOptions(() => {
                     const opt = [];
-                    for (let i = 1; i <= Math.ceil(allRestaurants.length / pageSize); i++) {
+                    for (let i = 1; i <= Math.ceil(allFilteredRsts.length / pageSize); i++) {
                         opt.push(i);
                     }
                     return opt;
@@ -51,21 +57,30 @@ export const Restaurants = () => {
     }, [showLoading, hideLoading, navigate, pageSize]);
 
     const onSearch = (searched) => {
-        setSortCriteria('');
-        setFilteredRestaurants(restaurants.filter(x => x.name.toLowerCase().includes(searched.toLowerCase())));
+        setSortCriteria(sort);
+        setFilteredRestaurants(() => {
+            const filtered = restaurants.filter(x => x.name.toLowerCase().includes(searched.toLowerCase()));
+
+            return [...utils.sortRestaurantsByCriteria([...filtered], sort)];
+        });
         setCurrentPage(1);
         setStart(0);
+        changeSearchState(searched);
+        changePageState(1);
     }
 
     const onSort = (criteria) => {
         setSortCriteria(criteria);
         setFilteredRestaurants(state => [...utils.sortRestaurantsByCriteria([...state], criteria)]);
+        changeSortState(criteria);
+        changePageState(currentPage);
     }
 
     const clickPrev = () => {
         if (currentPage > 1) {
             setCurrentPage(state => state - 1);
             setStart(state => state - pageSize);
+            changePageState(currentPage - 1);
         }
     }
 
@@ -73,12 +88,14 @@ export const Restaurants = () => {
         if (currentPage < numberOfPages) {
             setCurrentPage(state => state + 1);
             setStart(state => state + pageSize);
+            changePageState(currentPage + 1);
         }
     }
 
     const onChangePage = (page) => {
         setCurrentPage(Number(page));
-        setStart(Number(page) * pageSize - pageSize)
+        setStart(Number(page) * pageSize - pageSize);
+        changePageState(Number(page));
     }
 
     const calculateNumberOfPages = (searched) => {
@@ -105,6 +122,7 @@ export const Restaurants = () => {
                     <Search
                         onSearch={onSearch}
                         calculateNumberOfPages={calculateNumberOfPages}
+                        search={search}
                     />
 
                 </div>
