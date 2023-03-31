@@ -78,6 +78,7 @@ export const MyProfile = () => {
                                     {myRestaurants.length === 0
                                         ? <p className={styles["no-rt"]}>There is no restaurants in My restaurants yet!</p>
                                         : myRestaurants
+                                            .slice()
                                             .sort((a, b) => b._createdOn - a._createdOn)
                                             .map(x =>
                                                 <MyRestaurant
@@ -97,6 +98,7 @@ export const MyProfile = () => {
                                     {myFavourites.length === 0
                                         ? <p className={styles["no-favourites"]}>There is no restaurants in My favourites yet!</p>
                                         : myFavourites
+                                            .slice()
                                             .sort((a, b) => b._createdOn - a._createdOn)
                                             .map(x =>
                                                 <Favourite
@@ -116,6 +118,7 @@ export const MyProfile = () => {
                                     {myReviews.length === 0
                                         ? <p className={styles["no-reviews"]}>There is no reviews in My reviews yet!</p>
                                         : myReviews
+                                            .slice()
                                             .sort((a, b) => b._createdOn - a._createdOn)
                                             .map(x => <MyReview key={x._id} review={x} />)
                                     }
