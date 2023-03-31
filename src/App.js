@@ -15,6 +15,7 @@ import { MyProfile } from "./components/MyProfile/MyProfile";
 
 import { AuthProvider } from './contexts/AuthContext';
 import { LoadingProvider } from "./contexts/LoadingContext";
+import { UserActionsProvider } from './contexts/UserActionsContext';
 
 function App() {
   return (
@@ -22,21 +23,23 @@ function App() {
       <AuthProvider>
         <LoadingProvider>
           <Header />
+          <UserActionsProvider>
 
-          <Routes>
+            <Routes>
 
-            <Route path='/' element={<Home />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/logout' element={<Logout />} />
-            <Route path='/myProfile' element={<MyProfile />} />
-            <Route path='/restaurants' element={<Restaurants />} />
-            <Route path='/restaurants/:restaurantId' element={<Details />} />
-            <Route path='/restaurants/:restaurantId/edit' element={<Edit />} />
-            <Route path='/addRestaurant' element={<AddRestaurant />} />
+              <Route path='/' element={<Home />} />
+              <Route path='/register' element={<Register />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/logout' element={<Logout />} />
+              <Route path='/myProfile' element={<MyProfile />} />
+              <Route path='/restaurants' element={<Restaurants />} />
+              <Route path='/restaurants/:restaurantId' element={<Details />} />
+              <Route path='/restaurants/:restaurantId/edit' element={<Edit />} />
+              <Route path='/addRestaurant' element={<AddRestaurant />} />
 
-          </Routes>
+            </Routes>
 
+          </UserActionsProvider>
           <div className={styles["footer-container"]}>
             <Footer />
           </div>
