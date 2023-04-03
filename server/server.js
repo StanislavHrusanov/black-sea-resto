@@ -1337,6 +1337,24 @@
                 username: "Ivan",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1",
                 "_createdOn": 1679578258019
+            },
+            "35c62d76-8152-4626-8712-eeb96381bea1": {
+                fullname: "Todor Petrov",
+                username: "Todor",
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1",
+                "_createdOn": 1679568258049
+            },
+            "35c62d76-8152-4626-8712-eeb96381bea2": {
+                fullname: "Peter Todorov",
+                username: "Pesho",
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1",
+                "_createdOn": 1679577258049
+            },
+            "35c62d76-8152-4626-8712-eeb96381bea3": {
+                fullname: "Stanislav Hrusanov",
+                username: "Stan",
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1",
+                "_createdOn": 1679579258049
             }
         },
         sessions: {
@@ -1352,8 +1370,31 @@
                 "capacity": 300,
                 "imageUrl": "https://fastly.4sqi.net/img/general/600x600/32551704_l_uL8IULNtcByxgmcCtPPtZQL4_swnvqekBtyLN7XIE.jpg",
                 "summary": "Viaturna melnica is located in old town of Sozopol. It offers traditional Bulgarian food of it's guests.",
-                "reviews": [],
+                "reviews": [
+                    {
+                        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                        "restaurantId": "ff436770-76c5-40e2-b231-77409eda7a61",
+                        "restaurantName": "Viaturna Melnica",
+                        "author": "Ivan",
+                        "rating": 5,
+                        "comment": "Perfect meals! I love it!",
+                        "_createdOn": 1680525605810,
+                        "_id": "742ae8ac-0c42-4cb9-b030-0bfd4a1e4253"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                        "restaurantId": "ff436770-76c5-40e2-b231-77409eda7a61",
+                        "restaurantName": "Viaturna Melnica",
+                        "author": "Todor",
+                        "rating": 4,
+                        "comment": "Delicious food, but a little noisy!",
+                        "_createdOn": 1680526683143,
+                        "_id": "78f2f679-16a3-470c-bd64-6bd6da39cca6"
+                    }
+                ],
                 "_createdOn": 1617194128618,
+                "_id": "ff436770-76c5-40e2-b231-77409eda7a61",
+                "_updatedOn": 1680526683183
             },
             "1840a313-225c-416a-817a-9954d4609f7c": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1363,17 +1404,41 @@
                 "capacity": 150,
                 "imageUrl": "https://www.arthotel-sbh.com/wp-content/uploads/2021/12/Ev.Hud-27-1200x812.jpg",
                 "summary": "Restaurant Pri hudojnicite is located in old town of Sozopol. It offers fresh fish and other sea foods.",
-                "reviews": [{
-                    "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                    "restaurantId": "1840a313-225c-416a-817a-9954d4609f7c",
-                    "restaurantName": "Pri hudojnicite",
-                    "rating": 3,
-                    "author": "John",
-                    "comment": "Good!",
-                    "_createdOn": 1678708464033,
-                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c4"
-                }],
+                "reviews": [
+                    {
+                        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                        "restaurantId": "1840a313-225c-416a-817a-9954d4609f7c",
+                        "restaurantName": "Pri hudojnicite",
+                        "rating": 3,
+                        "author": "John",
+                        "comment": "Good!",
+                        "_createdOn": 1678708464033,
+                        "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c4"
+                    },
+                    {
+                        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                        "restaurantId": "1840a313-225c-416a-817a-9954d4609f7c",
+                        "restaurantName": "Pri hudojnicite",
+                        "author": "Ivan",
+                        "rating": 4,
+                        "comment": "The view from terrace was very beautiful! Тhe service was not up to par!",
+                        "_createdOn": 1680525962845,
+                        "_id": "cfa2c0ed-a420-436f-b80a-b24ad3b6d9de"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                        "restaurantId": "1840a313-225c-416a-817a-9954d4609f7c",
+                        "restaurantName": "Pri hudojnicite",
+                        "author": "Pesho",
+                        "rating": 1,
+                        "comment": "The food (mussels, meat) wasn’t good, salads are crap, 1 sweet waitress is handling all the tables and things are happening very slow",
+                        "_createdOn": 1680528125566,
+                        "_id": "5bdc79d5-4f14-44db-ba64-2d8d49585266"
+                    }
+                ],
                 "_createdOn": 1617194210928,
+                "_id": "1840a313-225c-416a-817a-9954d4609f7c",
+                "_updatedOn": 1680528125589
             },
             "126777f5-3277-42ad-b874-76d043b069cb": {
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
@@ -1383,17 +1448,51 @@
                 "capacity": 200,
                 "imageUrl": "https://gradat.bg/sites/default/files/styles/page_article_dynamic_width/public/mainimages/o_3045804_0.jpg?itok=Te1DzaI8",
                 "summary": "A first-class drink with friends or a blissful meal in your own company are some of the options our restaurants proudly serve. A meal at the Boca Grande restaurant will transport you to Spain without leaving dazzling Sozopol.",
-                "reviews": [{
-                    "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                    "restaurantId": "126777f5-3277-42ad-b874-76d043b069cb",
-                    "restaurantName": "Boca Grande",
-                    "rating": 5,
-                    "author": "Peter",
-                    "comment": "Excellent!",
-                    "_createdOn": 1678708464033,
-                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c2"
-                }],
+                "reviews": [
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                        "restaurantId": "126777f5-3277-42ad-b874-76d043b069cb",
+                        "restaurantName": "Boca Grande",
+                        "rating": 5,
+                        "author": "Peter",
+                        "comment": "Excellent!",
+                        "_createdOn": 1678708464033,
+                        "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c2"
+                    },
+                    {
+                        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                        "restaurantId": "126777f5-3277-42ad-b874-76d043b069cb",
+                        "restaurantName": "Boca Grande",
+                        "author": "Ivan",
+                        "rating": 5,
+                        "comment": "Great meals! Luxury design!",
+                        "_createdOn": 1680525695853,
+                        "_id": "81b2ec07-bb85-45b7-908d-c41faae5c090"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                        "restaurantId": "126777f5-3277-42ad-b874-76d043b069cb",
+                        "restaurantName": "Boca Grande",
+                        "author": "Todor",
+                        "rating": 3,
+                        "comment": "Good, but a little expensive!",
+                        "_createdOn": 1680526799006,
+                        "_id": "ef86da0c-4bdf-455e-a091-fa2af5ebf5c5"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                        "restaurantId": "126777f5-3277-42ad-b874-76d043b069cb",
+                        "restaurantName": "Boca Grande",
+                        "author": "Pesho",
+                        "rating": 5,
+                        "comment": "We were very satisfied with the food, drinks and the services! The waiter was very polite and tended to our table whenever we needed something.The view is also spectacular. Highly recommended!",
+                        "_createdOn": 1680527998205,
+                        "_id": "e250b3a1-656a-4d9b-857a-da3fac71e570"
+                    }
+                ],
                 "_createdOn": 1617194295474,
+                "_id": "126777f5-3277-42ad-b874-76d043b069cb",
+                "_updatedOn": 1680527998230
             },
             "126777f5-3277-42ad-b874-76d043b069cd": {
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
@@ -1403,27 +1502,461 @@
                 "capacity": 50,
                 "imageUrl": "https://guest-house-koral-sozopol.hotelmix.bg/data/Photos/OriginalPhoto/1431/143152/143152287/Guest-House-Koral-Sozopol-Exterior.JPEG",
                 "summary": "A small family restaurant located in old town of Sozopol. It is a quiet place with delicious traditional and sea food.",
-                "reviews": [{
-                    "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                    "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
-                    "restaurantName": "Coral",
-                    "rating": 4,
-                    "author": "Peter",
-                    "comment": "Very good!",
-                    "_createdOn": 1678708464073,
-                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c3"
-                },
-                {
-                    "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
-                    "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
-                    "restaurantName": "Coral",
-                    "rating": 5,
-                    "author": "Ivan",
-                    "comment": "Nice place!",
-                    "_createdOn": 1678707454013,
-                    "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c8"
-                }],
+                "reviews": [
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                        "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
+                        "restaurantName": "Coral",
+                        "rating": 4,
+                        "author": "Peter",
+                        "comment": "Very good!",
+                        "_createdOn": 1678708464073,
+                        "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c3"
+                    },
+                    {
+                        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                        "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
+                        "restaurantName": "Coral",
+                        "rating": 5,
+                        "author": "Ivan",
+                        "comment": "Nice place!",
+                        "_createdOn": 1678707454013,
+                        "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c8"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                        "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
+                        "restaurantName": "Coral",
+                        "author": "Todor",
+                        "rating": 5,
+                        "comment": "Small family restaurant! I love it! The service was perfect!",
+                        "_createdOn": 1680526747168,
+                        "_id": "56838567-e961-431b-8dfb-16924e8a8f42"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                        "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
+                        "restaurantName": "Coral",
+                        "author": "Pesho",
+                        "rating": 5,
+                        "comment": "Food was excellent! And the staff was very responsive and friendly. It is very busy at night, so I recommend to book a table in advance. The salads with rose tomato, the tuna tartar and the sea tongue are a must!",
+                        "_createdOn": 1680528047738,
+                        "_id": "239e78bf-8e05-44db-9b95-64a21a13fe6f"
+                    },
+                    {
+                        "_ownerId": "085224ee-a2fb-4af6-8b02-a68d35f487b3",
+                        "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
+                        "restaurantName": "Coral",
+                        "author": "Elizabeth",
+                        "rating": 5,
+                        "comment": "Nice small restaurant",
+                        "_createdOn": 1680530550460,
+                        "_id": "6bb647d1-73c1-412d-9b24-232776baf123"
+                    }
+                ],
                 "_createdOn": 1617194295475,
+                "_id": "126777f5-3277-42ad-b874-76d043b069cd",
+                "_updatedOn": 1680530550491
+            },
+            "9fe6b7b0-040b-42df-9a9c-c4cb0bf1df85": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                "name": "Albatros",
+                "address": "Yani Popov 10, Sozopol 8130 Bulgaria",
+                "phone": "+359897909089",
+                "capacity": "60",
+                "imageUrl": "https://images.myguide-cdn.com/bulgaria/companies/albatros-sozopol/large/albatros-sozopol-163267.jpg",
+                "summary": "The restaurant of Hotel Albatros -New city is a peaceful place where every connoisseur of good food will be able to enjoy a variety of seafood and fish dishes from the traditional Bulgarian cuisine and various dishes at affordable prices. The maximum capacity of the restaurant is 60 seats on two levels in the inner hall and a summer terrace.",
+                "reviews": [
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                        "restaurantId": "9fe6b7b0-040b-42df-9a9c-c4cb0bf1df85",
+                        "restaurantName": "Albatros",
+                        "author": "Todor",
+                        "rating": 5,
+                        "comment": "Best restaurant in Sozopol!",
+                        "_createdOn": 1680526609934,
+                        "_id": "c2621cc6-3ec4-43b6-a287-54119f297d25"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea3",
+                        "restaurantId": "9fe6b7b0-040b-42df-9a9c-c4cb0bf1df85",
+                        "restaurantName": "Albatros",
+                        "author": "Stan",
+                        "rating": 5,
+                        "comment": "Great food, a very friendly staff, atmosphere in the restaurant is ok, nothing special but very clean. All In all, a must visit place in Sozopol.",
+                        "_createdOn": 1680528885893,
+                        "_id": "e38b0763-b380-4794-9266-565ed81d6fa0"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                        "restaurantId": "9fe6b7b0-040b-42df-9a9c-c4cb0bf1df85",
+                        "restaurantName": "Albatros",
+                        "author": "Peter",
+                        "rating": 5,
+                        "comment": "This is one of the best small restaurant i have ever been. The food is so tasty and the menu is perfect. The servise in hi-top level. I love it :-)",
+                        "_createdOn": 1680529077319,
+                        "_id": "460d561b-a138-4df2-a2a3-613e2c93263d"
+                    },
+                    {
+                        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                        "restaurantId": "9fe6b7b0-040b-42df-9a9c-c4cb0bf1df85",
+                        "restaurantName": "Albatros",
+                        "author": "John",
+                        "rating": 4,
+                        "comment": "Located not in the very beach, however, it offers quite a lot of fish. They produce their own beer and this is always a plus. Interesting.",
+                        "_createdOn": 1680529353473,
+                        "_id": "1dbe9ca5-d557-492c-9509-80eb8ba8d95e"
+                    }
+                ],
+                "_createdOn": 1680525078128,
+                "_id": "9fe6b7b0-040b-42df-9a9c-c4cb0bf1df85",
+                "_updatedOn": 1680529353494
+            },
+            "cab97cb0-690d-429c-baea-c10409ff7a8e": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                "name": "Black Bison Grill & Bar",
+                "address": "Industrialna Str 9 8130, Sozopol 8130 Bulgaria",
+                "phone": "+359123123123",
+                "capacity": "20",
+                "imageUrl": "https://www.teampro.bg/sites/default/files/logo_black_bizon.jpg",
+                "summary": "Since 2014, our family company has maintained a tradition of high quality food on the Bulgarian market. Low price. Heavy Weigth. Great Taste. Only Natural Ingredients.",
+                "reviews": [
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                        "restaurantId": "cab97cb0-690d-429c-baea-c10409ff7a8e",
+                        "restaurantName": "Black Bison Grill & Bar",
+                        "author": "Todor",
+                        "rating": 5,
+                        "comment": "The chiken burgers was so delicious!",
+                        "_createdOn": 1680526545411,
+                        "_id": "635bfdf1-4dea-417a-8f41-2f5da7cb76d4"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                        "restaurantId": "cab97cb0-690d-429c-baea-c10409ff7a8e",
+                        "restaurantName": "Black Bison Grill & Bar",
+                        "author": "Peter",
+                        "rating": 5,
+                        "comment": "The best burger place in Sozopol. One of the most delicious onion rings I have ever tried when combined with their secret homemade sauce!",
+                        "_createdOn": 1680529026363,
+                        "_id": "6f18f407-9be5-442b-addc-33f26bcb7f48"
+                    }
+                ],
+                "_createdOn": 1680525375967,
+                "_id": "cab97cb0-690d-429c-baea-c10409ff7a8e",
+                "_updatedOn": 1680529026453
+            },
+            "26e4a065-679f-47cf-94af-9ac3faeeb2da": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                "name": "Del Muro",
+                "address": "Milet 42, Sozopol 8130 Bulgaria",
+                "phone": "+359889012210",
+                "capacity": "150",
+                "imageUrl": "https://kralevgroup.com/wp-content/uploads/2020/08/delmuro-interior-6.jpg",
+                "summary": "Welcome to the heart of the most beautiful part of Sozopol the South Fortress Wall! Inspired by the magic of the Italian and French cuisine we created Restaurant Del Muro in order to express our gratitude through one of the most delicate forms of expression that is food.",
+                "reviews": [
+                    {
+                        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                        "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                        "restaurantName": "Del Muro",
+                        "author": "Ivan",
+                        "rating": 5,
+                        "comment": "Excellent!",
+                        "_createdOn": 1680527034679,
+                        "_id": "8ae13886-e095-46a6-9e27-8939df914f08"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                        "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                        "restaurantName": "Del Muro",
+                        "author": "Pesho",
+                        "rating": 5,
+                        "comment": "Lovely restaurant, perfect for a romantic dinner. The food was very fresh and tasty and the service was very nice",
+                        "_createdOn": 1680527951083,
+                        "_id": "9ddd5e00-d32a-4c00-9f34-d4981ae1aaee"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea3",
+                        "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                        "restaurantName": "Del Muro",
+                        "author": "Stan",
+                        "rating": 5,
+                        "comment": "Our favorite. Great food, service, atmosphere. Easily best one in Sozopol, going steadily for years, never disappointed so far.",
+                        "_createdOn": 1680528934863,
+                        "_id": "9f7e690b-0478-43e8-8288-6e65d6568eef"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                        "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                        "restaurantName": "Del Muro",
+                        "author": "Peter",
+                        "rating": 5,
+                        "comment": "Went there with my wife. Make sure to make a reservation for the terrace (first lone). Beautiful place with an amazing view. Service was great too. Very friendly and professional staff.",
+                        "_createdOn": 1680529211491,
+                        "_id": "40df948b-150d-456e-85fc-eafe67505d35"
+                    },
+                    {
+                        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                        "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                        "restaurantName": "Del Muro",
+                        "author": "John",
+                        "rating": 5,
+                        "comment": "Incredible place, just amazing food and service!!! Recommend it!!! The best place in Sozopol! I love it!",
+                        "_createdOn": 1680529310920,
+                        "_id": "0f6657c5-2cba-49aa-9266-9fc2c0dc6891"
+                    },
+                    {
+                        "_ownerId": "085224ee-a2fb-4af6-8b02-a68d35f487b3",
+                        "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                        "restaurantName": "Del Muro",
+                        "author": "Elizabeth",
+                        "rating": 5,
+                        "comment": "Perfect place!",
+                        "_createdOn": 1680530506416,
+                        "_id": "18aa3411-8fb5-4d47-963a-91bf6ca217c4"
+                    }
+                ],
+                "_createdOn": 1680526151113,
+                "_id": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                "_updatedOn": 1680530506453
+            },
+            "b51fcde2-3514-4484-9c41-69f8cf9ab9b4": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                "name": "Veranda",
+                "address": "Odesa 16, Sozopol 8130 Bulgaria",
+                "phone": "+359889012210",
+                "capacity": "140",
+                "imageUrl": "https://www.smpm.bg//storage1/images/news/item164/View.jpg",
+                "summary": "Seafood, Mediterranean, European, Eastern European, Central European",
+                "reviews": [
+                    {
+                        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                        "restaurantId": "b51fcde2-3514-4484-9c41-69f8cf9ab9b4",
+                        "restaurantName": "Veranda",
+                        "author": "Ivan",
+                        "rating": 3,
+                        "comment": "Good!",
+                        "_createdOn": 1680527055175,
+                        "_id": "08a2a090-4d6a-4232-b43e-5e40af0f2773"
+                    },
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                        "restaurantId": "b51fcde2-3514-4484-9c41-69f8cf9ab9b4",
+                        "restaurantName": "Veranda",
+                        "author": "Pesho",
+                        "rating": 4,
+                        "comment": "Nice terrace place with outdoor seating. In the heart of the new town. Tasty and cheap. Very friendly staff:)",
+                        "_createdOn": 1680528195013,
+                        "_id": "d9ec5c30-2688-4edd-8fd3-444fa742f80b"
+                    }
+                ],
+                "_createdOn": 1680526486264,
+                "_id": "b51fcde2-3514-4484-9c41-69f8cf9ab9b4",
+                "_updatedOn": 1680528195042
+            },
+            "81bff2c2-6c70-4729-a9e7-276530eb9282": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "name": "Panorama Sv. Ivan",
+                "address": "Morski skali 21, Sozopol 8130 Bulgaria",
+                "phone": "+359123123123",
+                "capacity": "50",
+                "imageUrl": "https://fastly.4sqi.net/img/general/600x600/62648606_xOH6nXhQpAPQnfahnutz22RNZofjcetSfXU2nxB3EXA.jpg",
+                "summary": "Come and taste our fresh sea food, traditional Bulgarian foods and our homemade desserts!",
+                "reviews": [
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea3",
+                        "restaurantId": "81bff2c2-6c70-4729-a9e7-276530eb9282",
+                        "restaurantName": "Panorama Sv. Ivan",
+                        "author": "Stan",
+                        "rating": 4,
+                        "comment": "I liked the mussels",
+                        "_createdOn": 1680528779730,
+                        "_id": "416dd6de-a605-4256-b701-b13a5b1ba689"
+                    }
+                ],
+                "_createdOn": 1680527378604,
+                "_id": "81bff2c2-6c70-4729-a9e7-276530eb9282",
+                "_updatedOn": 1680528779756
+            },
+            "e5ac9d89-8a59-463f-84da-1c92113c506f": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "name": "Restaurant Apolonia",
+                "address": "Lulin 7, Sozopol 8130 Bulgaria",
+                "phone": "+359889012210",
+                "capacity": "100",
+                "imageUrl": "https://static.pochivka.bg/restaurants.bgstay.com/images/restaurants/00/694/55d44506b4444.jpg",
+                "summary": "Before 30 years ago there were just some tables and delicious food in the backyard of a small house. 30 years later there are more tables, more visitors , I can say now its a small family restaurant with traditions and the same delicious food!",
+                "reviews": [
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea3",
+                        "restaurantId": "e5ac9d89-8a59-463f-84da-1c92113c506f",
+                        "restaurantName": "Restaurant Apolonia",
+                        "author": "Stan",
+                        "rating": 5,
+                        "comment": "Very nice and quiet place!",
+                        "_createdOn": 1680528807889,
+                        "_id": "8731d518-e399-4a5b-94d5-fd9ba8ed8d03"
+                    }
+                ],
+                "_createdOn": 1680527890712,
+                "_id": "e5ac9d89-8a59-463f-84da-1c92113c506f",
+                "_updatedOn": 1680528807917
+            },
+            "8b0a1750-7169-47c0-b7db-e701f90aba6e": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea3",
+                "name": "Ksantana",
+                "address": "Morski Skali, 7, Sozopol 8130 Bulgaria",
+                "phone": "+359889012210",
+                "capacity": "80",
+                "imageUrl": "https://static.pochivka.bg/restaurants.bgstay.com/images/restaurants/00/692/55d1a5a1608ed.jpg",
+                "summary": "Bulgarian cuisine",
+                "reviews": [
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                        "restaurantId": "8b0a1750-7169-47c0-b7db-e701f90aba6e",
+                        "restaurantName": "Ksantana",
+                        "author": "Peter",
+                        "rating": 3,
+                        "comment": "This restaurant has a great location with sunset views but I'm afraid that's the best it has to offer. The service wasn't too bad but could have been much better. The food was distinctly average and bore no resemblance to the menu. If you want sunsets then have a drink here but personally I'd avoid having dinner here.",
+                        "_createdOn": 1680529123463,
+                        "_id": "a6be9269-e6f0-44ff-87ae-fc60af4e3bb4"
+                    }
+                ],
+                "_createdOn": 1680528417855,
+                "_id": "8b0a1750-7169-47c0-b7db-e701f90aba6e",
+                "_updatedOn": 1680529123475
+            },
+            "0371ef2c-69d2-49a3-819f-0562cf0c2848": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea3",
+                "name": "Antichen Kladenec",
+                "address": "Kiril i Metodii 35, Sozopol 8130 Bulgaria",
+                "phone": "+359123123123",
+                "capacity": "70",
+                "imageUrl": "https://static.pochivka.bg/restaurants.bgstay.com/images/restaurants/01/1578/55ffc5e34fe48.jpg",
+                "summary": "Visit us and taste some Armenian foods and drinks! Food is fresh, made with love and served fast! We are waiting for you! ",
+                "reviews": [
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                        "restaurantId": "0371ef2c-69d2-49a3-819f-0562cf0c2848",
+                        "restaurantName": "Antichen Kladenec",
+                        "author": "Peter",
+                        "rating": 5,
+                        "comment": "We had to wait three days to get a table here. You shoud book a table in advance in order to sit here for a late dinner. Finally we got it and we had a chance to taste delightful local dishes. That was really an amazing experience.",
+                        "_createdOn": 1680529155480,
+                        "_id": "f77ccb30-6c8c-4be2-9418-2018455699bc"
+                    }
+                ],
+                "_createdOn": 1680528700151,
+                "_id": "0371ef2c-69d2-49a3-819f-0562cf0c2848",
+                "_updatedOn": 1680529155501
+            },
+            "e1aed097-2f87-40e3-86b7-f6d4d72bb1a2": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "The Old Sozopol Bistro",
+                "address": "Kraybrezhna41, Sozopol 8130 Bulgaria",
+                "phone": "+359889012210",
+                "capacity": "80",
+                "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/52/27/6c/the-old-sozopol-bistro.jpg",
+                "summary": "Small, tidy restaurant, with a beautiful terrace, to the old port.National traditional cuisine. Mediterranean cuisine, fresh fish and meat. once you come, you will come back again.",
+                "reviews": [
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                        "restaurantId": "e1aed097-2f87-40e3-86b7-f6d4d72bb1a2",
+                        "restaurantName": "The Old Sozopol Bistro",
+                        "author": "Pesho",
+                        "rating": 5,
+                        "comment": "I barely write reviews but this time i have to. This place should be higher ranked. The staff is super friendly as well as the service. Nice and cozy interior. The prices are more then correct and the food is amazing! Great job guys!",
+                        "_createdOn": 1680530024726,
+                        "_id": "fb2c3388-64b0-49d9-8ba3-898a6e5b6563"
+                    }
+                ],
+                "_createdOn": 1680529484455,
+                "_id": "e1aed097-2f87-40e3-86b7-f6d4d72bb1a2",
+                "_updatedOn": 1680530024758
+            },
+            "77d83905-e75e-474c-a215-2e2ce41d6b1b": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "name": "Casa Del Mare",
+                "address": "Kiril i Metodii 36, Sozopol 8130 Bulgaria",
+                "phone": "+359123123123",
+                "capacity": "130",
+                "imageUrl": "http://hotelcasadelmare.com/media/Restorant-1.jpg",
+                "summary": "Restaurant Casa del Mare is situated on the most picturesque and romantic place in the Ancient Sozopol. The Southern Castle Wall Museum is adjacent to the restaurant. The beautiful sea scenic view revealed to the guests of the restaurant leaves them with lasting memories and warm feelings. ",
+                "reviews": [
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                        "restaurantId": "77d83905-e75e-474c-a215-2e2ce41d6b1b",
+                        "restaurantName": "Casa Del Mare",
+                        "author": "Pesho",
+                        "rating": 4,
+                        "comment": "My wife and I liked the food here. We tried some of the seafood and for our daughter some chicken tenders which were amazing! Overall this place is really nice and the only reason we give it a 4/5 it's because, even though the service was good the guy that served at out table seemed like he was forced to do this for a living. Not a smile, nothing.",
+                        "_createdOn": 1680530059336,
+                        "_id": "25ee78e4-3965-44b5-8f01-91d71393d0b1"
+                    }
+                ],
+                "_createdOn": 1680529610065,
+                "_id": "77d83905-e75e-474c-a215-2e2ce41d6b1b",
+                "_updatedOn": 1680530059357
+            },
+            "e93dd0f4-fa50-4aff-9e8a-b8e69bb927a0": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                "name": "Marina Beach Bar",
+                "address": "Santa Marina Holiday Village Beach 2, Sozopol 8130 Bulgaria",
+                "phone": "+359123123123",
+                "capacity": "70",
+                "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/17/2e/b5/63/marina-beach-bar.jpg",
+                "summary": "You will reach Marina Beach Bar with a 10-minute walk from the Old Town of Sozopol. Marina Beach Bar is the best place to enjoy care-free summers by the water. A bar with refreshments on the beach, chaise-longues, spacious tents, dressing rooms and secured swimming space with lifeguards are all at your disposal.",
+                "reviews": [
+                    {
+                        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                        "restaurantId": "e93dd0f4-fa50-4aff-9e8a-b8e69bb927a0",
+                        "restaurantName": "Marina Beach Bar",
+                        "author": "Pesho",
+                        "rating": 5,
+                        "comment": "I loved this little bar, great serice, views & food, coconut fried prawns to die for! Relax on the beach, have a beer in the shade, eat good food, whats not to like.",
+                        "_createdOn": 1680530093669,
+                        "_id": "dce11c2c-7d77-4ec6-88be-d5a043fd118a"
+                    }
+                ],
+                "_createdOn": 1680529755468,
+                "_id": "e93dd0f4-fa50-4aff-9e8a-b8e69bb927a0",
+                "_updatedOn": 1680530093695
+            },
+            "0f4c1eed-0494-47dc-a314-82fed4591fe4": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "name": "Anel Restaurant",
+                "address": "Via Pontica 145 Art Complex Anel, Sozopol 8130 Bulgaria",
+                "phone": "+359889012210",
+                "capacity": "120",
+                "imageUrl": "https://cf.bstatic.com/images/hotel/max1024x768/274/274399704.jpg",
+                "summary": "Visit us and see the difference!",
+                "reviews": [],
+                "_createdOn": 1680529985445,
+                "_id": "0f4c1eed-0494-47dc-a314-82fed4591fe4"
+            },
+            "c882aace-c624-46f3-acd4-0952de724843": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "name": "El Greco",
+                "address": "Milet Str. 30, Sozopol 8130 Bulgaria",
+                "phone": "+359123123123",
+                "capacity": "60",
+                "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/0b/83/d4/f8/salle-interieure.jpg",
+                "summary": "Italian, Pizza, Seafood",
+                "reviews": [],
+                "_createdOn": 1680530272668,
+                "_id": "c882aace-c624-46f3-acd4-0952de724843"
+            },
+            "a0ed473e-3c6d-4d0c-aae7-d3263d7c090e": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "name": "Mekhana Shatrite",
+                "address": "Ropotamo 32 Plyazhna Aleya, Sozopol 8130 Bulgaria",
+                "phone": "+359123123123",
+                "capacity": "250",
+                "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-m/1280/19/44/7b/cf/sozopol-mehana-shatrite.jpg",
+                "summary": "Traditional Bulgarian food! Live music!",
+                "reviews": [],
+                "_createdOn": 1680530400759,
+                "_id": "a0ed473e-3c6d-4d0c-aae7-d3263d7c090e"
             }
         },
         reviews: {
@@ -1467,6 +2000,316 @@
                 "_createdOn": 1678707454013,
                 "_id": "8d7fa12f-3669-453b-adc6-550d6295f6c8"
             },
+            "742ae8ac-0c42-4cb9-b030-0bfd4a1e4253": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                "restaurantId": "ff436770-76c5-40e2-b231-77409eda7a61",
+                "restaurantName": "Viaturna Melnica",
+                "author": "Ivan",
+                "rating": 5,
+                "comment": "Perfect meals! I love it!",
+                "_createdOn": 1680525605810,
+                "_id": "742ae8ac-0c42-4cb9-b030-0bfd4a1e4253"
+            },
+            "81b2ec07-bb85-45b7-908d-c41faae5c090": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                "restaurantId": "126777f5-3277-42ad-b874-76d043b069cb",
+                "restaurantName": "Boca Grande",
+                "author": "Ivan",
+                "rating": 5,
+                "comment": "Great meals! Luxury design!",
+                "_createdOn": 1680525695853,
+                "_id": "81b2ec07-bb85-45b7-908d-c41faae5c090"
+            },
+            "cfa2c0ed-a420-436f-b80a-b24ad3b6d9de": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                "restaurantId": "1840a313-225c-416a-817a-9954d4609f7c",
+                "restaurantName": "Pri hudojnicite",
+                "author": "Ivan",
+                "rating": 4,
+                "comment": "The view from terrace was very beautiful! Тhe service was not up to par!",
+                "_createdOn": 1680525962845,
+                "_id": "cfa2c0ed-a420-436f-b80a-b24ad3b6d9de"
+            },
+            "635bfdf1-4dea-417a-8f41-2f5da7cb76d4": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                "restaurantId": "cab97cb0-690d-429c-baea-c10409ff7a8e",
+                "restaurantName": "Black Bison Grill & Bar",
+                "author": "Todor",
+                "rating": 5,
+                "comment": "The chiken burgers was so delicious!",
+                "_createdOn": 1680526545411,
+                "_id": "635bfdf1-4dea-417a-8f41-2f5da7cb76d4"
+            },
+            "c2621cc6-3ec4-43b6-a287-54119f297d25": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                "restaurantId": "9fe6b7b0-040b-42df-9a9c-c4cb0bf1df85",
+                "restaurantName": "Albatros",
+                "author": "Todor",
+                "rating": 5,
+                "comment": "Best restaurant in Sozopol!",
+                "_createdOn": 1680526609934,
+                "_id": "c2621cc6-3ec4-43b6-a287-54119f297d25"
+            },
+            "78f2f679-16a3-470c-bd64-6bd6da39cca6": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                "restaurantId": "ff436770-76c5-40e2-b231-77409eda7a61",
+                "restaurantName": "Viaturna Melnica",
+                "author": "Todor",
+                "rating": 4,
+                "comment": "Delicious food, but a little noisy!",
+                "_createdOn": 1680526683143,
+                "_id": "78f2f679-16a3-470c-bd64-6bd6da39cca6"
+            },
+            "56838567-e961-431b-8dfb-16924e8a8f42": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
+                "restaurantName": "Coral",
+                "author": "Todor",
+                "rating": 5,
+                "comment": "Small family restaurant! I love it! The service was perfect!",
+                "_createdOn": 1680526747168,
+                "_id": "56838567-e961-431b-8dfb-16924e8a8f42"
+            },
+            "ef86da0c-4bdf-455e-a091-fa2af5ebf5c5": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea1",
+                "restaurantId": "126777f5-3277-42ad-b874-76d043b069cb",
+                "restaurantName": "Boca Grande",
+                "author": "Todor",
+                "rating": 3,
+                "comment": "Good, but a little expensive!",
+                "_createdOn": 1680526799006,
+                "_id": "ef86da0c-4bdf-455e-a091-fa2af5ebf5c5"
+            },
+            "8ae13886-e095-46a6-9e27-8939df914f08": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                "restaurantName": "Del Muro",
+                "author": "Ivan",
+                "rating": 5,
+                "comment": "Excellent!",
+                "_createdOn": 1680527034679,
+                "_id": "8ae13886-e095-46a6-9e27-8939df914f08"
+            },
+            "08a2a090-4d6a-4232-b43e-5e40af0f2773": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                "restaurantId": "b51fcde2-3514-4484-9c41-69f8cf9ab9b4",
+                "restaurantName": "Veranda",
+                "author": "Ivan",
+                "rating": 3,
+                "comment": "Good!",
+                "_createdOn": 1680527055175,
+                "_id": "08a2a090-4d6a-4232-b43e-5e40af0f2773"
+            },
+            "9ddd5e00-d32a-4c00-9f34-d4981ae1aaee": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                "restaurantName": "Del Muro",
+                "author": "Pesho",
+                "rating": 5,
+                "comment": "Lovely restaurant, perfect for a romantic dinner. The food was very fresh and tasty and the service was very nice",
+                "_createdOn": 1680527951083,
+                "_id": "9ddd5e00-d32a-4c00-9f34-d4981ae1aaee"
+            },
+            "e250b3a1-656a-4d9b-857a-da3fac71e570": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "restaurantId": "126777f5-3277-42ad-b874-76d043b069cb",
+                "restaurantName": "Boca Grande",
+                "author": "Pesho",
+                "rating": 5,
+                "comment": "We were very satisfied with the food, drinks and the services! The waiter was very polite and tended to our table whenever we needed something.The view is also spectacular. Highly recommended!",
+                "_createdOn": 1680527998205,
+                "_id": "e250b3a1-656a-4d9b-857a-da3fac71e570"
+            },
+            "239e78bf-8e05-44db-9b95-64a21a13fe6f": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
+                "restaurantName": "Coral",
+                "author": "Pesho",
+                "rating": 5,
+                "comment": "Food was excellent! And the staff was very responsive and friendly. It is very busy at night, so I recommend to book a table in advance. The salads with rose tomato, the tuna tartar and the sea tongue are a must!",
+                "_createdOn": 1680528047738,
+                "_id": "239e78bf-8e05-44db-9b95-64a21a13fe6f"
+            },
+            "5bdc79d5-4f14-44db-ba64-2d8d49585266": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "restaurantId": "1840a313-225c-416a-817a-9954d4609f7c",
+                "restaurantName": "Pri hudojnicite",
+                "author": "Pesho",
+                "rating": 1,
+                "comment": "The food (mussels, meat) wasn’t good, salads are crap, 1 sweet waitress is handling all the tables and things are happening very slow",
+                "_createdOn": 1680528125566,
+                "_id": "5bdc79d5-4f14-44db-ba64-2d8d49585266"
+            },
+            "d9ec5c30-2688-4edd-8fd3-444fa742f80b": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "restaurantId": "b51fcde2-3514-4484-9c41-69f8cf9ab9b4",
+                "restaurantName": "Veranda",
+                "author": "Pesho",
+                "rating": 4,
+                "comment": "Nice terrace place with outdoor seating. In the heart of the new town. Tasty and cheap. Very friendly staff:)",
+                "_createdOn": 1680528195013,
+                "_id": "d9ec5c30-2688-4edd-8fd3-444fa742f80b"
+            },
+            "416dd6de-a605-4256-b701-b13a5b1ba689": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea3",
+                "restaurantId": "81bff2c2-6c70-4729-a9e7-276530eb9282",
+                "restaurantName": "Panorama Sv. Ivan",
+                "author": "Stan",
+                "rating": 4,
+                "comment": "I liked the mussels",
+                "_createdOn": 1680528779730,
+                "_id": "416dd6de-a605-4256-b701-b13a5b1ba689"
+            },
+            "8731d518-e399-4a5b-94d5-fd9ba8ed8d03": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea3",
+                "restaurantId": "e5ac9d89-8a59-463f-84da-1c92113c506f",
+                "restaurantName": "Restaurant Apolonia",
+                "author": "Stan",
+                "rating": 5,
+                "comment": "Very nice and quiet place!",
+                "_createdOn": 1680528807889,
+                "_id": "8731d518-e399-4a5b-94d5-fd9ba8ed8d03"
+            },
+            "e38b0763-b380-4794-9266-565ed81d6fa0": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea3",
+                "restaurantId": "9fe6b7b0-040b-42df-9a9c-c4cb0bf1df85",
+                "restaurantName": "Albatros",
+                "author": "Stan",
+                "rating": 5,
+                "comment": "Great food, a very friendly staff, atmosphere in the restaurant is ok, nothing special but very clean. All In all, a must visit place in Sozopol.",
+                "_createdOn": 1680528885893,
+                "_id": "e38b0763-b380-4794-9266-565ed81d6fa0"
+            },
+            "9f7e690b-0478-43e8-8288-6e65d6568eef": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea3",
+                "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                "restaurantName": "Del Muro",
+                "author": "Stan",
+                "rating": 5,
+                "comment": "Our favorite. Great food, service, atmosphere. Easily best one in Sozopol, going steadily for years, never disappointed so far.",
+                "_createdOn": 1680528934863,
+                "_id": "9f7e690b-0478-43e8-8288-6e65d6568eef"
+            },
+            "6f18f407-9be5-442b-addc-33f26bcb7f48": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "restaurantId": "cab97cb0-690d-429c-baea-c10409ff7a8e",
+                "restaurantName": "Black Bison Grill & Bar",
+                "author": "Peter",
+                "rating": 5,
+                "comment": "The best burger place in Sozopol. One of the most delicious onion rings I have ever tried when combined with their secret homemade sauce!",
+                "_createdOn": 1680529026363,
+                "_id": "6f18f407-9be5-442b-addc-33f26bcb7f48"
+            },
+            "460d561b-a138-4df2-a2a3-613e2c93263d": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "restaurantId": "9fe6b7b0-040b-42df-9a9c-c4cb0bf1df85",
+                "restaurantName": "Albatros",
+                "author": "Peter",
+                "rating": 5,
+                "comment": "This is one of the best small restaurant i have ever been. The food is so tasty and the menu is perfect. The servise in hi-top level. I love it :-)",
+                "_createdOn": 1680529077319,
+                "_id": "460d561b-a138-4df2-a2a3-613e2c93263d"
+            },
+            "a6be9269-e6f0-44ff-87ae-fc60af4e3bb4": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "restaurantId": "8b0a1750-7169-47c0-b7db-e701f90aba6e",
+                "restaurantName": "Ksantana",
+                "author": "Peter",
+                "rating": 3,
+                "comment": "This restaurant has a great location with sunset views but I'm afraid that's the best it has to offer. The service wasn't too bad but could have been much better. The food was distinctly average and bore no resemblance to the menu. If you want sunsets then have a drink here but personally I'd avoid having dinner here.",
+                "_createdOn": 1680529123463,
+                "_id": "a6be9269-e6f0-44ff-87ae-fc60af4e3bb4"
+            },
+            "f77ccb30-6c8c-4be2-9418-2018455699bc": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "restaurantId": "0371ef2c-69d2-49a3-819f-0562cf0c2848",
+                "restaurantName": "Antichen Kladenec",
+                "author": "Peter",
+                "rating": 5,
+                "comment": "We had to wait three days to get a table here. You shoud book a table in advance in order to sit here for a late dinner. Finally we got it and we had a chance to taste delightful local dishes. That was really an amazing experience.",
+                "_createdOn": 1680529155480,
+                "_id": "f77ccb30-6c8c-4be2-9418-2018455699bc"
+            },
+            "40df948b-150d-456e-85fc-eafe67505d35": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                "restaurantName": "Del Muro",
+                "author": "Peter",
+                "rating": 5,
+                "comment": "Went there with my wife. Make sure to make a reservation for the terrace (first lone). Beautiful place with an amazing view. Service was great too. Very friendly and professional staff.",
+                "_createdOn": 1680529211491,
+                "_id": "40df948b-150d-456e-85fc-eafe67505d35"
+            },
+            "0f6657c5-2cba-49aa-9266-9fc2c0dc6891": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                "restaurantName": "Del Muro",
+                "author": "John",
+                "rating": 5,
+                "comment": "Incredible place, just amazing food and service!!! Recommend it!!! The best place in Sozopol! I love it!",
+                "_createdOn": 1680529310920,
+                "_id": "0f6657c5-2cba-49aa-9266-9fc2c0dc6891"
+            },
+            "1dbe9ca5-d557-492c-9509-80eb8ba8d95e": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "restaurantId": "9fe6b7b0-040b-42df-9a9c-c4cb0bf1df85",
+                "restaurantName": "Albatros",
+                "author": "John",
+                "rating": 4,
+                "comment": "Located not in the very beach, however, it offers quite a lot of fish. They produce their own beer and this is always a plus. Interesting.",
+                "_createdOn": 1680529353473,
+                "_id": "1dbe9ca5-d557-492c-9509-80eb8ba8d95e"
+            },
+            "fb2c3388-64b0-49d9-8ba3-898a6e5b6563": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "restaurantId": "e1aed097-2f87-40e3-86b7-f6d4d72bb1a2",
+                "restaurantName": "The Old Sozopol Bistro",
+                "author": "Pesho",
+                "rating": 5,
+                "comment": "I barely write reviews but this time i have to. This place should be higher ranked. The staff is super friendly as well as the service. Nice and cozy interior. The prices are more then correct and the food is amazing! Great job guys!",
+                "_createdOn": 1680530024726,
+                "_id": "fb2c3388-64b0-49d9-8ba3-898a6e5b6563"
+            },
+            "25ee78e4-3965-44b5-8f01-91d71393d0b1": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "restaurantId": "77d83905-e75e-474c-a215-2e2ce41d6b1b",
+                "restaurantName": "Casa Del Mare",
+                "author": "Pesho",
+                "rating": 4,
+                "comment": "My wife and I liked the food here. We tried some of the seafood and for our daughter some chicken tenders which were amazing! Overall this place is really nice and the only reason we give it a 4/5 it's because, even though the service was good the guy that served at out table seemed like he was forced to do this for a living. Not a smile, nothing.",
+                "_createdOn": 1680530059336,
+                "_id": "25ee78e4-3965-44b5-8f01-91d71393d0b1"
+            },
+            "dce11c2c-7d77-4ec6-88be-d5a043fd118a": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea2",
+                "restaurantId": "e93dd0f4-fa50-4aff-9e8a-b8e69bb927a0",
+                "restaurantName": "Marina Beach Bar",
+                "author": "Pesho",
+                "rating": 5,
+                "comment": "I loved this little bar, great serice, views & food, coconut fried prawns to die for! Relax on the beach, have a beer in the shade, eat good food, whats not to like.",
+                "_createdOn": 1680530093669,
+                "_id": "dce11c2c-7d77-4ec6-88be-d5a043fd118a"
+            },
+            "18aa3411-8fb5-4d47-963a-91bf6ca217c4": {
+                "_ownerId": "085224ee-a2fb-4af6-8b02-a68d35f487b3",
+                "restaurantId": "26e4a065-679f-47cf-94af-9ac3faeeb2da",
+                "restaurantName": "Del Muro",
+                "author": "Elizabeth",
+                "rating": 5,
+                "comment": "Perfect place!",
+                "_createdOn": 1680530506416,
+                "_id": "18aa3411-8fb5-4d47-963a-91bf6ca217c4"
+            },
+            "6bb647d1-73c1-412d-9b24-232776baf123": {
+                "_ownerId": "085224ee-a2fb-4af6-8b02-a68d35f487b3",
+                "restaurantId": "126777f5-3277-42ad-b874-76d043b069cd",
+                "restaurantName": "Coral",
+                "author": "Elizabeth",
+                "rating": 5,
+                "comment": "Nice small restaurant",
+                "_createdOn": 1680530550460,
+                "_id": "6bb647d1-73c1-412d-9b24-232776baf123"
+            }
 
         },
         favourites: {
@@ -1477,6 +2320,22 @@
                 "imageUrl": "https://gradat.bg/sites/default/files/styles/page_article_dynamic_width/public/mainimages/o_3045804_0.jpg?itok=Te1DzaI8",
                 "_createdOn": 1679666632574,
                 "_id": "75ce39b5-ea44-4a6d-ae4d-303440c66f77"
+            },
+            "f2ef2dbe-e7f3-4f22-9134-b730b84e08a1": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93b",
+                "restaurantId": "ff436770-76c5-40e2-b231-77409eda7a61",
+                "restaurantName": "Viaturna Melnica",
+                "imageUrl": "https://fastly.4sqi.net/img/general/600x600/32551704_l_uL8IULNtcByxgmcCtPPtZQL4_swnvqekBtyLN7XIE.jpg",
+                "_createdOn": 1680525578642,
+                "_id": "f2ef2dbe-e7f3-4f22-9134-b730b84e08a1"
+            },
+            "adb134f8-8381-438c-afeb-680b2b563d93": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "restaurantId": "0371ef2c-69d2-49a3-819f-0562cf0c2848",
+                "restaurantName": "Antichen Kladenec",
+                "imageUrl": "https://static.pochivka.bg/restaurants.bgstay.com/images/restaurants/01/1578/55ffc5e34fe48.jpg",
+                "_createdOn": 1680529151722,
+                "_id": "adb134f8-8381-438c-afeb-680b2b563d93"
             }
         }
 
