@@ -4,6 +4,7 @@ import styles from "./MyProfile.module.css";
 
 import { AuthContext } from "../../contexts/AuthContext";
 import { LoadingContext } from "../../contexts/LoadingContext";
+import { UserActionsContext } from "../../contexts/UserActionsContext";
 import * as utils from "../../utils";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
@@ -21,6 +22,7 @@ export const MyProfile = () => {
     const [myRestaurants, setMyRestaurants] = useState([]);
     const { user } = useContext(AuthContext);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
+    const { deleteUserActions } = useContext(UserActionsContext);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -39,8 +41,9 @@ export const MyProfile = () => {
                 window.alert(error.message);
                 return navigate('/');
             }
+            deleteUserActions();
         })();
-    }, [showLoading, hideLoading, user._id, navigate]);
+    }, [showLoading, hideLoading, user._id, navigate, deleteUserActions]);
 
     const removeFromMyFavouritesState = (favourite) => {
         setMyFavourites(state => state.filter(x => x._id !== favourite._id));

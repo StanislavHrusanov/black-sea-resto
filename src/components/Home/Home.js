@@ -6,6 +6,7 @@ import { getAvgRating } from "../../utils";
 import * as restaurantService from "../../services/restaurantService";
 import * as reviewService from "../../services/reviewService";
 
+import { UserActionsContext } from "../../contexts/UserActionsContext";
 import { LoadingContext } from "../../contexts/LoadingContext";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 import { Restaurant } from "./Restaurant/Restaurant";
@@ -16,6 +17,7 @@ export const Home = () => {
     const [restaurants, setRestaurants] = useState([]);
     const [lastReview, setLastReview] = useState([]);
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
+    const { deleteUserActions } = useContext(UserActionsContext);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -33,8 +35,9 @@ export const Home = () => {
                 hideLoading();
                 return navigate('/');
             }
+            deleteUserActions()
         })();
-    }, [showLoading, hideLoading, navigate]);
+    }, [showLoading, hideLoading, navigate, deleteUserActions]);
 
     const mostPopular = restaurants
         .slice()

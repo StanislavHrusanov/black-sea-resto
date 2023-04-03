@@ -19,6 +19,12 @@ export const UserActionsProvider = ({ children }) => {
         setPage(pageNumber);
     }
 
+    const deleteUserActions = () => {
+        setSearch('');
+        setSort('');
+        setPage(1);
+    }
+
     return (
         <UserActionsContext.Provider
             value={{
@@ -27,7 +33,8 @@ export const UserActionsProvider = ({ children }) => {
                 page,
                 changeSearchState,
                 changeSortState,
-                changePageState
+                changePageState,
+                deleteUserActions
             }}
         >
             {children}

@@ -1,9 +1,10 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./AddRestaurant.module.css";
 
 import * as restaurantService from "../../services/restaurantService";
 import * as validation from "../../validation";
+import { UserActionsContext } from "../../contexts/UserActionsContext";
 import { LoadingContext } from "../../contexts/LoadingContext";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
@@ -20,7 +21,12 @@ export const AddRestaurant = () => {
     const [errors, setErrors] = useState({});
 
     const { isLoading, showLoading, hideLoading } = useContext(LoadingContext);
+    const { deleteUserActions } = useContext(UserActionsContext);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        deleteUserActions();
+    })
 
     const onChangeHandler = (e) => {
         setInputs(state => ({
