@@ -4,15 +4,15 @@ import styles from "./Restaurants.module.css";
 
 import { RestaurantItem } from "./RestaurantItem/RestaurantItem";
 import { Search } from "./Search/Search";
-import * as restaurantService from "../../services/restaurantService";
-
-import { LoadingContext } from "../../contexts/LoadingContext";
-import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
-
-import * as utils from "../../utils";
 import { Pagination } from "./Pagination/Pagination";
 import { Sort } from "./Sort/Sort";
+import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
+
+import { LoadingContext } from "../../contexts/LoadingContext";
 import { UserActionsContext } from "../../contexts/UserActionsContext";
+
+import * as restaurantService from "../../services/restaurantService";
+import * as utils from "../../utils";
 
 export const Restaurants = () => {
     const [restaurants, setRestaurants] = useState([]);
