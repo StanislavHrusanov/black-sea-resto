@@ -1,4 +1,4 @@
-const host = 'http://localhost:3030';
+const host = 'https://softuni-server.onrender.com';
 
 async function request(method, url, data) {
     const options = {

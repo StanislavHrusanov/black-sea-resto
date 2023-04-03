@@ -1,5 +1,5 @@
 body {
-    background: url("https://www.hdwallpapers.in/download/beautiful_ocean_waves_beach_sand_under_blue_sky_during_daytime_4k_hd_nature-3840x2160.jpg");
+    background-image: url('../public/images/sea-and-sand.jpg');
     background-size: cover;
     margin: auto;
 }
