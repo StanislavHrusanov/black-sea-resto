@@ -17,6 +17,8 @@ import { AuthProvider } from './contexts/AuthContext';
 import { LoadingProvider } from "./contexts/LoadingContext";
 import { UserActionsProvider } from './contexts/UserActionsContext';
 import { PrivateRouts } from './components/RoutGuards/PrivateRout';
+import { NotFound } from './components/404/NotFound';
+import { AlreadyLoggedIn } from './components/RoutGuards/AlreadyLoggedIn';
 
 function App() {
   return (
@@ -29,8 +31,12 @@ function App() {
             <Routes>
 
               <Route path='/' element={<Home />} />
-              <Route path='/register' element={<Register />} />
-              <Route path='/login' element={<Login />} />
+
+              <Route element={<AlreadyLoggedIn />}>
+                <Route path='/register' element={<Register />} />
+                <Route path='/login' element={<Login />} />
+              </Route>
+
               <Route path='/restaurants' element={<Restaurants />} />
               <Route path='/restaurants/:restaurantId' element={<Details />} />
 
@@ -40,6 +46,8 @@ function App() {
                 <Route path='/addRestaurant' element={<AddRestaurant />} />
                 <Route path='/restaurants/:restaurantId/edit' element={<Edit />} />
               </Route>
+
+              <Route path='/*' element={<NotFound />} />
 
             </Routes>
 
