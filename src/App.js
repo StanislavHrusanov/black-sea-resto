@@ -22,7 +22,7 @@ import { AlreadyLoggedIn } from './components/RoutGuards/AlreadyLoggedIn';
 
 function App() {
   return (
-    <div className={styles["main"]}>
+    <div>
       <AuthProvider>
         <LoadingProvider>
           <Header />

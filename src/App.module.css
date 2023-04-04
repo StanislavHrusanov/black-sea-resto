@@ -1,20 +1,11 @@
 body {
-    background-color: whitesmoke;
-    height: 100vh;
+    background-image: url('../public/images/sea-and-sand.jpg');
+    background-size: cover;
     margin: auto;
 }
 
 .footer-container {
     position: relative;
-    margin-top: 62vh;
+    /* margin-top: 62vh; */
     width: 100%;
-}
-
-.main {
-    background-image: url('../public/images/sea-and-sand.jpg');
-    max-width: 2600px;
-    margin: auto;
-    background-size: cover;
-    height: 100%;
-    min-height: 100vh;
 }
