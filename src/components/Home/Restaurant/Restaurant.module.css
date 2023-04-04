@@ -2,8 +2,8 @@
     box-shadow: 0px 0px 30px 0px;
     margin-top: 20px;
     padding: 50px;
-    margin-left: 85px;
-    max-width: 300px;
+    margin-left: 83px;
+    max-width: 280px;
     max-height: 475px;
     background-position: right 35% bottom 45%;
     background-color: rgb(245, 223, 190);
@@ -36,8 +36,8 @@
     display: inline-block;
     overflow: hidden;
     position: relative;
-    margin-top: -5px;
-    left: 56%;
+    margin-top: -12px;
+    left: 57%;
     transform: translateX(-50%);
 }
 
@@ -52,13 +52,12 @@
     unicode-bidi: bidi-override;
     text-align: center;
     direction: ltr;
-    position: relative;
+    margin-left: -2px;
 }
 
 .rating span {
-    font-size: 35px;
-    padding: 4px;
-    text-align: center;
+    font-size: 34px;
+    padding: 3px;
 }
 
 .full::before {
