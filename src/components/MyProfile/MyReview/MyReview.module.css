@@ -19,7 +19,7 @@
 
 .review h3 {
     font-family: 'Times New Roman', Times, serif;
-    margin-top: -61px;
+    margin-top: -57px;
     margin-left: 80px;
     font-size: 26px;
     text-align: left;
@@ -33,7 +33,7 @@
     font-size: 14px;
     line-height: 1.428571429;
     -webkit-font-smoothing: antialiased;
-    margin-top: -60px;
+    margin-top: -59px;
     margin-left: 75px;
     position: relative;
     text-align: left;
@@ -47,7 +47,7 @@
 .rating span {
     font-size: 25px;
     padding: 2px;
-    color: black;
+    color: transparent;
     font-weight: lighter;
 }
 
@@ -74,7 +74,7 @@
     min-width: 440px;
     max-width: 440px;
     min-height: 20px;
-    margin-top: -49px;
+    margin-top: -48px;
     margin-left: 80px;
     word-break: normal;
     text-align: justify;
