@@ -2,7 +2,7 @@ header nav {
     font-size: auto;
     font-family: 'Times New Roman', Times, serif;
     position: absolute;
-    right: 8px;
+    right: 0;
     bottom: 8px;
 }
 
@@ -21,8 +21,12 @@ header {
     display: block;
     background-color: darkblue;
     color: whitesmoke;
-    position: relative;
-    padding: 8px;
+    position: fixed;
+    overflow: hidden;
+    margin-bottom: 30px;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 
 .home {
@@ -30,6 +34,9 @@ header {
     font-family: 'Times New Roman', Times, serif;
     color: whitesmoke;
     text-decoration: none;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
 }
 
 nav a {

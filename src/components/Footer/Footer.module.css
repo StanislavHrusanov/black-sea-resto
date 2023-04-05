@@ -13,7 +13,7 @@
     width: 100%;
     text-align: left;
     font: bold 16px sans-serif;
-    padding: 55px 50px;
+    padding: 20px 10px;
 }
 
 .footer-distributed .footer-left,
@@ -29,7 +29,7 @@
 
 .footer-distributed h3 {
     color: whitesmoke;
-    font: bold 36px 'Times New Roman', cursive;
+    font: bold 38px 'Times New Roman', Times, serif;
     margin: 0;
 }
 
