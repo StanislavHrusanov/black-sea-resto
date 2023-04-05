@@ -1,5 +1,4 @@
 <h1 align="center"><i>Black Sea Resto</i></h1>
-<hr/>
 
 <p align="center"> Black Sea Resto is an app which introduce the restaurants located on Bulgarian Black Sea! Users can see details about every restaurant also can check reviews left by other users.
 Also every registered user can upload own restaurant and attract future visitors.
