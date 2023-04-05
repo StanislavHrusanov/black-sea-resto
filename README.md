@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+<h1 align="center"><i>Black Sea Resto</i></h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center"> Black Sea Resto is an app which introduce the restaurants located on Bulgarian Black Sea! Users can see details about every restaurant also can check reviews left by other users.
+Also every registered user can upload own restaurant and attract future visitors.
+<hr/>
 
-## Available Scripts
+<p align="center">
+    <img src="./screenshots/home.png"/>
+    <hr/>
+    <img src="./screenshots/home1.png"/>
+    <hr/>
+    <img src="./screenshots/restaurants.png"/>
+    <hr/>
+    <img src="./screenshots/details1.png"/>
+    <hr/>
+    <img src="./screenshots/details2.png"/>
+    <hr/>
+    <img src="./screenshots/editReview.png"/>
+    <hr/>
+    <img src="./screenshots/myProfile1.png"/>
+    <hr/>
+    <img src="./screenshots/myProfile2.png"/>
+    <hr/>
+    </a>
+<p>
 
-In the project directory, you can run:
+<hr/>
 
-### `npm start`
+**Features of the app**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<hr/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<b>Home page with three most popular restaurants, last added restaurant and last added review</b>
 
-### `npm test`
+<b>Register and Login page with validations - only for logged out users</b>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<b>Restaurants page with pagination, search and sort by criteria</b>
 
-### `npm run build`
+<b>Details page</b>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- <i>Edit restaurant - only for the owner</i>
+- <i>Delete restaurant - only for the owner</i>
+- <i>Add to favourites/Remove from favourites - only for logged in user differnet than owner</i>
+- <i>Add/Edit/Delete review - only for logged in user differnet than owner</i>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<b>Add restaurant page with validations - only for logged in users</b>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<b>My profile page - only for logged in users</b>
 
-### `npm run eject`
+- <i>User info</i>
+- <i>My restaurants  - with edit/delete buttons and link to details</i>
+- <i>My favourites - with Remove from details button and link to details</i>
+- <i>My reviews - with link to restaurant details and rating and comment</i>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<b>The repository includes only "Front-end" of the app, "Back-end" is provided by Softuni (Softuni practice server)</b>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h2>Hosted at <a href="https://black-sea-resto.onrender.com/"/>https://black-sea-resto.onrender.com/</h2>
