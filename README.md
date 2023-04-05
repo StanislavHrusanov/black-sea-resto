@@ -21,10 +21,7 @@ Also every registered user can upload own restaurant and attract future visitors
     <hr/>
     <img src="./screenshots/myProfile2.png"/>
     <hr/>
-    </a>
 <p>
-
-<hr/>
 
 **Features of the app**
 
