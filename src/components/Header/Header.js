@@ -9,7 +9,7 @@ export const Header = () => {
 
     return (
         <header>
-            <h1><Link className={styles["home"]} to="/">Black See Resto</Link></h1>
+            <h1><Link className={styles["home"]} to="/">Black Sea Resto</Link></h1>
             <nav>
                 {user &&
                     <span className={styles["hello"]}>{`Hello, ${user.username}!`}</span>
