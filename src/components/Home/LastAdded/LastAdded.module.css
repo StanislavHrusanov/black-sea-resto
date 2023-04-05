@@ -85,6 +85,7 @@
 .rating span {
     font-size: 30px;
     padding: 4px;
+    color: transparent;
 }
 
 .full::before {

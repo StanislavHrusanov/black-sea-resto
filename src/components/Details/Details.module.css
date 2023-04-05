@@ -87,7 +87,7 @@
 }
 
 .buttons {
-  margin-top: 10%;
+  margin-top: 60px;
   position: relative;
   text-align: center;
   bottom: 2%;
@@ -180,6 +180,7 @@
   unicode-bidi: bidi-override;
   text-align: center;
   direction: ltr;
+  margin-top: -20px;
 }
 
 .rating span {

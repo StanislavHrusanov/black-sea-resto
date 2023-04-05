@@ -30,8 +30,8 @@
     cursor: pointer;
 }
 
-.restaurant a:hover{
-    color:rgb(192, 129, 117);
+.restaurant a:hover {
+    color: rgb(192, 129, 117);
 }
 
 .restaurant h3 {
@@ -101,6 +101,7 @@
 .rating span {
     font-size: 20px;
     padding: 4px;
+    color: transparent;
 }
 
 .full::before {

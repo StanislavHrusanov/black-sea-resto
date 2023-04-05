@@ -5,9 +5,9 @@ Also every registered user can upload own restaurant and attract future visitors
 <hr/>
 
 <p align="center">
-    <img src="./screenshots/home.png"/>
-    <hr/>
     <img src="./screenshots/home1.png"/>
+    <hr/>
+    <img src="./screenshots/home2.png"/>
     <hr/>
     <img src="./screenshots/restaurants.png"/>
     <hr/>

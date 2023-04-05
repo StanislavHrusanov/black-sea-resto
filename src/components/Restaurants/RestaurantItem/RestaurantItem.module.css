@@ -59,6 +59,7 @@
 .rating span {
     font-size: 20px;
     padding: 4px;
+    color: transparent;
     text-align: center;
 }
 
