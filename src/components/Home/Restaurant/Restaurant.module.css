@@ -24,7 +24,6 @@
     text-overflow: ellipsis;
     transition: all 0.5s ease-out;
     text-align: center;
-    /* text-transform: uppercase; */
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -36,15 +35,14 @@
     display: inline-block;
     overflow: hidden;
     position: relative;
-    margin-top: -12px;
+    margin-top: -17px;
     left: 57%;
     transform: translateX(-50%);
 }
 
 .image-wrap>img {
-    max-width: 210px;
-    max-height: 210px;
-    aspect-ratio: 1/0.8;
+    width: 211px;
+    height: 162px;
     border: 2px solid darkblue;
 }
 

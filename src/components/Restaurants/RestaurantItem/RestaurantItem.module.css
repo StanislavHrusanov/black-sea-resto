@@ -18,13 +18,9 @@
     margin: auto;
     margin-top: -20px;
     font-size: 18px;
-    /* font-weight: 700; */
     line-height: normal;
     overflow: hidden;
-    /* text-overflow: ellipsis;
-    transition: all 0.5s ease-out; */
     text-align: center;
-    /* text-transform: uppercase; */
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -33,7 +29,7 @@
 .image-wrap {
     width: 166px;
     height: 166px;
-    margin-top: -8px;
+    margin-top: -14px;
     display: inline-block;
     overflow: hidden;
     position: relative;
@@ -42,9 +38,8 @@
 }
 
 .image-wrap>img {
-    max-width: 150px;
-    max-height: 150px;
-    aspect-ratio: 1/0.8;
+    width: 151px;
+    height: 118px;
     border: 2px solid darkblue;
 }
 
@@ -85,7 +80,6 @@
     background-color: darkblue;
     font-size: 1.0rem;
     padding-top: 20px;
-    /* margin-top: 10px; */
     color: whitesmoke;
     padding: 0.9em 1.4em;
     text-decoration: none;
