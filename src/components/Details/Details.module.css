@@ -37,8 +37,10 @@
 }
 
 .item-details-image>img {
-  width: 450px;
-  height: 460px;
+  min-width: 450px;
+  max-width: 450px;
+  min-height: 460px;
+  max-height: 460px;
   position: absolute;
   right: 0;
   left: 0;

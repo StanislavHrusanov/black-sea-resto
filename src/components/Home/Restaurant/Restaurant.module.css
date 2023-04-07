@@ -41,8 +41,10 @@
 }
 
 .image-wrap>img {
-    width: 211px;
-    height: 162px;
+    min-width: 211px;
+    max-width: 211px;
+    min-height: 162px;
+    max-height: 162px;
     border: 2px solid darkblue;
 }
 

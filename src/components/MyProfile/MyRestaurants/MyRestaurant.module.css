@@ -9,8 +9,10 @@
 }
 
 .restaurant-image-wrap>img {
-    width: 167px;
-    height: 138px;
+    min-width: 167px;
+    max-width: 167px;
+    min-height: 138px;
+    max-height: 138px;
     border: 2px solid darkblue;
 }
 
