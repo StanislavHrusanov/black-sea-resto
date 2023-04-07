@@ -25,10 +25,10 @@ export const commentDateConverter = (par) => {
 
     const date = new Date(par);
 
-    const fullDate = date.toLocaleDateString();
-    const time = date.toLocaleTimeString();
+    const fullDate = date.toDateString();
+    const time = date.toTimeString();
 
-    const formatedDate = `${time.slice(0, -3)}/${fullDate.slice(0, -3)}`;
+    const formatedDate = `${time.slice(0,8)}/${fullDate}`;
 
     return formatedDate;
 }
@@ -60,5 +60,5 @@ export const profileCreatedOnDateConverter = (par) => {
 
     const fullDate = date.toLocaleDateString();
 
-    return fullDate.slice(0, -3);
+    return fullDate.slice(0,10);
 }
