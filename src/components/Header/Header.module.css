@@ -1,5 +1,58 @@
-header nav {
-    font-size: auto;
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: darkblue;
+    color: whitesmoke;
+    overflow: hidden;
+}
+
+.home {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.btn-mobile-menu {
+    background-color: darkblue;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.nav {
+    display: block;
+    text-align: center;
+    margin: 30px auto 0px;
+}
+
+
+#user,
+#guest {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* header nav {
     font-family: 'Times New Roman', Times, serif;
     position: absolute;
     right: 0;
@@ -60,4 +113,4 @@ nav a:hover {
     font-size: 20px;
     color: wheat;
     font-style: italic;
-}
+} */
