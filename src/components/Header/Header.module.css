@@ -1,21 +1,19 @@
 .header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    padding: 1rem;
-    width: 100%;
-    font-family: 'Times New Roman', Times, serif;
     background-color: darkblue;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    align-items: baseline;
+    font-family: 'Times New Roman', Times, serif;
     color: whitesmoke;
-    overflow: hidden;
 }
 
 .home {
-    width: 100%;
+    margin-right: 3rem;
     font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
@@ -23,16 +21,24 @@
 }
 
 .btn-mobile-menu {
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 0;
     background-color: darkblue;
     color: whitesmoke;
-    font-size: 1.5rem;
-    border: none;
 }
 
 .nav {
     display: block;
     text-align: center;
-    margin: 30px auto 0px;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    background-color: darkblue;
+    width: 100%;
 }
 
 
@@ -52,65 +58,56 @@
     color: whitesmoke;
 }
 
-/* header nav {
-    font-family: 'Times New Roman', Times, serif;
+.home:hover,
+.nav-link:hover {
+    color: rgb(63, 119, 241);
+    transition: all 300ms ease-in-out;
+}
+
+.hidden {
+    display: none;
+    text-align: center;
     position: absolute;
-    right: 0;
-    bottom: 8px;
-}
-
-header nav>* {
-    float: left;
-}
-
-header h1 {
-    display: inline-block;
+    top: 64px;
+    left: 0;
     background-color: darkblue;
-    color: whitesmoke;
-    margin-bottom: auto;
-}
-
-header {
-    display: block;
-    background-color: darkblue;
-    color: whitesmoke;
-    position: fixed;
-    overflow: hidden;
-    margin-bottom: 30px;
-    top: 0;
-    z-index: 1000;
     width: 100%;
 }
 
-.home {
-    font-size: 120%;
-    font-family: 'Times New Roman', Times, serif;
-    color: whitesmoke;
-    text-decoration: none;
-    position: relative;
-    bottom: 10px;
-    left: 10px;
+@media screen and (min-width:800px) {
+    .home {
+        font-size: 2.5rem;
+    }
+
+    .btn-mobile-menu {
+        display: none;
+    }
+
+    .hidden {
+        display: flex;
+        margin-left: auto;
+        position: relative;
+        width: auto;
+        top: 0;
+        right: 0;
+    }
+
+    .nav {
+        display: flex;
+        margin-left: auto;
+        position: relative;
+        width: auto;
+        top: 0;
+        right: 0;
+    }
+
+    .nav-link {
+        display: inline-block;
+    }
 }
 
-nav a {
-    margin: 0 0.8em;
-    color: whitesmoke;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    cursor: pointer;
-    color: black;
-    font-weight: bolder;
-}
-
-.home:hover {
-    color: black;
-}
-
-.hello {
+/* .hello {
     font-size: 20px;
     color: wheat;
     font-style: italic;
-} */
+}  */
