@@ -12,7 +12,7 @@
 .last-added-container,
 .last-review-container {
     margin: 2.5rem auto;
-    padding: 1.75rem;
+    padding: 1.75rem 0.75rem;
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -52,4 +52,21 @@
     font-weight: 700;
     font-size: 2rem;
     font-family: 'Times New Roman', Times, serif;
+}
+
+@media screen and (min-width:450px) and (max-width:768px) {
+
+    .most-popular-container,
+    .last-added-container,
+    .last-review-container {
+        margin: 2.5rem auto;
+        padding: 1.75rem 0.75rem;
+        display: flex;
+        flex-direction: column;
+        width: 405px;
+        justify-content: center;
+        box-shadow: 0px 0px 40px 0px;
+        background-color: transparent;
+        border-radius: 5px;
+    }
 }
