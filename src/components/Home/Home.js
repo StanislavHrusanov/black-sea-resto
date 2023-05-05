@@ -58,7 +58,7 @@ export const Home = () => {
                 <div className={styles["most-popular-container"]}>
 
                     <div className={styles["most-popular"]}>
-                        <h1>Most Popular</h1>
+                        <h3>Most Popular</h3>
 
                         {
                             mostPopular.length > 0
@@ -72,7 +72,7 @@ export const Home = () => {
                 <div className={styles["last-added-container"]}>
 
                     <div className={styles["last-added"]}>
-                        <h1>Last added</h1>
+                        <h3>Last added</h3>
 
                         {
                             lastAdded.length > 0
@@ -86,7 +86,7 @@ export const Home = () => {
                 <div className={styles["last-review-container"]}>
 
                     <div className={styles["last-review"]}>
-                        <h1>Last review</h1>
+                        <h3>Last review</h3>
 
                         {
                             lastReview.length > 0
