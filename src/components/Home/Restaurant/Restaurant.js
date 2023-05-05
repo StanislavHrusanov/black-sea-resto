@@ -29,7 +29,9 @@ export const Restaurant = ({ restaurant }) => {
 
             </div>
             <div className={styles["data-buttons"]}>
-                <Link to={`/restaurants/${restaurant._id}`} className={styles["details-btn"]}>Details</Link>
+                <Link to={`/restaurants/${restaurant._id}`}>
+                    <button className={styles["details-btn"]}>Details</button>
+                </Link>
             </div>
         </div>
     );

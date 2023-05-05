@@ -1,4 +1,4 @@
-.restaurant-image-wrap {
+/* .restaurant-image-wrap {
     width: 414px;
     height: 332px;
     display: inline-block;
@@ -6,86 +6,58 @@
     position: relative;
     left: -2px;
     bottom: 8px;
-}
+} */
 
 .restaurant-image-wrap>img {
-    min-width: 410px;
-    max-width: 410px;
-    min-height: 263px;
-    max-height: 263px;
+    margin: 1.7rem 1rem;
+    width: 196px;
+    height: 140px;
     border: 2px solid darkblue;
 }
 
 .restaurant {
-    box-shadow: 0px 0px 20px 0px;
-    padding: 50px;
-    margin: auto auto 30px;
-    width: 900px;
-    min-height: 250px;
-    max-height: 250px;
+    width: 246px;
+    height: 360px;
+    box-sizing: border-box;
     background-color: rgb(245, 223, 190);
     color: darkblue;
+    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 1);
 }
 
-.restaurant a {
+/* .restaurant a {
     text-decoration: none;
     cursor: pointer;
 }
 
 .restaurant a:hover {
     color: rgb(192, 129, 117);
-}
+} */
 
-.restaurant h3 {
+.restaurant>h3 {
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 450px;
-    margin-top: -344px;
-    font-size: 50px;
+    margin: auto;
+    padding: 0 8px;
+    font-size: 30px;
+    font-weight: 700;
     line-height: normal;
     overflow: hidden;
+    text-overflow: ellipsis;
     text-align: center;
-    display: -webkit-box;
+    white-space: nowrap;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-}
-
-.data-buttons {
-    font-size: 1.4rem;
-    padding-top: 20px;
-    text-align: center;
-}
-
-.details-btn {
-    background-color: darkblue;
-    font-size: 1.2rem;
-    padding-top: 20px;
-    margin-top: -30px;
-    color: whitesmoke;
-    padding: 0.9em 1.4em;
-    text-decoration: none;
-    border: none;
-    margin-left: 450px;
-    cursor: pointer;
-}
-
-
-.details-btn:hover {
-    background-color: rgb(192, 129, 117);
-    color: white;
 }
 
 .rating {
     unicode-bidi: bidi-override;
     text-align: center;
     direction: ltr;
-    margin-left: 450px;
-    margin-top: -50px;
-    position: relative;
+    margin-left: -2px;
 }
 
 .rating span {
-    font-size: 30px;
-    padding: 4px;
+    font-size: 1.75rem;
+    padding: 3px;
     color: transparent;
 }
 
@@ -101,9 +73,31 @@
     color: grey;
 }
 
-.review-count {
-    color: black;
-    font-size: 24px;
+.data-buttons {
+    font-size: 1.4rem;
+    padding-top: 7px;
     text-align: center;
-    margin-top: 20px;
+}
+
+.details-btn {
+    background-color: darkblue;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    padding: 0.6em 1.1em;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.details-btn:hover {
+    transition: all 200ms ease-in-out;
+    background-color: rgb(192, 129, 117);
+    color: white;
+}
+
+.review-count {
+    margin: 0.4rem;
+    color: black;
+    font-size: 18px;
+    text-align: center;
 }

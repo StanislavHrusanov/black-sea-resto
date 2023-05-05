@@ -10,11 +10,13 @@
 .restaurant>h3 {
     font-family: 'Times New Roman', Times, serif;
     margin: auto;
+    padding: 0 8px;
     font-size: 30px;
     font-weight: 700;
     line-height: normal;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
     text-align: center;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -63,20 +65,22 @@
 
 .data-buttons {
     font-size: 1.4rem;
-    padding-top: 20px;
+    padding-top: 7px;
     text-align: center;
 }
 
 .details-btn {
     background-color: darkblue;
     font-size: 1.2rem;
-    padding-top: 20px;
     color: whitesmoke;
-    padding: 0.7em 1.2em;
+    padding: 0.6em 1.1em;
     text-decoration: none;
+    border: none;
+    border-radius: 5px;
 }
 
 .details-btn:hover {
+    transition: all 200ms ease-in-out;
     background-color: rgb(192, 129, 117);
     color: white;
 }
