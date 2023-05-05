@@ -1,11 +1,21 @@
 .review {
-    box-shadow: 0px 0px 20px 0px;
-    padding: 50px;
-    margin: auto auto 30px;
-    width: 900px;
-    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    width: 246px;
+    height: auto;
     background-color: rgb(245, 223, 190);
+    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 1);
     color: darkblue;
+    border-radius: 5px;
+}
+
+.desc {
+    margin: 0.5rem;
+}
+
+.desc>p {
+    color: black;
 }
 
 .review a {
@@ -18,23 +28,21 @@
 
 .review h3 {
     font-family: 'Times New Roman', Times, serif;
-    margin-top: -64px;
-    margin-left: 80px;
-    font-size: 34px;
-    text-align: left;
+    margin-top: 0.75rem;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .star-rating-container {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.428571429;
-    -webkit-font-smoothing: antialiased;
-    margin-top: -60px;
-    margin-left: 75px;
-    position: relative;
-    text-align: left;
+    margin-top: 0.75rem;
+    unicode-bidi: bidi-override;
+    text-align: center;
+    direction: ltr;
 }
 
 .rating {
@@ -62,29 +70,9 @@
 }
 
 .comment {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    color: #444444;
-    box-sizing: content-box;
-    min-width: 825px;
-    max-width: 825px;
-    min-height: 20px;
-    margin-top: -53px;
-    margin-left: 80px;
+    margin-top: 0.75rem;
+    font-size: 1.25rem;
+    font-style: italic;
     word-break: normal;
-    text-align: justify;
-    box-sizing: content-box;
-}
-
-.desc {
-    margin-top: -10px;
-    padding-bottom: 10px;
-    margin-left: -25px;
-    cursor: default;
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: left;
+    text-align: center;
 }
