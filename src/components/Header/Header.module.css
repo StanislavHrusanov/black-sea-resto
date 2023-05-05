@@ -74,9 +74,9 @@
     width: 100%;
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:768px) {
     .home {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
 
     .btn-mobile-menu {
