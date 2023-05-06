@@ -11,7 +11,7 @@
 .restaurant>h3 {
     font-family: 'Times New Roman', Times, serif;
     margin: auto;
-    padding: 0 8px;
+    padding: 0 10px;
     font-size: 30px;
     font-weight: 700;
     line-height: normal;
@@ -91,4 +91,25 @@
     color: black;
     font-size: 18px;
     text-align: center;
+}
+
+@media screen and (min-width:768px) {
+
+    .restaurant {
+        width: 30%;
+    }
+
+    .image-wrap>img {
+        width: 84%;
+    }
+}
+
+@media screen and (min-width:950px) {
+    .restaurant {
+        width: 247px;
+    }
+
+    .image-wrap>img {
+        width: 207px
+    }
 }
