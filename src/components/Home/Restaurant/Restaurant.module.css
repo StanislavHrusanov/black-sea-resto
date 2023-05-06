@@ -11,8 +11,8 @@
 .restaurant>h3 {
     font-family: 'Times New Roman', Times, serif;
     margin: auto;
-    padding: 0 10px;
-    font-size: 30px;
+    padding: 0 10px 3px;
+    font-size: 1.65rem;
     font-weight: 700;
     line-height: normal;
     overflow: hidden;
@@ -23,17 +23,8 @@
     -webkit-box-orient: vertical;
 }
 
-/* .image-wrap {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    overflow: hidden;
-    margin-top: -17px;
-    transform: translateX(-50%);
-} */
-
 .image-wrap>img {
-    margin: 1.7rem 1rem;
+    margin: 1.7rem 1rem 1rem;
     width: 196px;
     height: 140px;
     border: 2px solid darkblue;
@@ -47,7 +38,7 @@
 }
 
 .rating span {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     padding: 3px;
     color: transparent;
 }
@@ -111,5 +102,13 @@
 
     .image-wrap>img {
         width: 207px
+    }
+
+    .restaurant>h3 {
+        font-size: 2rem;
+    }
+
+    .rating span {
+        font-size: 1.75rem;
     }
 }

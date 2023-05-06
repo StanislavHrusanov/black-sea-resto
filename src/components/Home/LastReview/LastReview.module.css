@@ -29,7 +29,7 @@
 .review h3 {
     font-family: 'Times New Roman', Times, serif;
     margin-top: 0.75rem;
-    font-size: 30px;
+    font-size: 1.65rem;
     font-weight: 700;
     line-height: normal;
     overflow: hidden;
@@ -51,7 +51,7 @@
 }
 
 .rating span {
-    font-size: 28px;
+    font-size: 1.6rem;
     padding: 2px;
     color: transparent;
     font-weight: lighter;
@@ -86,6 +86,14 @@
 @media screen and (min-width:950px) {
     .review {
         width: calc((3*247px) + 3.5rem);
+    }
+
+    .review h3 {
+        font-size: 2rem;
+    }
+
+    .rating span {
+        font-size: 1.75rem;
     }
 }
 

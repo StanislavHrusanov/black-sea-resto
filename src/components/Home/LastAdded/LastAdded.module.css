@@ -1,15 +1,5 @@
-/* .restaurant-image-wrap {
-    width: 414px;
-    height: 332px;
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    left: -2px;
-    bottom: 8px;
-} */
-
 .restaurant-image-wrap>img {
-    margin: 1.7rem 1rem;
+    margin: 1.7rem 1rem 1rem;
     width: 196px;
     height: 140px;
     border: 2px solid darkblue;
@@ -29,7 +19,7 @@
     font-family: 'Times New Roman', Times, serif;
     margin: auto;
     padding: 0 10px;
-    font-size: 30px;
+    font-size: 1.65rem;
     font-weight: 700;
     line-height: normal;
     overflow: hidden;
@@ -48,7 +38,7 @@
 }
 
 .rating span {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     padding: 3px;
     color: transparent;
 }
@@ -123,6 +113,14 @@
 @media screen and (min-width:950px) {
     .restaurant {
         width: calc((3*247px) + 3.5rem);
+    }
+
+    .desc>h3 {
+        font-size: 2rem;
+    }
+
+    .rating span {
+        font-size: 1.75rem;
     }
 }
 

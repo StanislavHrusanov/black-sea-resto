@@ -41,7 +41,7 @@
 .last-review h3 {
     color: darkblue;
     font-weight: 700;
-    font-size: 2.75rem;
+    font-size: 2.6rem;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -97,6 +97,7 @@
     .last-added h3,
     .last-review h3 {
         margin-bottom: 0;
+        font-size: 2.75rem;
     }
 }
 
