@@ -1,5 +1,9 @@
 .sort-div {
-    float: right;
+    display: flex;
+    justify-content: right;
+    margin-top: -20px;
+    margin-right: -4px;
+    margin-bottom: 20px;
     font-size: 18px;
     color: black;
 }
