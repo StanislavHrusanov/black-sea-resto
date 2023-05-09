@@ -1,5 +1,4 @@
 .page-container {
-    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -11,6 +10,7 @@
     font-size: 20px;
     cursor: pointer;
     border: none;
+    border-radius: 5px;
 }
 
 .page {
@@ -20,4 +20,5 @@
     padding-bottom: 5px;
     font-size: 22px;
     background-color: whitesmoke;
+    border-radius: 5px;
 }
