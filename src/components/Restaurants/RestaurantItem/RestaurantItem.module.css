@@ -94,3 +94,50 @@
     font-size: 18px;
     text-align: center;
 }
+
+@media screen and (min-width:768px) {
+
+    .restaurant {
+        width: 30%;
+    }
+
+    .image-wrap>img {
+        width: 84%;
+    }
+}
+
+@media screen and (min-width:950px) {
+    .restaurant {
+        width: 247px;
+    }
+
+    .image-wrap>img {
+        width: 207px;
+    }
+
+    .restaurant>h3 {
+        font-size: 2rem;
+    }
+
+    .rating span {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    .restaurant {
+        width: 22%;
+    }
+
+    .image-wrap>img {
+        width: 84%;
+    }
+
+    .restaurant>h3 {
+        font-size: 1.5rem;
+    }
+
+    .rating span {
+        font-size: 1.5rem;
+    }
+}
