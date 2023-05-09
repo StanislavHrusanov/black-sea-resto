@@ -119,13 +119,13 @@ export const Restaurants = () => {
                 <div className={styles["restaurants-message"]}>
                     <h2>We will help you find your perfect restaurant!</h2>
 
-                    <Search
-                        onSearch={onSearch}
-                        calculateNumberOfPages={calculateNumberOfPages}
-                        search={search}
-                    />
 
                 </div>
+                <Search
+                    onSearch={onSearch}
+                    calculateNumberOfPages={calculateNumberOfPages}
+                    search={search}
+                />
                 <div className={styles["restaurants-container"]}>
 
                     <Sort
@@ -134,7 +134,7 @@ export const Restaurants = () => {
                     />
 
                     <div className={styles["restaurants"]}>
-                        <h1>Restaurants</h1>
+                        <h3>Restaurants</h3>
 
                         {restaurants.length === 0
                             ? <p className={styles["no-restaurants"]}>There is no restaurants yet!</p>
