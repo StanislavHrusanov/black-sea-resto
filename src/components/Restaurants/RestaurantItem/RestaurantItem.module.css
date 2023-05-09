@@ -1,32 +1,29 @@
 .restaurant {
-    box-shadow: 0px 0px 30px 0px;
-    margin-top: 20px;
-    padding: 50px;
-    margin-left: 54px;
-    max-width: 225px;
-    max-height: 375px;
-    background-position: right 35% bottom 45%;
-    background-color: rgb(245, 223, 190);
+    width: 246px;
+    height: 360px;
     box-sizing: border-box;
-    float: left;
-    height: auto;
+    background-color: rgb(245, 223, 190);
     color: darkblue;
+    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 1);
+    border-radius: 5px;
 }
 
 .restaurant>h3 {
     font-family: 'Times New Roman', Times, serif;
     margin: auto;
-    margin-top: -20px;
-    font-size: 18px;
+    padding: 0 10px 3px;
+    font-size: 1.65rem;
+    font-weight: 700;
     line-height: normal;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     text-align: center;
-    display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
 
-.image-wrap {
+/* .image-wrap {
     width: 166px;
     height: 166px;
     margin-top: -14px;
@@ -35,13 +32,12 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-}
+} */
 
 .image-wrap>img {
-    min-width: 151px;
-    max-width: 151px;
-    min-height: 118px;
-    max-height: 118px;
+    margin: 1.7rem 1rem 1rem;
+    width: 196px;
+    height: 140px;
     border: 2px solid darkblue;
 }
 
@@ -49,15 +45,13 @@
     unicode-bidi: bidi-override;
     text-align: center;
     direction: ltr;
-    position: relative;
-    margin-top: 4px;
+    margin-left: -2px;
 }
 
 .rating span {
-    font-size: 20px;
-    padding: 4px;
+    font-size: 1.6rem;
+    padding: 3px;
     color: transparent;
-    text-align: center;
 }
 
 .full::before {
@@ -74,27 +68,29 @@
 
 .data-buttons {
     font-size: 1.4rem;
-    padding-top: 20px;
+    padding-top: 7px;
     text-align: center;
 }
 
 .details-btn {
     background-color: darkblue;
-    font-size: 1.0rem;
-    padding-top: 20px;
+    font-size: 1.2rem;
     color: whitesmoke;
-    padding: 0.9em 1.4em;
+    padding: 0.6em 1.1em;
     text-decoration: none;
+    border: none;
+    border-radius: 5px;
 }
 
 .details-btn:hover {
+    transition: all 200ms ease-in-out;
     background-color: rgb(192, 129, 117);
     color: white;
 }
 
 .review-count {
+    margin: 0.4rem;
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
-    margin-top: 8px;
 }
