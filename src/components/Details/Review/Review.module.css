@@ -1,64 +1,36 @@
 .review-container {
-    display: table-row;
-    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 8px;
     box-sizing: border-box;
     border: #444444 solid 1px;
-    /* margin-top: 10px; */
+}
+.review-author-date{
+    display: flex;
+    flex-direction: column;
 }
 
-.review-container p {
-    float: left;
-    margin-top: 30px;
-    margin-left: 10px;
-    font-size: 18px;
+.author {
+    text-align: left;
+    margin-right: 0.5rem;
 }
 
 .posted {
+    text-align: left;
     color: #888888;
 }
 
-.review-body {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.428571429;
-    /* -webkit-font-smoothing: antialiased; */
-    color: #444444;
-    box-sizing: content-box;
-    min-width: 988px;
-    max-width: 988px;
-    min-height: 50px;
-    display: inline;
-    position: relative;
-    float: left;
-}
-
-.star-rating-container {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.428571429;
-    -webkit-font-smoothing: antialiased;
-    color: #444444;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    display: block;
-    text-decoration: none !important;
-    float: left;
-    margin-top: -30px;
-    margin-left: 5px;
-}
-
 .rating {
+    margin-left: -4px;
+    margin-top: 3px;
     unicode-bidi: bidi-override;
-    text-align: center;
+    text-align: left;
     direction: ltr;
 }
 
 .rating span {
-    font-size: 25px;
+    font-size: 1.25rem;
     padding: 2px;
     text-align: center;
     color: transparent;
@@ -76,28 +48,13 @@
     position: absolute;
     color: grey;
 }
-
-h3 .rating {
-    text-align: center;
-}
-
 .comment {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    /* -webkit-font-smoothing: antialiased; */
+    font-size: 1rem;
+    font-style: italic;
     color: #444444;
-    box-sizing: content-box;
-    min-width: 968px;
-    max-width: 968px;
-    min-height: 50px;
-    margin-bottom: 10px;
-    line-height: 20px;
+    box-sizing: border-box;
+    line-height: 1.2;
     overflow: hidden;
-    float: left;
-    margin-top: -20px;
-    margin-left: 10px;
     text-align: justify;
     word-break: normal;
 }
