@@ -149,76 +149,73 @@ export const Details = () => {
 
                 <div className={styles["item-details"]}>
 
-                    <div className={styles["item-description"]}>
-                        <h2> {restaurant.name}</h2>
-                        {
-                            <h3><div className={styles["rating"]}>
-                                {[...Array(5)].map((star, index) => {
-                                    index += 1;
+                    <h2> {restaurant.name}</h2>
+                    {
+                        <h3><div className={styles["rating"]}>
+                            {[...Array(5)].map((star, index) => {
+                                index += 1;
 
-                                    return (
-                                        <span
-                                            key={index}
-                                            className={index <= Math.round(getAvgRating(restaurant.reviews)) ? styles["full"] : styles["empty"]}
-                                        >
-                                            ☆
-                                        </span>
-                                    )
-                                })}
-                                <span>{`${getAvgRating(restaurant.reviews)} (${restaurant.reviews?.length}) reviews`}</span>
+                                return (
+                                    <span
+                                        key={index}
+                                        className={index <= Math.round(getAvgRating(restaurant.reviews)) ? styles["full"] : styles["empty"]}
+                                    >
+                                        ☆
+                                    </span>
+                                )
+                            })}
+                            <span>{`${getAvgRating(restaurant.reviews)} (${restaurant.reviews?.length}) reviews`}</span>
 
-                            </div></h3>
-                        }
-                        <h3>Address: {restaurant.address}</h3>
-                        <h3>Phone: {restaurant.phone}</h3>
-                        <h3>Capacity: {restaurant.capacity} persons</h3>
-                        <h3>Summary: {restaurant.summary}</h3>
-                        {user &&
-                            <div className={styles["buttons"]}>
-                                {isOwner
+                        </div></h3>
+                    }
+                    <img src={restaurant.imageUrl} alt="resto" />
+                    <div className={styles["item-desc"]}>
+                        <h3>Address: <p>{restaurant.address}</p></h3>
+                        <h3>Phone: <p>{restaurant.phone}</p></h3>
+                        <h3>Capacity: <p>{restaurant.capacity} persons</p></h3>
+                        <h3>Summary: <p>{restaurant.summary}</p></h3>
+                    </div>
+                    {user &&
+                        <div className={styles["buttons"]}>
+                            {isOwner
+                                ?
+                                <>
+                                    <Link to={`/restaurants/${restaurant._id}/edit`} ><button className={styles["edit-button"]}>Edit</button></Link>
+                                    <button onClick={deleteRestaurant} className={styles["delete-button"]}>Delete</button>
+                                </>
+                                : isUserAddedToFavourites
                                     ?
-                                    <>
-                                        <Link to={`/restaurants/${restaurant._id}/edit`} ><button className={styles["edit-button"]}>Edit</button></Link>
-                                        <button onClick={deleteRestaurant} className={styles["delete-button"]}>Delete</button>
-                                    </>
-                                    : isUserAddedToFavourites
-                                        ?
-                                        <button
-                                            className={styles["favourite-remove-button"]}
-                                            onClick={onRemoveFromFavourites}
-                                        >Remove from Favourites</button>
-                                        :
-                                        <button
-                                            className={styles["favourite-add-button"]}
-                                            onClick={onAddToFavoutites}
-                                        >Add to Favourites</button>
-                                }
-                            </div>
+                                    <button
+                                        className={styles["favourite-remove-button"]}
+                                        onClick={onRemoveFromFavourites}
+                                    >Remove from Favourites</button>
+                                    :
+                                    <button
+                                        className={styles["favourite-add-button"]}
+                                        onClick={onAddToFavoutites}
+                                    >Add to Favourites</button>
+                            }
+                        </div>
+                    }
+
+                    <div className={styles["reviews-container"]}>
+
+                        {!user
+                            ? <p className={styles["reviews-p"]}>Reviews</p>
+                            : !isOwner
+                                ? <button onClick={() => openModal()} className={styles["add-review-btn"]}>{reviewBtnName}</button>
+                                : <p className={styles["reviews-p"]}>Reviews</p>
                         }
 
-                        <div className={styles["reviews-container"]}>
-
-                            {!user
-                                ? <p className={styles["reviews-p"]}>Reviews</p>
-                                : !isOwner
-                                    ? <button onClick={() => openModal()} className={styles["add-review-btn"]}>{reviewBtnName}</button>
-                                    : <p className={styles["reviews-p"]}>Reviews</p>
-                            }
-
-                            {restaurant.reviews?.length > 0
-                                ? restaurant.reviews
-                                    .sort((a, b) => b._createdOn - a._createdOn)
-                                    .map(x => <Review key={x._id} review={x} />)
-                                : <p className={styles["no-reviews"]}>No reviews yet!</p>
-                            }
-
-                        </div>
+                        {restaurant.reviews?.length > 0
+                            ? restaurant.reviews
+                                .sort((a, b) => b._createdOn - a._createdOn)
+                                .map(x => <Review key={x._id} review={x} />)
+                            : <p className={styles["no-reviews"]}>No reviews yet!</p>
+                        }
 
                     </div>
 
-                    <div className={styles["item-details-image"]}>
-                        <img src={restaurant.imageUrl} alt="resto" />
-                    </div>
                 </div>
             </section >
         );
