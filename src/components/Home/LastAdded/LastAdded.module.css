@@ -71,12 +71,6 @@
     border-radius: 5px;
 }
 
-.details-btn:hover {
-    transition: all 200ms ease-in-out;
-    background-color: rgb(192, 129, 117);
-    color: white;
-}
-
 .review-count {
     margin: 0.4rem;
     color: black;
@@ -127,5 +121,11 @@
 @media screen and (min-width:1100px) {
     .restaurant {
         width: calc((3*247px) + 7rem);
+    }
+
+    .details-btn:hover {
+        transition: all 200ms ease-in-out;
+        background-color: rgb(192, 129, 117);
+        color: white;
     }
 }

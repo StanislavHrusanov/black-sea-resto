@@ -22,10 +22,6 @@
     text-decoration: none;
 }
 
-.review a:hover {
-    color: rgb(192, 129, 117);
-}
-
 .review h3 {
     font-family: 'Times New Roman', Times, serif;
     margin-top: 0.75rem;
@@ -100,5 +96,9 @@
 @media screen and (min-width:1100px) {
     .review {
         width: calc((3*247px) + 7rem);
+    }
+
+    .review a:hover {
+        color: rgb(192, 129, 117);
     }
 }

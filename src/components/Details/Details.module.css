@@ -64,11 +64,6 @@
   border-radius: 5px;
 }
 
-.edit-button:hover {
-  background-color: rgb(192, 129, 117);
-  transition: all 200ms ease-in-out;
-}
-
 .delete-button {
   background-color: red;
   color: whitesmoke;
@@ -81,11 +76,6 @@
   cursor: pointer;
   border: none;
   border-radius: 5px;
-}
-
-.delete-button:hover {
-  background-color: rgb(192, 129, 117);
-  transition: all 200ms ease-in-out;
 }
 
 .favourite-add-button {
@@ -114,12 +104,6 @@
   cursor: pointer;
   border: none;
   border-radius: 5px;
-}
-
-.favourite-add-button:hover,
-.favourite-remove-button:hover {
-  background-color: rgb(192, 129, 117);
-  transition: all 200ms ease-in-out;
 }
 
 .rating {
@@ -236,5 +220,13 @@
 @media screen and (min-width:1100px) {
   .item-details {
     width: 990px;
+  }
+
+  .edit-button:hover,
+  .delete-button:hover,
+  .favourite-add-button:hover,
+  .favourite-remove-button:hover {
+    background-color: rgb(192, 129, 117);
+    transition: all 200ms ease-in-out;
   }
 }
