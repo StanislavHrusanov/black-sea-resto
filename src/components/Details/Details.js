@@ -168,12 +168,14 @@ export const Details = () => {
 
                         </div></h3>
                     }
-                    <img src={restaurant.imageUrl} alt="resto" />
-                    <div className={styles["item-desc"]}>
-                        <h3>Address: <p>{restaurant.address}</p></h3>
-                        <h3>Phone: <p>{restaurant.phone}</p></h3>
-                        <h3>Capacity: <p>{restaurant.capacity} persons</p></h3>
-                        <h3>Summary: <p>{restaurant.summary}</p></h3>
+                    <div className={styles["desc-container"]}>
+                        <img src={restaurant.imageUrl} alt="resto" />
+                        <div className={styles["item-desc"]}>
+                            <h3>Address: <p>{restaurant.address}</p></h3>
+                            <h3>Phone: <p>{restaurant.phone}</p></h3>
+                            <h3>Capacity: <p>{restaurant.capacity} persons</p></h3>
+                            <h3>Summary: <p>{restaurant.summary}</p></h3>
+                        </div>
                     </div>
                     {user &&
                         <div className={styles["buttons"]}>
