@@ -102,6 +102,7 @@
 }
 
 .review-count {
+    margin-top: 0.25rem;
     color: black;
     font-size: 1rem;
     text-align: center;
