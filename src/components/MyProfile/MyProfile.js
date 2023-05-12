@@ -60,72 +60,65 @@ export const MyProfile = () => {
         : (
             <section id="profile-section">
                 <div className={styles["container-box"]}>
-                    <div className={styles["profile-message"]}>
+                    <div className={styles["user-card-box"]}>
                         <h2>User Info</h2>
                         <div className={styles["user-details"]}>
                             <div className={styles["image-wrap"]}>
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCWz2PNQ8o4EKjY6lY6JcT7sLIWeiS3Hc0_Vsm2Ot820vgbCO_GWVAB4Z_XDsWiyWDuf0&usqp=CAU" alt="user" />
                             </div>
-                            <h3>Full name: {user.fullname}</h3>
-                            <h3>Username: {user.username}</h3>
-                            <h3>Created on: {utils.profileCreatedOnDateConverter(user._createdOn)}</h3>
+                            <h3>Full name: <p>{user.fullname}</p></h3>
+                            <h3>Username: <p>{user.username}</p></h3>
+                            <h3>Created on: <p>{utils.profileCreatedOnDateConverter(user._createdOn)}</p></h3>
                         </div>
 
                     </div>
                     <div className={styles["box"]}>
-
                         <div className={styles["my-rt-box"]}>
-                            <h1>My restaurants</h1>
+                            <h2>My restaurants</h2>
                             <div className={styles["my-rt-container"]}>
-                                <div className={styles["rt"]}>
-                                    {myRestaurants.length === 0
-                                        ? <p className={styles["no-rt"]}>There is no restaurants in My restaurants yet!</p>
-                                        : myRestaurants
-                                            .slice()
-                                            .sort((a, b) => b._createdOn - a._createdOn)
-                                            .map(x =>
-                                                <MyRestaurant
-                                                    key={x._id}
-                                                    restaurant={x}
-                                                    removeFromMyRestaurantsState={removeFromMyRestaurantsState}
-                                                />)
-                                    }
-                                </div>
+                                {myRestaurants.length === 0
+                                    ? <p className={styles["no-rt"]}>There is no restaurants in My restaurants yet!</p>
+                                    : myRestaurants
+                                        .slice()
+                                        .sort((a, b) => b._createdOn - a._createdOn)
+                                        .map(x =>
+                                            <MyRestaurant
+                                                key={x._id}
+                                                restaurant={x}
+                                                removeFromMyRestaurantsState={removeFromMyRestaurantsState}
+                                            />)
+                                }
                             </div>
                         </div>
 
                         <div className={styles["fav-box"]}>
-                            <h1>My favourites</h1>
+                            <h2>My favourites</h2>
                             <div className={styles["favourites-container"]}>
-                                <div className={styles["favourites"]}>
-                                    {myFavourites.length === 0
-                                        ? <p className={styles["no-favourites"]}>There is no restaurants in My favourites yet!</p>
-                                        : myFavourites
-                                            .slice()
-                                            .sort((a, b) => b._createdOn - a._createdOn)
-                                            .map(x =>
-                                                <Favourite
-                                                    key={x._id}
-                                                    favourite={x}
-                                                    removeFromMyFavouritesState={removeFromMyFavouritesState}
-                                                />)
-                                    }
-                                </div>
+                                {myFavourites.length === 0
+                                    ? <p className={styles["no-favourites"]}>There is no restaurants in My favourites yet!</p>
+                                    : myFavourites
+                                        .slice()
+                                        .sort((a, b) => b._createdOn - a._createdOn)
+                                        .map(x =>
+                                            <Favourite
+                                                key={x._id}
+                                                favourite={x}
+                                                removeFromMyFavouritesState={removeFromMyFavouritesState}
+                                            />)
+                                }
                             </div>
                         </div>
 
                         <div className={styles["rev-box"]}>
-                            <h1>My reviews</h1>
+                            <h2>My reviews</h2>
                             <div className={styles["my-reviews-container"]}>
-                                <div className={styles["reviews"]}>
-                                    {myReviews.length === 0
-                                        ? <p className={styles["no-reviews"]}>There is no reviews in My reviews yet!</p>
-                                        : myReviews
-                                            .slice()
-                                            .sort((a, b) => b._createdOn - a._createdOn)
-                                            .map(x => <MyReview key={x._id} review={x} />)
-                                    }
-                                </div>
+                                {myReviews.length === 0
+                                    ? <p className={styles["no-reviews"]}>There is no reviews in My reviews yet!</p>
+                                    : myReviews
+                                        .slice()
+                                        .sort((a, b) => b._createdOn - a._createdOn)
+                                        .map(x => <MyReview key={x._id} review={x} />)
+                                }
                             </div>
                         </div>
                     </div>

@@ -1,74 +1,96 @@
-.profile-message {
-    margin: auto;
-    margin-top: 120px;
-    text-align: center;
+.container-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 12rem auto 6rem;
 }
 
-.profile-message h2 {
-    font-size: 63px;
-    color: rgb(2, 2, 107);
-    text-align: center;
+.user-card-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+.user-card-box h2 {
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 80px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(2, 2, 107);
 }
 
 .user-details {
-    width: 100%;
-    max-width: 400px;
-    min-height: 500px;
-    box-shadow: 0px 0px 40px 0px;
-    /* padding: .55rem; */
-    background-color: rgb(245, 223, 190);
-    margin-top: 100px;
+    margin: 1rem auto;
+    padding: 0 10px;
+    width: 90%;
     text-align: center;
-    margin: auto;
+    box-shadow: 0px 0px 40px 0px;
+    background-color: rgb(245, 223, 190);
+    border-radius: 5px;
 }
 
 .user-details h3 {
-    font-size: 32px;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.5;
     color: rgb(2, 2, 107);
 }
 
-.container-box {
-    text-align: center;
-    margin-bottom: 50px;
+.user-details p {
+    font-size: 2rem;
+    font-weight: lighter;
+    font-style: italic;
+    color: darkblue;
 }
 
-.box {
-    display: inline;
-    position: relative;
-    margin: auto;
+.image-wrap {
     text-align: center;
 }
 
-.box h1 {
-    color: rgb(3, 3, 114);
-    font-weight: 700;
-    font-size: 63px;
-    margin-top: 50px;
-    margin-bottom: -30px;
-    text-align: center;
+.my-rt-box,
+.fav-box,
+.rev-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem auto 0;
+}
+
+.my-rt-box h2,
+.fav-box h2,
+.rev-box h2 {
+    margin-bottom: 1rem;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: darkblue;
 }
 
 .favourites-container,
 .my-reviews-container,
 .my-rt-container {
-    display: inline-flex;
-    flex-direction: row;
-    width: 800px;
-    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    padding: 10px;
+    width: 90%;
+    height: 403px;
+    text-align: center;
+    overflow: scroll;
     box-shadow: 0px 0px 40px 0px;
     background-color: transparent;
-    margin-top: 100px;
-    margin-right: 50px;
-    margin-left: 50px;
+    border-radius: 5px;
 }
 
 .favourites,
 .reviews,
 .rt {
-    background-color: transparent;
+    background-color: rgb(245, 223, 190);
+    ;
     overflow: auto;
     padding: 55px;
     text-align: center;
@@ -76,22 +98,96 @@
     width: 800px;
 }
 
-.favourites h1,
-.reviews h1 {
-    color: rgb(3, 3, 114);
-    font-weight: 700;
-    font-size: 63px;
-    margin-top: -50px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-}
+
 
 .no-favourites,
 .no-reviews,
 .no-rt {
     color: rgb(1, 1, 102);
     text-align: center;
+    margin: auto;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 2.25rem;
     font-family: 'Times New Roman', Times, serif;
+}
+
+@media screen and (min-width:450px) {
+    .user-card-box {
+        width: 400px;
+    }
+
+    .my-rt-box,
+    .fav-box,
+    .rev-box {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+
+    .box {
+        display: flex;
+        align-items: start;
+        margin: 3rem auto 0;
+    }
+
+    .user-card-box {
+        width: 330px;
+    }
+
+    .my-rt-box,
+    .fav-box,
+    .rev-box {
+        width: 330px;
+    }
+
+    .favourites-container,
+    .my-reviews-container,
+    .my-rt-container {
+        height: 787px;
+    }
+
+    .user-card-box h2 {
+        font-size: 3rem;
+    }
+
+    .my-rt-box h2,
+    .fav-box h2,
+    .rev-box h2 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .user-card-box {
+        width: 350px;
+    }
+
+    .box {
+        gap: 1rem;
+    }
+
+    .my-rt-box,
+    .fav-box,
+    .rev-box {
+        width: 350px;
+    }
+}
+
+@media screen and (min-width:1400px) {
+
+    .user-card-box {
+        width: 400px;
+    }
+
+    .my-rt-box,
+    .fav-box,
+    .rev-box {
+        width: 400px;
+    }
+
+    .box {
+        gap: 2rem;
+    }
 }
