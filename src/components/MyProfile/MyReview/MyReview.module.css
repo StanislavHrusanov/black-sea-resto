@@ -1,52 +1,57 @@
 .review {
-    box-shadow: 0px 0px 20px 0px;
-    padding: 50px;
-    margin: auto auto 30px;
-    width: 500px;
-    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    padding: 1rem 0;
+    width: 90%;
+    height: auto;
     background-color: rgb(245, 223, 190);
+    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 1);
     color: darkblue;
+    border-radius: 5px;
+}
+
+.desc {
+    margin: 0.5rem;
+}
+
+.desc>p {
+    color: black;
 }
 
 .review a {
     text-decoration: none;
-    cursor: pointer;
-}
-
-.review a:hover {
-    color: rgb(192, 129, 117);
 }
 
 .review h3 {
     font-family: 'Times New Roman', Times, serif;
-    margin-top: -57px;
-    margin-left: 80px;
-    font-size: 26px;
-    text-align: left;
+    margin-top: 0.75rem;
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
 }
 
-
 .star-rating-container {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.428571429;
-    -webkit-font-smoothing: antialiased;
-    margin-top: -59px;
-    margin-left: 75px;
-    position: relative;
-    text-align: left;
+    margin-top: 0.75rem;
+    unicode-bidi: bidi-override;
+    text-align: center;
+    direction: ltr;
 }
 
 .rating {
     unicode-bidi: bidi-override;
     direction: ltr;
+    position: relative;
+    margin-bottom: -1rem;
 }
 
 .rating span {
-    font-size: 25px;
-    padding: 2px;
+    font-size: 1.6rem;
+    padding: 3px;
     color: transparent;
     font-weight: lighter;
 }
@@ -64,30 +69,9 @@
 }
 
 .comment {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    /* -webkit-font-smoothing: antialiased; */
-    color: #444444;
-    box-sizing: content-box;
-    min-width: 440px;
-    max-width: 440px;
-    min-height: 20px;
-    margin-top: -48px;
-    margin-left: 80px;
-    word-break: normal;
-    text-align: justify;
-    box-sizing: content-box;
-}
-
-.desc {
-    margin-top: -10px;
-    padding-bottom: 10px;
-    margin-left: -25px;
-    cursor: default;
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: left;
+    margin-top: 0.75rem;
+    font-size: 1.25rem;
+    font-style: italic;
+    text-align: center;
+    overflow: hidden;
 }

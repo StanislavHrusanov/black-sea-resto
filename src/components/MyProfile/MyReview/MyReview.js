@@ -8,32 +8,38 @@ export const MyReview = ({ review }) => {
 
     return (
         <div className={styles["review"]}>
-            <p className={styles["desc"]}>Left for:</p>
-            <Link to={`/restaurants/${review.restaurantId}`}>
-                <h3>{review.restaurantName}</h3>
-            </Link>
-            <p className={styles["desc"]}>Rating:</p>
-            <div className={styles["star-rating-container"]}>
-                <h2> <div className={styles["rating"]}>
-                    {[...Array(5)].map((star, index) => {
-                        index += 1;
+            <div className={styles["desc"]}>
+                <p>Left for:</p>
+                <Link to={`/restaurants/${review.restaurantId}`}>
+                    <h3>{review.restaurantName}</h3>
+                </Link>
+            </div>
+            <div className={styles["desc"]}>
+                <p>Rating:</p>
+                <div className={styles["star-rating-container"]}>
+                    <h2> <div className={styles["rating"]}>
+                        {[...Array(5)].map((star, index) => {
+                            index += 1;
 
-                        return (
-                            <span
-                                key={index}
-                                className={index <= rating ? styles["full"] : styles["empty"]}
-                            >
-                                ☆
-                            </span>
-                        )
-                    })}
+                            return (
+                                <span
+                                    key={index}
+                                    className={index <= rating ? styles["full"] : styles["empty"]}
+                                >
+                                    ☆
+                                </span>
+                            )
+                        })}
 
+                    </div>
+                    </h2>
                 </div>
-                </h2>
             </div>
 
-            <p className={styles["desc"]}>Comment:</p>
-            <div className={styles["comment"]} >{comment}</div>
+            <div className={styles["desc"]}>
+                <p>Comment:</p>
+                <p className={styles["comment"]} >{comment}</p>
+            </div>
         </div>
     );
 }
