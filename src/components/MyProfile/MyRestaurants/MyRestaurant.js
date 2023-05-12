@@ -34,9 +34,7 @@ export const MyRestaurant = ({
 
     return (
         <div className={styles["restaurant"]}>
-            <div className={styles["restaurant-image-wrap"]}>
                 <img src={restaurant.imageUrl} alt="resto" />
-            </div>
             <Link to={`/restaurants/${restaurant._id}`}>
                 <h3>{restaurant.name}</h3>
             </Link>
