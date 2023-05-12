@@ -20,19 +20,15 @@ export const Favourite = ({ favourite, removeFromMyFavouritesState }) => {
 
     return (
         <div className={styles["restaurant"]}>
-            <div className={styles["restaurant-image-wrap"]}>
-                <img src={favourite.imageUrl} alt="resto" />
-            </div>
+            <img src={favourite.imageUrl} alt="resto" />
             <h3>{favourite.restaurantName}</h3>
-            <div className={styles["data-buttons"]}>
-                <Link to={`/restaurants/${favourite.restaurantId}`}>
-                    <button className={styles["details-btn"]}>Details</button>
-                </Link>
-                <button
-                    onClick={onRemove}
-                    className={styles["favourites-btn"]}
-                >Remove from favourites</button>
-            </div>
+            <Link to={`/restaurants/${favourite.restaurantId}`}>
+                <button className={styles["details-btn"]}>Details</button>
+            </Link>
+            <button
+                onClick={onRemove}
+                className={styles["favourites-btn"]}
+            >Remove from favourites</button>
         </div>
     );
 }

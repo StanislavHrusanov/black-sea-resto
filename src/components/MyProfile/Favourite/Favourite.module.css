@@ -1,86 +1,69 @@
-.restaurant-image-wrap {
-    width: 171px;
-    height: 171px;
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    left: -172px;
-    bottom: 11px;
-}
-
-.restaurant-image-wrap>img {
-    min-width: 167px;
-    max-width: 167px;
-    min-height: 139px;
-    max-height: 139px;
-    border: 2px solid darkblue;
-}
-
 .restaurant {
-    box-shadow: 0px 0px 20px 0px;
-    padding: 50px;
-    margin: auto auto 30px;
-    width: 500px;
-    max-height: 170px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 1);
+    padding: 8px;
+    margin: 1rem auto;
+    width: 90%;
+    height: auto;
     background-color: rgb(245, 223, 190);
     color: darkblue;
+    border-radius: 5px;
+}
+
+.restaurant>img {
+    margin: 1rem auto;
+    width: 90%;
+    height: 185px;
+    border: 2px solid darkblue;
 }
 
 .restaurant h3 {
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 200px;
-    margin-top: -185px;
-    font-size: 26px;
-    line-height: normal;
+    font-size: 1.65rem;
+    font-weight: bold;
     overflow: hidden;
     text-align: center;
-    display: -webkit-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
 
-.data-buttons {
-    display: inline-flex;
-    position: relative;
-    margin-left: 200px;
-    margin-top: -7px;
-    max-width: 280px;
-}
-
 .details-btn {
+    margin: 0.5rem auto 0;
     background-color: darkblue;
     width: 70px;
     height: 30px;
-    font-size: 18px;
-    margin-top: 10px;
-    margin-left: 70px;
+    font-size: 1.25rem;
     color: whitesmoke;
     text-align: center;
     text-decoration: none;
     border: 1px solid black;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .details-btn:hover {
     background-color: rgb(192, 129, 117);
-    color: white;
 }
 
 .favourites-btn {
+    margin: 0.75rem auto 0.75rem;
     background-color: red;
     width: 210px;
     height: 30px;
-    font-size: 18px;
-    margin-top: 50px;
-    margin-left: -140px;
+    font-size: 1.25rem;
     color: whitesmoke;
     text-align: center;
     text-decoration: none;
     border: 1px solid black;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .favourites-btn:hover {
     background-color: rgb(192, 129, 117);
-    color: white;
 }
