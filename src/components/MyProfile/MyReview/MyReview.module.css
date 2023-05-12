@@ -46,7 +46,7 @@
     unicode-bidi: bidi-override;
     direction: ltr;
     position: relative;
-    margin-bottom: -1rem;
+    margin-bottom: -2rem;
 }
 
 .rating span {
@@ -71,6 +71,7 @@
 .comment {
     margin-top: 0.75rem;
     font-size: 1.25rem;
+    line-height: 1.25;
     font-style: italic;
     text-align: center;
     overflow: hidden;

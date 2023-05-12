@@ -43,9 +43,9 @@
 
 .edit-btn {
     background-color: darkblue;
-    width: 70px;
+    width: 80px;
     height: 30px;
-    font-size: 1.25rem;
+    font-size: 1.20rem;
     margin-top: 6px;
     margin-left: 0px;
     color: whitesmoke;
@@ -58,9 +58,9 @@
 
 .delete-btn {
     background-color: red;
-    width: 70px;
+    width: 80px;
     height: 30px;
-    font-size: 1.25rem;
+    font-size: 1.20rem;
     margin: 10px 0;
     color: whitesmoke;
     text-align: center;
