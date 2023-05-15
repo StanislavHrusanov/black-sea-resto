@@ -150,7 +150,7 @@ export const Edit = () => {
                                     className={styles["input-field"]}
                                     name="capacity"
                                     id="restaurant-capacity"
-                                    placeholder="100 persons"
+                                    placeholder="100"
                                     value={restaurant.capacity}
                                     onChange={onChangeHandler}
                                     onBlur={(e) => validation.isPositiveNumber(e, setErrors)}
