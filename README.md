@@ -5,21 +5,35 @@ Also every registered user can upload own restaurant and attract future visitors
 <hr/>
 
 <p align="center">
-    <img src="./screenshots/home1.png"/>
+    <img src="./screenshots/Home1.png"/>
     <hr/>
-    <img src="./screenshots/home2.png"/>
+    <img src="./screenshots/Home2.png"/>
     <hr/>
-    <img src="./screenshots/restaurants.png"/>
+    <img src="./screenshots/Catalog1.png"/>
     <hr/>
-    <img src="./screenshots/details1.png"/>
+    <img src="./screenshots/Catalog2.png"/>
     <hr/>
-    <img src="./screenshots/details2.png"/>
+    <img src="./screenshots/Details1.png"/>
     <hr/>
-    <img src="./screenshots/editReview.png"/>
+    <img src="./screenshots/Details2.png"/>
     <hr/>
-    <img src="./screenshots/myProfile1.png"/>
+    <img src="./screenshots/EditReview.png"/>
     <hr/>
-    <img src="./screenshots/myProfile2.png"/>
+    <img src="./screenshots/MyProfile1.png"/>
+    <hr/>
+    <img src="./screenshots/MyProfile2.png"/>
+    <hr/>
+    <img src="./screenshots/Mobile1.png"/>
+    <hr/>
+    <img src="./screenshots/Mobile2.png"/>
+    <hr/>
+    <img src="./screenshots/Mobile3.png"/>
+    <hr/>
+    <img src="./screenshots/Mobile4.png"/>
+    <hr/>
+    <img src="./screenshots/Mobile5.png"/>
+    <hr/>
+    <img src="./screenshots/Mobile6.png"/>
     <hr/>
 <p>
 
