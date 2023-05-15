@@ -17,7 +17,7 @@ export const EditReview = ({
 }) => {
     const [rating, setRating] = useState(userReview.rating);
     const [hover, setHover] = useState(userReview.rating);
-    const [starName, setStarName] = useState(userReview.rating);
+    const [starName, setStarName] = useState(utils.ratingAsWords.get(userReview.rating));
     const [comment, setComment] = useState(userReview.comment);
 
     const { showLoading, hideLoading } = useContext(LoadingContext);
@@ -97,7 +97,7 @@ export const EditReview = ({
                         <div className={styles["form-column"]}>
                             <div className={styles["form-input"]}>
                                 <label>Add rating:</label>
-                                <div className={styles["input-wrapper"]}>
+                                <div className={styles["rating-wrapper"]}>
                                     {[...Array(5)].map((star, index) => {
                                         index += 1;
                                         return (
@@ -130,7 +130,7 @@ export const EditReview = ({
                             </div>
                             <div className={styles["form-input"]}>
                                 <label htmlFor="add-comment">Add comment:</label>
-                                <div className={styles["input-wrapper"]}>
+                                <div className={styles["comment-wrapper"]}>
                                     <textarea
                                         name="comment"
                                         type="text"

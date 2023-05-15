@@ -13,7 +13,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 175%);
     background-color: rgb(245, 223, 190);
     padding: 1rem;
     box-shadow: 0px 0px 40px 0px;
@@ -88,8 +88,8 @@
 }
 
 .btn-add {
-    width: 120px;
-    height: 60px;
+    width: 100px;
+    height: 50px;
     font-size: 1.25rem;
     background-color: darkblue;
     margin-top: 10px;
@@ -138,6 +138,7 @@
 @media screen and (min-width:768px) {
     .modal {
         width: 690px;
+        transform: translate(-50%, 75%);
     }
 
     .star {
@@ -146,5 +147,11 @@
 
     .star-name {
         font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .modal {
+        transform: translate(-50%, 50%);
     }
 }
