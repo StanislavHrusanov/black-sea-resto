@@ -81,7 +81,7 @@ export const AddReview = ({
                             <div className={styles["form-column"]}>
                                 <div className={styles["form-input"]}>
                                     <label>Add rating:</label>
-                                    <div className={styles["input-wrapper"]}>
+                                    <div className={styles["rating-wrapper"]}>
                                         {[...Array(5)].map((star, index) => {
                                             index += 1;
                                             return (
@@ -121,7 +121,7 @@ export const AddReview = ({
 
                                 <div className={styles["form-input"]}>
                                     <label htmlFor="add-comment">Add comment:</label>
-                                    <div className={styles["input-wrapper"]}>
+                                    <div className={styles["comment-wrapper"]}>
                                         <textarea
                                             name="comment"
                                             type="text"
