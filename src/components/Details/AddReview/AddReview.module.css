@@ -41,10 +41,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 5px;
+    padding: 5px 10px;
     margin-bottom: 15px;
     background-color: darkblue;
     color: white;
+    border-radius: 5px;
 }
 
 .header h2 {
@@ -58,6 +59,7 @@
 }
 
 .comment-wrapper textarea {
+    margin-top: 10px;
     width: 100%;
     font-weight: 400;
     font-size: 1.5rem;
@@ -65,19 +67,20 @@
     outline: none;
     padding: 6px 12px;
     background-color: rgb(239, 228, 212);
+    border-radius: 5px;
 }
 
 .form-column {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
     margin-top: 15px;
 }
 
 .form-input {
-    padding: 0 5px;
+    padding-left: 5px;
     width: 100%;
     font-size: 1.5rem;
 }
@@ -131,8 +134,9 @@
 }
 
 .error-msg {
+    margin: 0 5px 10px;
     color: red;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 @media screen and (min-width:768px) {
@@ -153,5 +157,9 @@
 @media screen and (min-width:1000px) {
     .modal {
         transform: translate(-50%, 50%);
+    }
+
+    .rating-wrapper {
+        margin-top: -10px;
     }
 }
