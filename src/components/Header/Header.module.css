@@ -102,6 +102,14 @@
 
 @media screen and (min-width:1100px) {
 
+    .home {
+        font-size: 2.25rem;
+    }
+
+    .nav-link {
+        font-size: 1.25rem;
+    }
+
     .home:hover,
     .nav-link:hover {
         color: rgb(63, 119, 241);
