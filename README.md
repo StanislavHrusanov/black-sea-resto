@@ -5,23 +5,23 @@ Also every registered user can upload own restaurant and attract future visitors
 <hr/>
 
 <p align="center">
-    <img src="./screenshots/Home1.png"/>
+    <img src="./screenshots/HomePage1.png"/>
     <hr/>
-    <img src="./screenshots/Home2.png"/>
+    <img src="./screenshots/HomePage2.png"/>
     <hr/>
     <img src="./screenshots/Catalog1.png"/>
     <hr/>
     <img src="./screenshots/Catalog2.png"/>
     <hr/>
-    <img src="./screenshots/Details1.png"/>
+    <img src="./screenshots/DetailsPage1.png"/>
     <hr/>
-    <img src="./screenshots/Details2.png"/>
+    <img src="./screenshots/DetailsPage2.png"/>
     <hr/>
     <img src="./screenshots/EditReview.png"/>
     <hr/>
-    <img src="./screenshots/MyProfile1.png"/>
+    <img src="./screenshots/MyProfilePage1.png"/>
     <hr/>
-    <img src="./screenshots/MyProfile2.png"/>
+    <img src="./screenshots/MyProfilePage2.png"/>
     <hr/>
     <img src="./screenshots/Mobile1.png"/>
     <hr/>
