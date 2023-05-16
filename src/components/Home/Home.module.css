@@ -11,7 +11,7 @@
 .most-popular-container,
 .last-added-container,
 .last-review-container {
-    margin: 2.5rem auto;
+    margin: 2.5rem auto 5rem;
     padding: 1.75rem 0.75rem;
     display: flex;
     flex-direction: column;
