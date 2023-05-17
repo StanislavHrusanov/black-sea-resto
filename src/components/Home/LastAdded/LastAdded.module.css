@@ -19,10 +19,18 @@
     border: 2px solid darkblue;
 }
 
+.desc {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 84%;
+}
+
 .desc>h3 {
+    width: 100%;
     font-family: 'Times New Roman', Times, serif;
     margin: 1.5rem 0 0;
-    padding: 0 10px;
     font-size: 1.65rem;
     font-weight: 700;
     line-height: normal;
@@ -85,7 +93,6 @@
 @media screen and (min-width:768px) {
 
     .restaurant {
-        flex-direction: row;
         width: calc(90% + 2.5rem);
         height: 253px;
     }
@@ -101,6 +108,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         margin: auto;
+        width: calc(100% - 250px - 3.4rem);
     }
 
     .desc>h3 {

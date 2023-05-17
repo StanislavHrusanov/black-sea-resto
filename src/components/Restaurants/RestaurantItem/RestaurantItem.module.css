@@ -14,9 +14,9 @@
 }
 
 .restaurant>h3 {
+    width: 84%;
     font-family: 'Times New Roman', Times, serif;
     margin: 1.25rem 0 0;
-    padding: 0 10px 3px;
     font-size: 1.65rem;
     font-weight: 700;
     line-height: normal;
