@@ -7,9 +7,7 @@ export const LastAdded = ({ restaurant }) => {
 
     return (
         <div className={styles["restaurant"]}>
-            <div className={styles["restaurant-image-wrap"]}>
                 <img src={restaurant.imageUrl} alt="resto" />
-            </div>
             <div className={styles["desc"]}>
                 <h3>{restaurant.name}</h3>
                 <div className={styles["rating"]}>
