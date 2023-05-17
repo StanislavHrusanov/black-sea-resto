@@ -1,6 +1,11 @@
 .restaurant {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 246px;
-    height: 360px;
+    height: 345px;
     box-sizing: border-box;
     background-color: rgb(245, 223, 190);
     color: darkblue;
@@ -10,7 +15,7 @@
 
 .restaurant>h3 {
     font-family: 'Times New Roman', Times, serif;
-    margin: auto;
+    margin: 1.25rem 0 0;
     padding: 0 10px 3px;
     font-size: 1.65rem;
     font-weight: 700;
@@ -23,9 +28,8 @@
     -webkit-box-orient: vertical;
 }
 
-.image-wrap>img {
-    margin: 1.7rem 1rem 1rem;
-    width: 196px;
+.restaurant>img {
+    width: 84%;
     height: 140px;
     border: 2px solid darkblue;
 }
@@ -83,18 +87,15 @@
     .restaurant {
         width: 30%;
     }
-
-    .image-wrap>img {
-        width: 84%;
-    }
 }
 
 @media screen and (min-width:950px) {
     .restaurant {
         width: 247px;
+        height: 360px;
     }
 
-    .image-wrap>img {
+    .restaurant>img {
         width: 207px;
     }
 
@@ -110,9 +111,10 @@
 @media screen and (min-width:1100px) {
     .restaurant {
         width: 22%;
+        height: 340px;
     }
 
-    .image-wrap>img {
+    .restaurant>img {
         width: 84%;
     }
 

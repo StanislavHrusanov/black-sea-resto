@@ -7,9 +7,7 @@ export const RestaurantItem = ({ restaurant }) => {
 
     return (
         <div className={styles["restaurant"]}>
-            <div className={styles["image-wrap"]}>
                 <img src={restaurant.imageUrl} alt="resto" />
-            </div>
             <h3>{restaurant.name}</h3>
             <div className={styles["rating"]}>
                 {[...Array(5)].map((star, index) => {
