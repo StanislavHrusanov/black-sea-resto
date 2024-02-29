@@ -1,4 +1,4 @@
-const host = 'https://zany-lime-macaw-wig.cyclic.app';
+const host = 'https://softuni-server.onrender.com';
 
 async function request(method, url, data) {
     const options = {
